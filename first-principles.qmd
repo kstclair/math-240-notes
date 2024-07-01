@@ -1,4 +1,4 @@
-# First principles of probability   {#first-p}
+# First principles of probability   {#sec-first-p}
 
 First principles cover sections in chapter 1 of @dobrow. 
 

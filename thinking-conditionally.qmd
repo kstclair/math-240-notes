@@ -1,5 +1,5 @@
-# Thinking conditionally  {#think-cond}
+# Thinking conditionally  {#sec-think-cond}
 
 Chapter 2 of @dobrow covers conditional probabilities and the concept of independence. 
 
-Make sure to review @first-p before this chapter.
+Make sure to review @sec-first-p before this chapter.
