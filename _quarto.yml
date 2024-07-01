@@ -3,12 +3,12 @@ project:
 
 book:
   title: "math-240-notes"
-  author: "Norah Jones"
+  author: "Katie St. Clair"
   date: "7/1/2024"
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
+    - first-principles.qmd
+    - thinking-conditionally.qmd
     - references.qmd
 
 bibliography: references.bib
