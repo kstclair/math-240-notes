@@ -1,9 +1,13 @@
-# First principles of probability {#first-p}
+# First principles of probability   {#first-p}
 
-This is a book created from markdown and executable code.
+First principles cover sections in chapter 1 of @dobrow. 
 
-See @dobrow for additional discussion of literate programming.
+## Day 1 {.unnumbered}
 
-```{r}
-1 + 1
-```
+- What to read: Read sections 1.1, 1.2, 1.3 and 1.4. Skim section 1.8 to see the generalization of property #3. 
+
+- Learning goals:
+
+## Day 2 {.unnumbered}
+
+## Day 3 {.unnumbered}

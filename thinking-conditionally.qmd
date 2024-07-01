@@ -1,7 +1,5 @@
-# Summary
+# Thinking conditionally  {#think-cond}
 
-In summary, this book has no content whatsoever.
+Chapter 2 of @dobrow covers conditional probabilities and the concept of independence. 
 
-```{r}
-1 + 1
-```
+Make sure to review @first-p before this chapter.

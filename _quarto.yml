@@ -6,6 +6,7 @@ book:
   title: "math-240-notes"
   author: "Katie St. Clair"
   date: "7/1/2024"
+  reader-mode: true
   chapters:
     - index.qmd
     - first-principles.qmd

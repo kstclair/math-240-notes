@@ -1,9 +1,3 @@
-# Preface {.unnumbered}
+# Math 240 Probability {.unnumbered}
 
-This is a Quarto book.
-
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
-
-```{r}
-1 + 1
-```
+This is a reading guide resource for students in my Math 240 Probability class taught at Carleton College (Northfield, MN). Our textbook is @dobrow. 
