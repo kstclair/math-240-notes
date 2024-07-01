@@ -1,0 +1,42 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "math-240-notes",
+    "section": "",
+    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "first-principles.html",
+    "href": "first-principles.html",
+    "title": "1  First principles of probability",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Wagaman (2021) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nWagaman, & Dobrow, A. S. 2021. Probability: With Applications and r. 2nd ed. Wiley.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>First principles of probability</span>"
+    ]
+  },
+  {
+    "objectID": "thinking-conditionally.html",
+    "href": "thinking-conditionally.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Wagaman, & Dobrow, A. S. 2021. Probability: With Applications\nand r. 2nd ed. Wiley.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]
