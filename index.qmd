@@ -1,3 +1,3 @@
 # Math 240 Probability {.unnumbered}
 
-This is a reading guide resource for students in my Math 240 Probability class taught at Carleton College (Northfield, MN). Our textbook is @dobrow. 
+This is a reading guide resource for students in my Math 240 Probability class taught at Carleton College (Northfield, MN). Our textbook is @dobrow. You can find this [book online in our library](https://bridge.primo.exlibrisgroup.com/permalink/01BRC_INST/11mmqid/cdi_askewsholts_vlebooks_9781119692416). 
