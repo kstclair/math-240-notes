@@ -4,10 +4,91 @@ First principles cover sections in chapter 1 of @dobrow. Make sure to review our
 
 ## Day 1 {.unnumbered}
 
-- What to read: Read sections 1.1, 1.2, 1.3 and 1.4. Skim section 1.8 to see the generalization of property #3. 
+- What to read: Read sections 1.1, 1.2, 1.3, 1.4, and 1.8 to see the generalization of property #3. 
+
+- Learning goals:
+  - define basic probability and set theory terminology
+  - define fundamental properties of probability
+  
+
+### Section 1.1 {.unnumbered}
+
+Key terminology to know:
+
+  - [ ] Sample space $\Omega$
+  - [ ] Outcome $\omega$: this can also be called an <u>element</u>
+  - [ ] Event $A$, $B$, ...
+
+Notes: 
+
+The sample space for a random experiment is the list of all possible outcomes. To define a sample space, start by thinking about how to define a couple individual outcomes and then generalize this to all outcomes. If there are a large or infinite number of outcomes, then you can use a "..." to show that a pattern will continue (like Examples 1.3 and 1.4).
+
+
+There may not be a unique way to define a sample space and outcomes for a random experiment. For example, one may chose to define the sample space for Example 1.3 as just the number of votes for Yolanda $$\Omega = \{ 0, 1, 2, \dotsc, 999, 1000\}$$. But all the outcomes in a sample space must define unique possibilities for a random experiment (i.e. they are mutually exclusive, section 1.4).
+
+"Complex" random experiments are often composed of simpler experiments. Example 1.2 is an example of this as we define one outcome for two dice rolls as the joint outcome of two individual die rolls. Similar for the sample space for three coin flips. In scenarios where the individual simpler experiments have equally likely outcomes, the outcomes in the more complex sample space (e.g. two dice rolls, three coin flips) are also equally likely outcomes. 
+
+
+### Section 1.2-1.3 {.unnumbered}
+
+Key ideas to know:
+
+- [ ] relative frequency interpretation of probability
+- [ ] probability function and its essential properties
+
+Notes: 
+
+Make sure you can put the probability function properties into words: (1) means probabilities can't be negative, (2) means something in the sample space has to happen with probability 1 and (3) means the probability of an event is just the sum of the probabilities of  outcomes that make up that event.
+
+
+
+### Section 1.4 + 1.8 {.unnumbered}
+
+Key <u>set theory</u> ideas to know
+
+- [ ] complement $A^c$ (not $A$)
+- [ ] union $A \cup B$ (at least one $A$ or $B$ or both)
+- [ ] intersection $A \cap B = AB$ (both $A$ and $B$)
+- [ ]  $(AB)^c = A^c \cup B^c$ (at most one)
+- [ ] $(A \cup B)^c = A^cB^c$ (neither)
+- [ ] $AB^c$ ($A$ but not $B$)
+- [ ] subset $\subseteq$
+- [ ] mutually exclusive/disjoint events
+- [ ] Venn diagram
+- [ ] empty set $\emptyset$
+
+
+Notes: 
+
+The first six ideas create a new event out of one or more events (think addition, subtraction, etc). Subset,  mutually exclusive and Venn diagrams tells us relational information about events (think less than, etc). The empty set is a set that has no outcomes (think zero).
+
+Key <u>probability properties</u> to know
+
+- [ ] Addition rule for mutually exclusive events (only add probability of events when they are mutually exclusive)
+- [ ] General addition rule (events do not need to be mutually exclusive)
+- [ ] Complement rule
+
+Notes:
+
+The addition rule properties are used to find the probability of a *union* of two or more events. When events are mutually exclusive, we just add the individual event probabilities. Make sure that you assess whether events are mutually exclusive before simply adding their probabilities. 
+
+When events are not mutually exclusive, you start by adding event probabilities but then you need to subtract out the probability of the overlap (intersection) between events. The inclusion/exclusion rule is an extension of property (3) (eq. 1.3).
+
+The complement rule along with the addition rule is useful for computing the probability of neither $A$ nor $B$: 
+$$
+P(A^c B^c) = 1 - P(A \cap B)
+$$
+
+
+
+
+## Day 2 {.unnumbered}
+
+- What to read:
 
 - Learning goals:
 
-## Day 2 {.unnumbered}
+- Reading quiz: quiz 1
+
 
 ## Day 3 {.unnumbered}
