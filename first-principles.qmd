@@ -6,7 +6,7 @@ First principles cover sections in chapter 1 of @dobrow. Make sure to review our
 
 - What to read: Read sections 1.1, 1.2, 1.3, 1.4, and 1.8 to see the generalization of property #3. 
 
-- Learning goals:
+- Learning objectives: These sections will help you
   - define basic probability and set theory terminology
   - define fundamental properties of probability
   
@@ -19,7 +19,7 @@ Key terminology to know:
   - [ ] Outcome $\omega$: this can also be called an <u>element</u>
   - [ ] Event $A$, $B$, ...
 
-Notes: 
+Comments: 
 
 The sample space for a random experiment is the list of all possible outcomes. To define a sample space, start by thinking about how to define a couple individual outcomes and then generalize this to all outcomes. If there are a large or infinite number of outcomes, then you can use a "..." to show that a pattern will continue (like Examples 1.3 and 1.4).
 
@@ -36,7 +36,7 @@ Key ideas to know:
 - [ ] relative frequency interpretation of probability
 - [ ] probability function and its essential properties
 
-Notes: 
+Comments: 
 
 Make sure you can put the probability function properties into words: (1) means probabilities can't be negative, (2) means something in the sample space has to happen with probability 1 and (3) means the probability of an event is just the sum of the probabilities of  outcomes that make up that event.
 
@@ -58,7 +58,7 @@ Key <u>set theory</u> ideas to know
 - [ ] empty set $\emptyset$
 
 
-Notes: 
+Comments: 
 
 The first six ideas create a new event out of one or more events (think addition, subtraction, etc). Subset,  mutually exclusive and Venn diagrams tells us relational information about events (think less than, etc). The empty set is a set that has no outcomes (think zero).
 
@@ -68,7 +68,7 @@ Key <u>probability properties</u> to know
 - [ ] General addition rule (events do not need to be mutually exclusive)
 - [ ] Complement rule
 
-Notes:
+Comments:
 
 The addition rule properties are used to find the probability of a *union* of two or more events. When events are mutually exclusive, we just add the individual event probabilities. Make sure that you assess whether events are mutually exclusive before simply adding their probabilities. 
 
@@ -84,11 +84,48 @@ $$
 
 ## Day 2 {.unnumbered}
 
-- What to read:
+- What to read: Read sections 1.5 and 1.6
 
-- Learning goals:
+- Learning objectives: These sections will help you
+  - use the multiplication principle to count the number of outcomes in a sample space or event
+  - compute event probabilities using counting when outcomes are equally likely
+  - define and count permutations
 
 - Reading quiz: quiz 1
 
+### Section 1.5
+
+Key idea to know:
+
+- [ ] equally like outcomes 
+
+Comments:
+
+Our definition of the probability function Section 1.3 means that the probability of any event $A$ is equal to the number of outcomes in $A$ divided by the total number of outcomes when all outcomes are equally likely. 
+
+
+### Section 1.6
+
+Key ideas to know:
+
+- [ ] multiplication principle 
+- [ ] permutation
+- [ ] counting the number of permutations
+- [ ] sampling with vs without replacement 
+
+Comments: 
 
 ## Day 3 {.unnumbered}
+
+- What to read: Read sections 1.7 and 1.9
+
+
+- Learning objectives: These sections will help you
+  - define and count combinations using the binomial coefficient
+  - use the binomial coefficient to count permutations of two types of objects
+  - distinguish between a permutation and a combination 
+
+- Reading quiz: quiz 2
+
+
+

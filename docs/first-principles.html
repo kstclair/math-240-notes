@@ -202,7 +202,11 @@ window.Quarto = {
   <li><a href="#section-1.2-1.3" id="toc-section-1.2-1.3" class="nav-link" data-scroll-target="#section-1.2-1.3">Section 1.2-1.3</a></li>
   <li><a href="#section-1.4-1.8" id="toc-section-1.4-1.8" class="nav-link" data-scroll-target="#section-1.4-1.8">Section 1.4 + 1.8</a></li>
   </ul></li>
-  <li><a href="#day-2" id="toc-day-2" class="nav-link" data-scroll-target="#day-2">Day 2</a></li>
+  <li><a href="#day-2" id="toc-day-2" class="nav-link" data-scroll-target="#day-2">Day 2</a>
+  <ul class="collapse">
+  <li><a href="#section-1.5" id="toc-section-1.5" class="nav-link" data-scroll-target="#section-1.5"><span class="header-section-number">1.0.1</span> Section 1.5</a></li>
+  <li><a href="#section-1.6" id="toc-section-1.6" class="nav-link" data-scroll-target="#section-1.6"><span class="header-section-number">1.0.2</span> Section 1.6</a></li>
+  </ul></li>
   <li><a href="#day-3" id="toc-day-3" class="nav-link" data-scroll-target="#day-3">Day 3</a></li>
   </ul>
 </nav>
@@ -234,7 +238,7 @@ window.Quarto = {
 <h2 class="unnumbered anchored" data-anchor-id="day-1">Day 1</h2>
 <ul>
 <li><p>What to read: Read sections 1.1, 1.2, 1.3, 1.4, and 1.8 to see the generalization of property #3.</p></li>
-<li><p>Learning goals:</p>
+<li><p>Learning objectives: These sections will help you</p>
 <ul>
 <li>define basic probability and set theory terminology</li>
 <li>define fundamental properties of probability</li>
@@ -248,7 +252,7 @@ window.Quarto = {
 <li><label><input type="checkbox">Outcome <span class="math inline">\(\omega\)</span>: this can also be called an <u>element</u></label></li>
 <li><label><input type="checkbox">Event <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, …</label></li>
 </ul>
-<p>Notes:</p>
+<p>Comments:</p>
 <p>The sample space for a random experiment is the list of all possible outcomes. To define a sample space, start by thinking about how to define a couple individual outcomes and then generalize this to all outcomes. If there are a large or infinite number of outcomes, then you can use a “…” to show that a pattern will continue (like Examples 1.3 and 1.4).</p>
 <p>There may not be a unique way to define a sample space and outcomes for a random experiment. For example, one may chose to define the sample space for Example 1.3 as just the number of votes for Yolanda <span class="math display">\[\Omega = \{ 0, 1, 2, \dotsc, 999, 1000\}\]</span>. But all the outcomes in a sample space must define unique possibilities for a random experiment (i.e.&nbsp;they are mutually exclusive, section 1.4).</p>
 <p>“Complex” random experiments are often composed of simpler experiments. Example 1.2 is an example of this as we define one outcome for two dice rolls as the joint outcome of two individual die rolls. Similar for the sample space for three coin flips. In scenarios where the individual simpler experiments have equally likely outcomes, the outcomes in the more complex sample space (e.g.&nbsp;two dice rolls, three coin flips) are also equally likely outcomes.</p>
@@ -260,7 +264,7 @@ window.Quarto = {
 <li><label><input type="checkbox">relative frequency interpretation of probability</label></li>
 <li><label><input type="checkbox">probability function and its essential properties</label></li>
 </ul>
-<p>Notes:</p>
+<p>Comments:</p>
 <p>Make sure you can put the probability function properties into words: (1) means probabilities can’t be negative, (2) means something in the sample space has to happen with probability 1 and (3) means the probability of an event is just the sum of the probabilities of outcomes that make up that event.</p>
 </section>
 <section id="section-1.4-1.8" class="level3 unnumbered">
@@ -278,7 +282,7 @@ window.Quarto = {
 <li><label><input type="checkbox">Venn diagram</label></li>
 <li><label><input type="checkbox">empty set <span class="math inline">\(\emptyset\)</span></label></li>
 </ul>
-<p>Notes:</p>
+<p>Comments:</p>
 <p>The first six ideas create a new event out of one or more events (think addition, subtraction, etc). Subset, mutually exclusive and Venn diagrams tells us relational information about events (think less than, etc). The empty set is a set that has no outcomes (think zero).</p>
 <p>Key <u>probability properties</u> to know</p>
 <ul class="task-list">
@@ -286,7 +290,7 @@ window.Quarto = {
 <li><label><input type="checkbox">General addition rule (events do not need to be mutually exclusive)</label></li>
 <li><label><input type="checkbox">Complement rule</label></li>
 </ul>
-<p>Notes:</p>
+<p>Comments:</p>
 <p>The addition rule properties are used to find the probability of a <em>union</em> of two or more events. When events are mutually exclusive, we just add the individual event probabilities. Make sure that you assess whether events are mutually exclusive before simply adding their probabilities.</p>
 <p>When events are not mutually exclusive, you start by adding event probabilities but then you need to subtract out the probability of the overlap (intersection) between events. The inclusion/exclusion rule is an extension of property (3) (eq. 1.3).</p>
 <p>The complement rule along with the addition rule is useful for computing the probability of neither <span class="math inline">\(A\)</span> nor <span class="math inline">\(B\)</span>: <span class="math display">\[
@@ -297,13 +301,48 @@ P(A^c B^c) = 1 - P(A \cap B)
 <section id="day-2" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="day-2">Day 2</h2>
 <ul>
-<li><p>What to read:</p></li>
-<li><p>Learning goals:</p></li>
+<li><p>What to read: Read sections 1.5 and 1.6</p></li>
+<li><p>Learning objectives: These sections will help you</p>
+<ul>
+<li>use the multiplication principle to count the number of outcomes in a sample space or event</li>
+<li>compute event probabilities using counting when outcomes are equally likely</li>
+<li>define and count permutations</li>
+</ul></li>
 <li><p>Reading quiz: quiz 1</p></li>
 </ul>
+<section id="section-1.5" class="level3" data-number="1.0.1">
+<h3 data-number="1.0.1" class="anchored" data-anchor-id="section-1.5"><span class="header-section-number">1.0.1</span> Section 1.5</h3>
+<p>Key idea to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">equally like outcomes</label></li>
+</ul>
+<p>Comments:</p>
+<p>Our definition of the probability function Section 1.3 means that the probability of any event <span class="math inline">\(A\)</span> is equal to the number of outcomes in <span class="math inline">\(A\)</span> divided by the total number of outcomes when all outcomes are equally likely.</p>
+</section>
+<section id="section-1.6" class="level3" data-number="1.0.2">
+<h3 data-number="1.0.2" class="anchored" data-anchor-id="section-1.6"><span class="header-section-number">1.0.2</span> Section 1.6</h3>
+<p>Key ideas to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">multiplication principle</label></li>
+<li><label><input type="checkbox">permutation</label></li>
+<li><label><input type="checkbox">counting the number of permutations</label></li>
+<li><label><input type="checkbox">sampling with vs without replacement</label></li>
+</ul>
+<p>Comments:</p>
+</section>
 </section>
 <section id="day-3" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="day-3">Day 3</h2>
+<ul>
+<li><p>What to read: Read sections 1.7 and 1.9</p></li>
+<li><p>Learning objectives: These sections will help you</p>
+<ul>
+<li>define and count combinations using the binomial coefficient</li>
+<li>use the binomial coefficient to count permutations of two types of objects</li>
+<li>distinguish between a permutation and a combination</li>
+</ul></li>
+<li><p>Reading quiz: quiz 2</p></li>
+</ul>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
