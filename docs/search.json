@@ -54,7 +54,7 @@
     "href": "thinking-conditionally.html",
     "title": "2  Thinking conditionally",
     "section": "",
-    "text": "Chapter 2 of Wagaman (2021) covers conditional probabilities and the concept of independence.\nMake sure to review Chapter 1 before this chapter and review our week 2 schedule.\n\n\n\n\nWagaman, & Dobrow, A. S. 2021. Probability: With Applications and r. 2nd ed. Wiley.",
+    "text": "Day 4",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Thinking conditionally</span>"
     ]
@@ -67,6 +67,36 @@
     "text": "Wagaman, & Dobrow, A. S. 2021. Probability: With Applications\nand r. 2nd ed. Wiley.",
     "crumbs": [
       "References"
+    ]
+  },
+  {
+    "objectID": "thinking-conditionally.html#day-4",
+    "href": "thinking-conditionally.html#day-4",
+    "title": "2  Thinking conditionally",
+    "section": "",
+    "text": "What to read: Read sections 2.1, 2.2, 2.3\nLearning objectives: These sections will help you\n\nhow to conceptualize and compute a conditional probability\ngeneral multiplication rule to compute the probabilities of intersections\nuse tree diagrams to organize conditional information and compute probabilities\n\n\n\nSection 2.1 and 2.2\nKey terminology to know:\n\nconditional probability function and its essential properties\n\nComments:\nDon’t get bogged down in the notation choice used to define a conditional probability, \\(P(A \\mid B)\\). The big idea is that to compute a conditional probability we compute the ratio of the intersection probability (chance that both events occur) relative to the probability of the event we are conditioning on (ie the event that has occurred).\nDon’t worry about the simulation code in example 2.3.\nThe conceptual idea in 2.2 is most important, that a conditional probability function \\(P( \\cdot \\mid B)\\) should have the same properties as an unconditional probability \\(P(\\cdot)\\). The only difference is that the sample space for the conditional probability is restricted to only outcomes that agree with the conditional information.\n\n\n2.0.1 Section 2.3\nKey terminology to know:\n\ngeneral multiplication rule for two or more events\ntree diagram\n\nComments:\nTree diagrams are a useful visual tool for organizing information that is conditional or sequential in nature. Venn diagrams are not useful for organizing such information.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Thinking conditionally</span>"
+    ]
+  },
+  {
+    "objectID": "thinking-conditionally.html#day-5",
+    "href": "thinking-conditionally.html#day-5",
+    "title": "2  Thinking conditionally",
+    "section": "Day 5",
+    "text": "Day 5\n\nWhat to read: Read sections 2.4 and 2.5\nLearning objectives: These sections will help you\n\nuse the law of total probability to compute an unconditional probability from conditional information\nuse Bayes rule to compute a “flipped/inverted” conditional probability\n\n\n\nSection 2.4\nKey terminology to know:\n\nsample space partition\nlaw of total probability (LoTP)\n\nComments:\nRecognize that the LoTP uses both the multiplication rule (to compute intersections) and the addition rule for mutually exclusive events.\n\n\nSection 2.5\nKey terminology to know:\n\nBayes formula/rule\ntree diagram\n\nComments:\nBayes formula is useful when we want to flip the direction of a conditional probability, eg. we want \\(P(B \\mid A)\\) but we are given \\(P(A \\mid B)\\) along with unconditional info about \\(B\\). But the formula didn’t appear from nothing, it is based on the original definition of a conditional probability from 2.1: the numerator is the multiplication rule and the denominator is the LoTP.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Thinking conditionally</span>"
+    ]
+  },
+  {
+    "objectID": "thinking-conditionally.html#day-6",
+    "href": "thinking-conditionally.html#day-6",
+    "title": "2  Thinking conditionally",
+    "section": "Day 6",
+    "text": "Day 6\n\nWhat to read: Read sections 2.6\nLearning objectives: These sections will help you\n\ndetermine whether events are independent or dependent\ncompute intersection probabilities if events are independent\n\n\n\nSection 2.6\nKey terminology to know:\n\nindependent and dependent events\nmutual independence\nmultiplication rule for independent events\n\nComments:\nIndependence is proved (or disproved) by thinking conditionally: if the occurrence of \\(B\\) doesn’t affect the probability of \\(A\\), then these events are independent.\nIf we know events are independent, then we can multiply unconditional probabilities to compute intersections. A common error is that I see is when the multiplication rule for independent events is used without first checking the essential assumption of independence.\nDon’t worry about \\(A\\) before \\(B\\) results (ie they are interesting but not a general rule you need to know).\n\n\n\n\nWagaman, & Dobrow, A. S. 2021. Probability: With Applications and r. 2nd ed. Wiley.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Thinking conditionally</span>"
     ]
   }
 ]

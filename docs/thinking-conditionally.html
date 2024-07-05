@@ -89,6 +89,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -163,7 +192,26 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#day-4" id="toc-day-4" class="nav-link active" data-scroll-target="#day-4">Day 4</a>
+  <ul class="collapse">
+  <li><a href="#section-2.1-and-2.2" id="toc-section-2.1-and-2.2" class="nav-link" data-scroll-target="#section-2.1-and-2.2">Section 2.1 and 2.2</a></li>
+  <li><a href="#section-2.3" id="toc-section-2.3" class="nav-link" data-scroll-target="#section-2.3"><span class="header-section-number">2.0.1</span> Section 2.3</a></li>
+  </ul></li>
+  <li><a href="#day-5" id="toc-day-5" class="nav-link" data-scroll-target="#day-5">Day 5</a>
+  <ul class="collapse">
+  <li><a href="#section-2.4" id="toc-section-2.4" class="nav-link" data-scroll-target="#section-2.4">Section 2.4</a></li>
+  <li><a href="#section-2.5" id="toc-section-2.5" class="nav-link" data-scroll-target="#section-2.5">Section 2.5</a></li>
+  </ul></li>
+  <li><a href="#day-6" id="toc-day-6" class="nav-link" data-scroll-target="#day-6">Day 6</a>
+  <ul class="collapse">
+  <li><a href="#section-2.6" id="toc-section-2.6" class="nav-link" data-scroll-target="#section-2.6">Section 2.6</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -189,6 +237,92 @@ div.csl-indent {
 
 <p>Chapter 2 of <span class="citation" data-cites="dobrow">Wagaman (<a href="references.html#ref-dobrow" role="doc-biblioref">2021</a>)</span> covers conditional probabilities and the concept of independence.</p>
 <p>Make sure to review <a href="first-principles.html" class="quarto-xref"><span>Chapter 1</span></a> before this chapter and review our <a href="https://docs.google.com/spreadsheets/d/1e_yVbPgnfymWyik8cLP_5qgLQfekGSh_jvFxE7u53P0/edit?usp=sharing">week 2 schedule</a>.</p>
+<section id="day-4" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="day-4">Day 4</h2>
+<ul>
+<li><p>What to read: Read sections 2.1, 2.2, 2.3</p></li>
+<li><p>Learning objectives: These sections will help you</p>
+<ul>
+<li>how to conceptualize and compute a conditional probability</li>
+<li>general multiplication rule to compute the probabilities of intersections</li>
+<li>use tree diagrams to organize conditional information and compute probabilities</li>
+</ul></li>
+</ul>
+<section id="section-2.1-and-2.2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-2.1-and-2.2">Section 2.1 and 2.2</h3>
+<p>Key terminology to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">conditional probability function and its essential properties</label></li>
+</ul>
+<p>Comments:</p>
+<p>Don’t get bogged down in the notation choice used to define a conditional probability, <span class="math inline">\(P(A \mid B)\)</span>. The big idea is that to compute a conditional probability we compute the ratio of the intersection probability (chance that both events occur) relative to the probability of the event we are conditioning on (ie the event that has occurred).</p>
+<p>Don’t worry about the simulation code in example 2.3.</p>
+<p>The conceptual idea in 2.2 is most important, that a conditional probability function <span class="math inline">\(P( \cdot \mid B)\)</span> should have the same properties as an unconditional probability <span class="math inline">\(P(\cdot)\)</span>. The only difference is that the sample space for the conditional probability is restricted to only outcomes that agree with the conditional information.</p>
+</section>
+<section id="section-2.3" class="level3" data-number="2.0.1">
+<h3 data-number="2.0.1" class="anchored" data-anchor-id="section-2.3"><span class="header-section-number">2.0.1</span> Section 2.3</h3>
+<p>Key terminology to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">general multiplication rule for two or more events</label></li>
+<li><label><input type="checkbox">tree diagram</label></li>
+</ul>
+<p>Comments:</p>
+<p>Tree diagrams are a useful visual tool for organizing information that is conditional or sequential in nature. Venn diagrams are not useful for organizing such information.</p>
+</section>
+</section>
+<section id="day-5" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="day-5">Day 5</h2>
+<ul>
+<li><p>What to read: Read sections 2.4 and 2.5</p></li>
+<li><p>Learning objectives: These sections will help you</p>
+<ul>
+<li>use the law of total probability to compute an unconditional probability from conditional information</li>
+<li>use Bayes rule to compute a “flipped/inverted” conditional probability</li>
+</ul></li>
+</ul>
+<section id="section-2.4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-2.4">Section 2.4</h3>
+<p>Key terminology to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">sample space partition</label></li>
+<li><label><input type="checkbox">law of total probability (LoTP)</label></li>
+</ul>
+<p>Comments:</p>
+<p>Recognize that the LoTP uses both the multiplication rule (to compute intersections) and the addition rule for mutually exclusive events.</p>
+</section>
+<section id="section-2.5" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-2.5">Section 2.5</h3>
+<p>Key terminology to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Bayes formula/rule</label></li>
+<li><label><input type="checkbox">tree diagram</label></li>
+</ul>
+<p>Comments:</p>
+<p>Bayes formula is useful when we want to flip the direction of a conditional probability, eg. we want <span class="math inline">\(P(B \mid A)\)</span> but we are given <span class="math inline">\(P(A \mid B)\)</span> along with unconditional info about <span class="math inline">\(B\)</span>. But the formula didn’t appear from nothing, it is based on the original definition of a conditional probability from 2.1: the numerator is the multiplication rule and the denominator is the LoTP.</p>
+</section>
+</section>
+<section id="day-6" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="day-6">Day 6</h2>
+<ul>
+<li><p>What to read: Read sections 2.6</p></li>
+<li><p>Learning objectives: These sections will help you</p>
+<ul>
+<li>determine whether events are independent or dependent</li>
+<li>compute intersection probabilities <em>if</em> events are independent</li>
+</ul></li>
+</ul>
+<section id="section-2.6" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-2.6">Section 2.6</h3>
+<p>Key terminology to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">independent and dependent events</label></li>
+<li><label><input type="checkbox">mutual independence</label></li>
+<li><label><input type="checkbox">multiplication rule for independent events</label></li>
+</ul>
+<p>Comments:</p>
+<p>Independence is proved (or disproved) by thinking conditionally: if the occurrence of <span class="math inline">\(B\)</span> doesn’t affect the probability of <span class="math inline">\(A\)</span>, then these events are independent.</p>
+<p>If we know events are independent, then we can multiply unconditional probabilities to compute intersections. A common error is that I see is when the multiplication rule for independent events is used without first checking the essential assumption of independence.</p>
+<p>Don’t worry about <span class="math inline">\(A\)</span> before <span class="math inline">\(B\)</span> results (ie they are interesting but not a general rule you need to know).</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
@@ -196,6 +330,8 @@ div.csl-indent {
 Wagaman, &amp; Dobrow, A. S. 2021. <em>Probability: With Applications and r</em>. 2nd ed. Wiley.
 </div>
 </div>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

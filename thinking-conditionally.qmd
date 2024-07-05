@@ -3,3 +3,101 @@
 Chapter 2 of @dobrow covers conditional probabilities and the concept of independence. 
 
 Make sure to review @sec-first-p before this chapter and review our [week 2 schedule](https://docs.google.com/spreadsheets/d/1e_yVbPgnfymWyik8cLP_5qgLQfekGSh_jvFxE7u53P0/edit?usp=sharing).
+
+
+
+## Day 4 {.unnumbered}
+
+- What to read: Read sections 2.1, 2.2, 2.3
+
+- Learning objectives: These sections will help you
+  - how to conceptualize and compute a conditional probability
+  - general multiplication rule to compute the probabilities of intersections
+  - use tree diagrams to organize conditional information and compute probabilities
+  
+
+### Section 2.1 and 2.2 {.unnumbered}
+
+Key terminology to know:
+
+  - [ ] conditional probability function and its essential properties
+
+Comments: 
+
+Don't get bogged down in the notation choice used to define a conditional probability, $P(A \mid B)$. The big idea is that to compute a conditional probability we compute the ratio of the intersection probability (chance that both events occur) relative to the probability of the event we are conditioning on (ie the event that has occurred). 
+
+Don't worry about the simulation code in example 2.3.
+
+The conceptual idea in 2.2 is most important, that a conditional probability function $P( \cdot \mid B)$ should have the same properties as an unconditional probability $P(\cdot)$. The only difference is that the sample space for the conditional probability is restricted to only outcomes that agree with the conditional information. 
+
+
+### Section 2.3
+
+Key terminology to know:
+
+  - [ ] general multiplication rule for two or more events
+  - [ ] tree diagram
+
+
+Comments: 
+
+Tree diagrams are a useful visual tool for organizing information that is conditional or sequential in nature. Venn diagrams are not useful for organizing such information. 
+
+
+## Day 5 {.unnumbered}
+
+- What to read: Read sections  2.4 and 2.5
+
+- Learning objectives: These sections will help you
+  - use the law of total probability to compute an unconditional probability from conditional information
+  - use Bayes rule to compute a "flipped/inverted" conditional probability
+  
+
+### Section 2.4 {.unnumbered}
+
+Key terminology to know:
+
+  - [ ] sample space partition
+  - [ ] law of total probability (LoTP)
+
+Comments: 
+
+Recognize that the LoTP uses both the multiplication rule (to compute intersections) and the addition rule for mutually exclusive events. 
+
+
+### Section 2.5 {.unnumbered}
+
+Key terminology to know:
+
+  - [ ] Bayes formula/rule
+  - [ ] tree diagram
+
+Comments: 
+
+Bayes formula is useful when we want to flip the direction of a conditional probability, eg. we want $P(B \mid A)$ but we are given $P(A \mid B)$ along with unconditional info about $B$. But the formula didn't appear from nothing, it is based on the original definition of a conditional probability from 2.1: the numerator is the multiplication rule and the denominator is the LoTP. 
+
+
+
+## Day 6 {.unnumbered}
+
+- What to read: Read sections  2.6
+
+- Learning objectives: These sections will help you
+  - determine whether events are independent or dependent
+  - compute intersection probabilities *if* events are independent
+
+### Section 2.6 {.unnumbered}
+
+Key terminology to know:
+
+  - [ ] independent and dependent events
+  - [ ] mutual independence
+  - [ ] multiplication rule for independent events
+
+Comments: 
+
+Independence is proved (or disproved) by thinking conditionally: if the occurrence of $B$ doesn't affect the probability of $A$, then these events are independent. 
+
+If we know events are independent, then we can multiply unconditional probabilities to compute intersections. A common error is that I see is when the multiplication rule for independent events is used without first checking the essential assumption of independence. 
+
+Don't worry about $A$ before $B$ results (ie they are interesting but not a general rule you need to know).
