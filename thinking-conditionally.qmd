@@ -31,7 +31,7 @@ Don't worry about the simulation code in example 2.3.
 The conceptual idea in 2.2 is most important, that a conditional probability function $P( \cdot \mid B)$ should have the same properties as an unconditional probability $P(\cdot)$. The only difference is that the sample space for the conditional probability is restricted to only outcomes that agree with the conditional information. 
 
 
-### Section 2.3
+### Section 2.3 {.unnumbered}
 
 Key terminology to know:
 
