@@ -93,7 +93,7 @@ $$
 
 - Reading quiz: quiz 1
 
-### Section 1.5
+### Section 1.5 {.unnumbered}
 
 Key idea to know:
 
@@ -104,28 +104,57 @@ Comments:
 Our definition of the probability function Section 1.3 means that the probability of any event $A$ is equal to the number of outcomes in $A$ divided by the total number of outcomes when all outcomes are equally likely. 
 
 
-### Section 1.6
+### Section 1.6 {.unnumbered}
 
 Key ideas to know:
 
 - [ ] multiplication principle 
 - [ ] permutation
-- [ ] counting the number of permutations
+- [ ] counting the number of permutations of $n$ unique/distinct objects
+- [ ] counting the number of permutations of size $k$ from $n$ unique/distinct objects
 - [ ] sampling with vs without replacement 
 
 Comments: 
 
+The outcomes counted by the multiplication principle describe a specific ordering, or arrangement, of a random experiment. For example 1.13, the outcomes in the sample space are found by fixing the exam (eg exams 1-4) and randomly assigning one of five grades to each exam. There are $5\times5\times5\times5 = 5^4$ such outcomes in the sample space. The complement of the event of interest is getting no A's and we must describe outcomes in this set the same way that we described them in the sample space (eg assigning one of four non-A grades to each exam). There are $4^4$ such ways to assign a non-A grade to each exam. 
+
+Permutations are always ordered arrangements of unique/distinct objects or individual outcomes. 
+
+Example 1.14 shows a common technique in counting problems. One outcome describes a specific (unique) arrangement of 15 books (eg positions 1-5 are top shelf, 6-10 middle, and 11-15 bottom). There are 15! such arrangements in the sample space. The event of interest, all math books on the bottom, uses both permutation counting and the multiplication principle. Permutations counts the number of ways to arrange math books (5!) and novels (10!). Each unique arrangement of math books can be combined with each unique arrangement of novels. Hence the multiplication principle is used to count the number of ways to get 10 novels on the top and middle shelves and 5 math books on the bottom: $10! \times 5!$. 
+
+One twist to problem 1.14: suppose the event of interest was simply that the 5 math books were on the same shelf (ie they could be on the top, middle or bottom shelves). Each of these three options, $A_{top}, A_{middle}, A_{bottom}$ for math book placement has $10! \times 5!$ ways to arrange the books and each of these shelf positions $A_{i}$ is mutually exclusive. Hence the probability that the 5 math books are on the same shelf is found using the addition rule for mutually exclusive events:
+$$
+P(A_{top} \cup A_{middle} \cup A_{bottom}) = P(A_{top}) + P(A_{middle}) +  P(A_{bottom}) = 3 \times \dfrac{10! \times 5!}{15!}
+$$
+
+
 ## Day 3 {.unnumbered}
 
-- What to read: Read sections 1.7 and 1.9
+- What to read: Read sections 1.7
 
 
 - Learning objectives: These sections will help you
   - define and count combinations using the binomial coefficient
-  - use the binomial coefficient to count permutations of two types of objects
+  - use the binomial coefficient to count permutations of two types of objects (a binary sequence)
   - distinguish between a permutation and a combination 
 
 - Reading quiz: quiz 2
 
 
+### Section 1.7 {.unnumbered}
 
+Key ideas to know:
+
+- [ ] combination
+- [ ] correspondence between a binary sequence/list and an unordered subset/sample of size $k$ from $n$ unique objects
+- [ ] binomial coefficient
+
+
+Comments: 
+
+We will be considering counting problems where outcomes are either *ordered* and *unordered*. Make sure that your strategy for solving a problem is consistent when counting sample space and event outcomes (eg don't use an ordered strategy for one and an unordered strategy for the other). 
+
+
+While you need to describe outcomes in an event and sample space of interest in the same manner, you don't need to use the same counting method to count outcomes in each. e.g. Example 1.26 uses the multiplication principle to count all possible ways to flip a coin 20 times while the binomial coefficient is used to count how many of these outcomes contain example 10 H and 10 T. 
+
+The binomial coefficient, which counts both the number of unordered subsets of unique objects and the number of binary sequences, can be generlized to a multinomial coefficient. Example 1.15(ii) involves picking 4 subsets of 13 cards from a deck of 52: $\dfrac{52!}{13!13!13!13!}$. Example 1.27(ii) also uses a multinomial coefficient in the numerator: $\dfrac{20!}{4!5!3!8!}$ counts the number of ways to arrange 4 As, 5 Gs, 3 Ts, and 8 Cs. 
