@@ -157,4 +157,6 @@ We will be considering counting problems where outcomes are either *ordered* and
 
 While you need to describe outcomes in an event and sample space of interest in the same manner, you don't need to use the same counting method to count outcomes in each. e.g. Example 1.26 uses the multiplication principle to count all possible ways to flip a coin 20 times while the binomial coefficient is used to count how many of these outcomes contain example 10 H and 10 T. 
 
-The binomial coefficient, which counts both the number of unordered subsets of unique objects and the number of binary sequences, can be generlized to a multinomial coefficient. Example 1.15(ii) involves picking 4 subsets of 13 cards from a deck of 52: $\dfrac{52!}{13!13!13!13!}$. Example 1.27(ii) also uses a multinomial coefficient in the numerator: $\dfrac{20!}{4!5!3!8!}$ counts the number of ways to arrange 4 As, 5 Gs, 3 Ts, and 8 Cs. 
+The binomial coefficient, which counts both the number of unordered subsets of unique objects and the number of binary sequences, can be generlized to a multinomial coefficient. Example 1.15(ii) involves picking 4 subsets of 13 cards from a deck of 52: $\frac{52!}{13!13!13!13!}$. Example 1.27(ii) also uses a multinomial coefficient in the numerator: $\frac{20!}{4!5!3!8!}$ counts the number of ways to arrange 4 As, 5 Gs, 3 Ts, and 8 Cs. 
+
+Don't worry about the binomial theorem (and its proof) for now. 
