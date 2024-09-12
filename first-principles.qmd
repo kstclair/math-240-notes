@@ -10,6 +10,7 @@ First principles cover sections in chapter 1 of @dobrow. Make sure to review our
   - define basic probability and set theory terminology
   - define fundamental properties of probability
   
+  
 
 ### Section 1.1 {.unnumbered}
 
@@ -91,7 +92,7 @@ $$
   - compute event probabilities using counting when outcomes are equally likely
   - define and count permutations
 
-- Reading quiz: quiz 1
+- After reading, take reading [quiz 1](https://forms.gle/JeRauvsZLp4FqnUK6)
 
 ### Section 1.5 {.unnumbered}
 
@@ -138,7 +139,7 @@ $$
   - use the binomial coefficient to count permutations of two types of objects (a binary sequence)
   - distinguish between a permutation and a combination 
 
-- Reading quiz: quiz 2
+- After reading, take reading [quiz 2](https://forms.gle/D5hXDdpzE5mcBLkaA)
 
 
 ### Section 1.7 {.unnumbered}

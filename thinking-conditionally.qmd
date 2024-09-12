@@ -15,6 +15,9 @@ Make sure to review @sec-first-p before this chapter and review our [week 2 sche
   - general multiplication rule to compute the probabilities of intersections
   - use tree diagrams to organize conditional information and compute probabilities
   
+- After reading, take reading [quiz 3](https://forms.gle/Gg8ZU3keRsw62JC38)
+
+  
 
 ### Section 2.1 and 2.2 {.unnumbered}
 
@@ -52,6 +55,8 @@ Tree diagrams are a useful visual tool for organizing information that is condit
   - use the law of total probability to compute an unconditional probability from conditional information
   - use Bayes rule to compute a "flipped/inverted" conditional probability
   
+- After reading, take reading [quiz 4](https://forms.gle/qqLNKnNCf21jkaL96)
+
 
 ### Section 2.4 {.unnumbered}
 
@@ -85,6 +90,8 @@ Bayes formula is useful when we want to flip the direction of a conditional prob
 - Learning objectives: These sections will help you
   - determine whether events are independent or dependent
   - compute intersection probabilities *if* events are independent
+
+- After reading, take reading [quiz 5](https://forms.gle/oXD68yZtkMh7Lxv3A)
 
 ### Section 2.6 {.unnumbered}
 
