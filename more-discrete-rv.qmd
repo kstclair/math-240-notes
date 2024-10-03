@@ -1,0 +1,125 @@
+# More with discrete random variables  {#sec-more-disc-rv}
+
+Chapters 4 and 5 of @dobrow cover more properties and types of discrete random variables. 
+
+Make sure to review @sec-intro-disc-rv before these chapters and review our [week 4 schedule](https://docs.google.com/spreadsheets/d/1DcSJuVX8xt5VTa5RV1PMZRaRvEhlWqvQaN7IacuW-ww/edit?usp=sharing).
+
+
+
+## Day 10 {.unnumbered}
+
+- What to read: Read sections 4.1, 4.2, 4.4, 4.5 but review the comments below on what to skim/skip.
+
+- Learning objectives: These sections will help you
+  - conceptualize and compute the expected value of a discrete random variable and a function of a discrete random variable
+  -  conceptualize and compute the expected value of a linear function of **two or more** discrete random variable 
+  -  conceptualize and compute the expected value of a product of **two independent** discrete random variable 
+  
+- After reading, take reading [quiz 8](https://forms.gle/Hguw2WYckTfeXiE89)
+
+  
+
+### Section 4.1 and 4.2 {.unnumbered}
+
+Key terminology to know:
+
+  - [ ] Expectation, or expected value, of a random variable, denoted $E(X)$ where $X$ is the random variable
+  - [ ] A function of a random variable, often denoted $g(X)$, and its expectation
+  - [ ] A *linear* function of a random variable, denoted $aX+b$, and its expectation
+
+Comments: 
+
+- We will skip 4.3 for now and we'll formally cover joint pmf in a couple weeks.
+- Examples 4.3, 4.4, 4.8 use Series facts shown in Appendix C. Be comfortable using these facts to compute expectations. 
+- The expectation of a linear function of a random variable is an *extremely* useful fact so make sure you spend some time absorbing it. For example, suppose $X$ counts the number of red lights in 5 days (ie it is Binomial). We might care more about $X/5$, which is the *proportion* of read lights in a week. If we know $E(X)$, the average *number* of red lights in a week, then we can easily compute $E(X/5)$ using this rule. 
+- The R code shows simulation examples that can be used to approximate an expected value. We won't be doing simulations this term but feel free to run the code if you want to learn how to do this for selected examples. 
+
+
+
+
+### Section 4.4 and 4.5 {.unnumbered}
+
+Key terminology to know:
+
+  - [ ] Expectation of the product of two independent random variables
+ - [ ] Expectation of a linear combination of two or more random variables
+ 
+ 
+Comments: 
+
+- For section 4.4, focus on the expectation rules for indep. RV in Equations 4.4 and 4.5. We will formally define and work with joint pmf later this term. 
+- Skim Section 4.4.1. We will prove that sums of independent Poisson RVs is Poisson using a different method. 
+- For section 4.5, focus on the linearity result at the start of the section but don't worry about the proof (for now)
+- The expectation of a linear function of  *two or more* random variable is an *extremely* useful fact so make sure you spend some time absorbing it.
+
+
+
+## Day 11 {.unnumbered}
+
+- What to read: Read sections  4.6, 5.2
+
+- Learning objectives: These sections will help you
+  - conceptualize and compute the variance and standard deviation of a discrete random variable 
+  - compute the variance and standard deviation of a linear function of a discrete random variable
+  - compute the variance and standard deviation of a linear function of two independent discrete random variables
+  - understand how moments of a random variable can be computed via the moment generating function
+  - understand how to use moment generating functions to determine the distribution of a function of one or more random variables
+  
+- After reading, take reading [quiz 9](https://forms.gle/oQ9ZMzGcAznhwoZa6)
+
+  
+
+### Section 4.6 {.unnumbered}
+
+Key terminology to know:
+
+  - [ ] variance
+  - [ ] standard deviation
+
+Comments: 
+
+- Equation 4.10 will be the typical way we compute variance/standard deviation since it is less mathematically intensive to compute compared to the expected value used to define it.
+- Example 4.24 use Series facts shown in Appendix C. 
+
+
+### Section 5.2 {.unnumbered}
+
+Key terminology to know:
+
+  - [ ] the $k$th moments of a random variable
+  - [ ] moment generating function (mgf)
+
+Comments: 
+
+- We jump ahead a bit to cover moment generating functions (mgf) which can be used to find expectations of the form $E(X^k)$ (the $k$th moment). 
+- An *extremely* useful fact about mgf's is that they uniquely identify a random variable, eg if two random variables have the same mgf then they have the same distribution. This combined with the properties described on pages 195-6 make mgf's a very useful tool for determining the distribution of linear combinations of one or more random variables. 
+
+
+
+
+## Day 12 {.unnumbered}
+
+- What to read: Read sections 5.1, 5.3, 5.4
+
+- Learning objectives: These sections will help you
+  - get familiar with a few more common discrete RV types (geometric, negative binomial, and hypergeometric)
+  
+- After reading, take reading [quiz 10](https://forms.gle/BmZE2tNwiM2tcVmd8)
+
+  
+
+### Section 5.1 {.unnumbered}
+
+Key terminology to know:
+
+  - [ ] geometric RV (know shorthand notation, pmf and support set)
+  - [ ] memorylessness of the geometric distribution
+  - [ ] negative binomial RV (know shorthand notation, pmf and support set)
+  - [ ] hypergeometric RV (know shorthand notation, pmf and support set)
+
+Comments: 
+
+- skim 5.1.2
+- Take care to understand what the geometric and negative binomial random variables count. While the Binomial counts the number of "successes" in a fixed number of trials, the geometric/negative binomail fix the number of successes while the number of trials that it takes to get those successes is random. 
+- Some probability books or online sources define geometric and negative binomial random variables as the number *failures* until some fixed number of successes. Eg. if $X$ is the number of trials until the 1st success, then $Y = X-1$ is the number of failures until the 1st success. We will stick with the number of *trials* definition in this course. 
+- A hypergeometric random variable is similar in spirit as the binomial, but the hypergeometric counts the number of successes in a fixed sample size taken *without replacement* from a group of unique individuals. A binomial random variable is similar but it assumes with replacement, or independent sampling draw-to-draw. 

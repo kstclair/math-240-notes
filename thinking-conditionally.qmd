@@ -11,8 +11,8 @@ Make sure to review @sec-first-p before this chapter and review our [week 2 sche
 - What to read: Read sections 2.1, 2.2, 2.3
 
 - Learning objectives: These sections will help you
-  - how to conceptualize and compute a conditional probability
-  - general multiplication rule to compute the probabilities of intersections
+  - conceptualize and compute a conditional probability
+  - use the general multiplication rule to compute the probabilities of intersections
   - use tree diagrams to organize conditional information and compute probabilities
   
 - After reading, take reading [quiz 3](https://forms.gle/Gg8ZU3keRsw62JC38)
