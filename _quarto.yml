@@ -12,6 +12,7 @@ book:
     - first-principles.qmd
     - thinking-conditionally.qmd
     - intro-discrete-rv.qmd
+    - more-discrete-rv.qmd
     - references.qmd
 
 bibliography: references.bib
