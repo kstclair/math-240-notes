@@ -108,7 +108,7 @@ Comments:
 
   
 
-### Section 5.1 {.unnumbered}
+### Sections 5.1, 5.3, 5.4 {.unnumbered}
 
 Key terminology to know:
 

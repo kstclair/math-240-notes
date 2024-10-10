@@ -13,6 +13,7 @@ book:
     - thinking-conditionally.qmd
     - intro-discrete-rv.qmd
     - more-discrete-rv.qmd
+    - intro-continuous-rv.qmd
     - references.qmd
 
 bibliography: references.bib

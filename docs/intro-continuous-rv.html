@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>References – math-240-notes</title>
+<title>5&nbsp; Introduction to continuous random variables – math-240-notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,6 +24,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -49,7 +50,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro-continuous-rv.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./more-discrete-rv.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -87,6 +89,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -99,7 +130,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro-continuous-rv.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Introduction to continuous random variables</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -163,13 +194,13 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-continuous-rv.html" class="sidebar-item-text sidebar-link">
+  <a href="./intro-continuous-rv.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Introduction to continuous random variables</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -178,15 +209,37 @@ div.csl-indent {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#day-13" id="toc-day-13" class="nav-link active" data-scroll-target="#day-13">Day 13</a>
+  <ul class="collapse">
+  <li><a href="#section-6.1" id="toc-section-6.1" class="nav-link" data-scroll-target="#section-6.1">Section 6.1</a></li>
+  <li><a href="#section-6.2-and-7.1.3" id="toc-section-6.2-and-7.1.3" class="nav-link" data-scroll-target="#section-6.2-and-7.1.3">Section 6.2 and 7.1.3</a></li>
+  <li><a href="#section-6.4" id="toc-section-6.4" class="nav-link" data-scroll-target="#section-6.4">Section 6.4</a></li>
+  </ul></li>
+  <li><a href="#day-14" id="toc-day-14" class="nav-link" data-scroll-target="#day-14">Day 14</a>
+  <ul class="collapse">
+  <li><a href="#section-6.3" id="toc-section-6.3" class="nav-link" data-scroll-target="#section-6.3">Section 6.3</a></li>
+  <li><a href="#section-6.5-and-7.2" id="toc-section-6.5-and-7.2" class="nav-link" data-scroll-target="#section-6.5-and-7.2">Section 6.5 and 7.2</a></li>
+  <li><a href="#section-7.1" id="toc-section-7.1" class="nav-link" data-scroll-target="#section-7.1">Section 7.1</a></li>
+  <li><a href="#section-7.4" id="toc-section-7.4" class="nav-link" data-scroll-target="#section-7.4">Section 7.4</a></li>
+  </ul></li>
+  <li><a href="#day-15" id="toc-day-15" class="nav-link" data-scroll-target="#day-15">Day 15</a>
+  <ul class="collapse">
+  <li><a href="#section-8.1" id="toc-section-8.1" class="nav-link" data-scroll-target="#section-8.1">Section 8.1</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title"><span id="sec-intro-cont-rv" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Introduction to continuous random variables</span></span></h1>
 </div>
 
 
@@ -203,14 +256,158 @@ div.csl-indent {
 </header>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<p>Chapter 6 of <span class="citation" data-cites="dobrow">Wagaman (<a href="references.html#ref-dobrow" role="doc-biblioref">2021</a>)</span> introduces us to continuous random variables.</p>
+<p>Make sure to review our <a href="https://docs.google.com/spreadsheets/d/1p4s9FLap8CUB40UYAzdxpDi8-PkoHUceGq0dNUmfE9c/edit?usp=sharing">week 5 schedule</a>.</p>
+<section id="day-13" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="day-13">Day 13</h2>
+<ul>
+<li><p>What to read: Read intro to ch.&nbsp;6, sections 6.1, 6.2, 6.4, 7.1.3</p></li>
+<li><p>Learning objectives: These sections will help you</p>
+<ul>
+<li>understand what a continuous random variable is</li>
+<li>use a probability mass function (pdf) to compute probabilities for events involving a continuous RV</li>
+<li>use a cumulative distribution function (cdf) to compute probabilities for events involving a continuous RV</li>
+<li>understand how to get a pdf from a cdf and vice versa</li>
+<li>compute quantiles for a continuous distribution</li>
+<li>get familiar with a (continuous) uniform RV</li>
+</ul></li>
+<li><p>After reading, take reading <a href="https://forms.gle/gMDmvhPHPysXiPkK8">quiz 6</a></p></li>
+</ul>
+<section id="section-6.1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-6.1">Section 6.1</h3>
+<p>Key terminology to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">continuous random variable</label></li>
+<li><label><input type="checkbox">probability density function (pdf) of a continuous RV</label></li>
+</ul>
+<p>Comments:</p>
+<ul>
+<li>Pay particular attention to the comment box on page 230. I am very particular when asking for pdf (or cdf) functions, especially on exams. If you are asked to define a pdf/cdf <em>over the entire real ine</em>, then you must get both the support <span class="math inline">\(S\)</span> and “0 otherwise” parts correct.</li>
+<li>Yes, you will be integrating functions in this class! While I may ask you do to more involved calculations, eg integration by parts, on homework, I don’t ask these longer calculation-focused questions on exams. Often (but not always) on exams, I’ll ask you to appropriately “set-up” an integral but not actually complete the calculation.</li>
+<li>You can check integration calculations using technology, but you can’t let technology do all the work. See the AI/tech homework policy on the syllabus.</li>
+</ul>
+</section>
+<section id="section-6.2-and-7.1.3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-6.2-and-7.1.3">Section 6.2 and 7.1.3</h3>
+<p>Key terminology to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">cumulative distribution function (cdf) of a continuous RV</label></li>
+<li><label><input type="checkbox">quantile of a continuous RV</label></li>
+</ul>
+<p>Comments:</p>
+<ul>
+<li>Take some time to make sure you see how pdf’s and cdf’s are related for continuous random variables.</li>
+<li>Take a look at the cdf example for a discrete RV, but I find cdf most useful for continuous RV. It is essential that you can use/derive cdf for continuous RV, but not as important for discrete (in my class).</li>
+<li>In 7.1.3, I just want you to review the definition of a quantile and how it relates to a cdf (6.2). You can skim the examples in 7.1.3, but we will formally introduce the normal distribution on another day.</li>
+<li>I’ve seen quantile described either as a percentage or a proportion/probability. E.g. the 50th quantile or the 0.5 quantile. Your book defines it as the former, “50th”, but be comfortable with either description.</li>
+</ul>
+</section>
+<section id="section-6.4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-6.4">Section 6.4</h3>
+<p>Key terminology to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">uniform RV (know shorthand notation, basic properties)</label></li>
+</ul>
+<p>Comments:</p>
+<ul>
+<li>You can just read up to Expectation and Variance on page 240. Review these after day 14’s reading.</li>
+<li>Be comfortable computing probabilities for uniform RV using both a calculus approach and geometric approach. There are pros/cons to each, depending on the problem.</li>
+</ul>
+</section>
+</section>
+<section id="day-14" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="day-14">Day 14</h2>
+<ul>
+<li><p>What to read: Read sections 6.3, 6.5, 7.1, 7.2, 7.4</p></li>
+<li><p>Learning objectives: These sections will help you</p>
+<ul>
+<li>compute the expected value, variance and sd of a continuous RV</li>
+<li>review important properties of expected values and variance/sd</li>
+<li>get familiar with some common continous RV types (exponential, normal, gamma, beta)</li>
+</ul></li>
+<li><p>After reading, take reading <a href="https://forms.gle/gMDmvhPHPysXiPkK8">quiz 6</a></p></li>
+</ul>
+<section id="section-6.3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-6.3">Section 6.3</h3>
+<p>Key terminology to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">expected value of a continuous RV</label></li>
+<li><label><input type="checkbox">variance/sd of a continuous RV</label></li>
+</ul>
+<p>Comments:</p>
+<ul>
+<li>We’ll cover 6.6-6.8 later this term</li>
+</ul>
+</section>
+<section id="section-6.5-and-7.2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-6.5-and-7.2">Section 6.5 and 7.2</h3>
+<p>Key terminology to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">exponential RV (know shorthand notation, basic properties)</label></li>
+<li><label><input type="checkbox">gamma RV (know shorthand notation, basic properties)</label></li>
+<li><label><input type="checkbox">gamma function <span class="math inline">\(\Gamma\)</span></label></li>
+</ul>
+<p>Comments:</p>
+<ul>
+<li>Exponential and gamma are common models for “waiting times”, eg time until something happens.</li>
+<li>Make sure you recognize the exponential as a special case of the gamma</li>
+<li>We will cover the connection between these distributions and the Poisson distribution on another day</li>
+</ul>
+</section>
+<section id="section-7.1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-7.1">Section 7.1</h3>
+<p>Key terminology to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">normal RV (know shorthand notation, basic properties)</label></li>
+</ul>
+<p>Comments:</p>
+<ul>
+<li>Skip 7.1.2 (pages 278-282)</li>
+</ul>
+</section>
+<section id="section-7.4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-7.4">Section 7.4</h3>
+<p>Key terminology to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">beta RV (know shorthand notation, basic properties)</label></li>
+</ul>
+<p>Comments:</p>
+<ul>
+<li>The beta model is very useful for random variables that have a support between 0 and 1.</li>
+</ul>
+</section>
+</section>
+<section id="day-15" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="day-15">Day 15</h2>
+<ul>
+<li><p>What to read: Read sections 8.1</p></li>
+<li><p>Learning objectives: This section will help you</p>
+<ul>
+<li>use cdf’s to derive the distribution (cdf, then pdf) of a function of a continuous RV</li>
+</ul></li>
+<li><p>No reading quiz on section 8.1</p></li>
+</ul>
+<section id="section-8.1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-8.1">Section 8.1</h3>
+<p>Key terminology to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">cdf and pdf (make sure these ideas are solid)</label></li>
+</ul>
+<p>Comments:</p>
+<ul>
+<li>Skim 8.1.1 and skip 8.1.2</li>
+<li>This section outlines how to derive the pdf of a function of a RV using the cdf method.</li>
+<li>This method always “works”, though often the mgf method is simpler <em>if</em> the function is linear and the pdf distribution is a common one (eg normal, exponential, etc).</li>
+</ul>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-dobrow" class="csl-entry" role="listitem">
-Wagaman, &amp; Dobrow, A. S. 2021. <em>Probability: With Applications
-and r</em>. 2nd ed. Wiley.
+Wagaman, &amp; Dobrow, A. S. 2021. <em>Probability: With Applications and r</em>. 2nd ed. Wiley.
 </div>
 </div>
-
-
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -635,11 +832,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./intro-continuous-rv.html" class="pagination-link" aria-label="Introduction to continuous random variables">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Introduction to continuous random variables</span></span>
+      <a href="./more-discrete-rv.html" class="pagination-link" aria-label="More with discrete random variables">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">More with discrete random variables</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
