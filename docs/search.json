@@ -200,6 +200,26 @@
     ]
   },
   {
+    "objectID": "intro-poisson-process.html",
+    "href": "intro-poisson-process.html",
+    "title": "6  Introduction to continuous random variables",
+    "section": "",
+    "text": "Day 13",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Introduction to continuous random variables</span>"
+    ]
+  },
+  {
+    "objectID": "intro-poisson-process.html#day-13",
+    "href": "intro-poisson-process.html#day-13",
+    "title": "6  Introduction to continuous random variables",
+    "section": "",
+    "text": "What to read: Read section 7.3 through page 299.\nLearning objectives: These sections will help you\n\nunderstand what a Poisson process is\nsee how “interarrival” or waiting times between Poisson events can be modeled by exponential or gamma distributed random variables\n\nAfter reading, take reading quiz 13\n\n\nSection 7.3\nKey terminology to know:\n\nPoisson process with \\(N_t \\sim Pois(\\lambda t)\\)\nInterarrival times \\(E_k \\sim Exp(\\lambda)\\)\nTime until the \\(nth\\) event \\(S_n \\sim Gamma(n,\\lambda)\\)\n\nComments:\n\nYou can skim/skip the proof on page 296 (up to example 7.15). This proof of the Poisson process model relies on joint pdf which we haven’t covered yet.\nThere is a typo on page 298: The Stationary increments property should state that “For all \\(0 &lt; s,t\\), …” instead of \\(0 &lt; s &lt; t\\)\n\n\n\n\n\nWagaman, & Dobrow, A. S. 2021. Probability: With Applications and r. 2nd ed. Wiley.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Introduction to continuous random variables</span>"
+    ]
+  },
+  {
     "objectID": "references.html",
     "href": "references.html",
     "title": "References",

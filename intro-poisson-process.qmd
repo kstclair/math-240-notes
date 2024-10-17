@@ -1,0 +1,33 @@
+# Introduction to continuous random variables  {#sec-intro-cont-rv}
+
+Chapter 6 of @dobrow introduces us to continuous random variables.
+
+Make sure to review our [week 5 schedule](https://docs.google.com/spreadsheets/d/1p4s9FLap8CUB40UYAzdxpDi8-PkoHUceGq0dNUmfE9c/edit?usp=sharing).
+
+
+
+## Day 13 {.unnumbered}
+
+- What to read: Read section 7.3 through page 299.
+
+- Learning objectives: These sections will help you
+  - understand what a Poisson process is
+  - see how "interarrival" or waiting times between Poisson events can be modeled by exponential or gamma distributed random variables
+  
+- After reading, take reading [quiz 13](https://forms.gle/8nwGZxx77bxcvn2f7)
+
+  
+
+### Section 7.3 {.unnumbered}
+
+Key terminology to know:
+
+  - [ ] Poisson process with $N_t \sim Pois(\lambda t)$
+  - [ ] Interarrival times $E_k \sim Exp(\lambda)$
+  - [ ] Time until the $nth$ event $S_n \sim Gamma(n,\lambda)$
+  
+Comments: 
+
+- You can skim/skip the proof on page 296 (up to example 7.15). This proof of the Poisson process model relies on joint pdf which we haven't covered yet. 
+
+- There is a **typo** on page 298: The *Stationary increments*  property should state that "For all $0 < s,t$, ..." instead of $0 < s < t$
