@@ -5,7 +5,7 @@ project:
 book:
   title: "math-240-notes"
   author: "Katie St. Clair"
-  date: "Fall 2024"
+  date: today
   reader-mode: true
   chapters:
     - index.qmd
