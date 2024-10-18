@@ -1,12 +1,10 @@
 # Poisson Process  {#sec-intro-cont-rv}
 
-Chapter 6 of @dobrow introduces us to continuous random variables.
-
-Make sure to review our [week 5 schedule](https://docs.google.com/spreadsheets/d/1p4s9FLap8CUB40UYAzdxpDi8-PkoHUceGq0dNUmfE9c/edit?usp=sharing).
+Make sure to review our [week 6 schedule](https://docs.google.com/spreadsheets/d/1qnz5t0OptIaeS-C-bjW4AMzgbrhckJPz4PuElSgGPac/edit?usp=sharing).
 
 
 
-## Day 13 {.unnumbered}
+## Day 16 {.unnumbered}
 
 - What to read: Read section 7.3 through page 299.
 

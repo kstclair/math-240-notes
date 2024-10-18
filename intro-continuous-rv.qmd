@@ -1,6 +1,6 @@
 # Introduction to continuous random variables  {#sec-intro-cont-rv}
 
-Chapter 6 of @dobrow introduces us to continuous random variables.
+Chapter 6 and 7 of @dobrow introduces us to continuous random variables.
 
 Make sure to review our [week 5 schedule](https://docs.google.com/spreadsheets/d/1p4s9FLap8CUB40UYAzdxpDi8-PkoHUceGq0dNUmfE9c/edit?usp=sharing).
 
