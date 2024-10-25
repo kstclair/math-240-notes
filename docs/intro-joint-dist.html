@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>intro-joint-dist</title>
+<title>7&nbsp; Introduction to joint distributions – math-240-notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,35 +20,221 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="intro-joint-dist_files/libs/clipboard/clipboard.min.js"></script>
-<script src="intro-joint-dist_files/libs/quarto-html/quarto.js"></script>
-<script src="intro-joint-dist_files/libs/quarto-html/popper.min.js"></script>
-<script src="intro-joint-dist_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="intro-joint-dist_files/libs/quarto-html/anchor.min.js"></script>
-<link href="intro-joint-dist_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="intro-joint-dist_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="intro-joint-dist_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="intro-joint-dist_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="intro-joint-dist_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./references.html" rel="next">
+<link href="./intro-poisson-process.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
 
 
 </head>
 
-<body class="fullcontent">
+<body class="nav-sidebar floating">
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro-joint-dist.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Introduction to joint distributions</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">math-240-notes</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Math 240 Probability</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./first-principles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">First principles of probability</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./thinking-conditionally.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Thinking conditionally</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro-discrete-rv.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to discrete random variables</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./more-discrete-rv.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">More with discrete random variables</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro-continuous-rv.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Introduction to continuous random variables</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro-poisson-process.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Poisson Process</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro-joint-dist.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Introduction to joint distributions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#day-18" id="toc-day-18" class="nav-link active" data-scroll-target="#day-18">Day 18</a>
+  <ul class="collapse">
+  <li><a href="#sections-4.3-and-6.6" id="toc-sections-4.3-and-6.6" class="nav-link" data-scroll-target="#sections-4.3-and-6.6">Sections 4.3 and 6.6</a></li>
+  </ul></li>
+  <li><a href="#day-19" id="toc-day-19" class="nav-link" data-scroll-target="#day-19">Day 19</a>
+  <ul class="collapse">
+  <li><a href="#sections-4.4-and-6.7" id="toc-sections-4.4-and-6.7" class="nav-link" data-scroll-target="#sections-4.4-and-6.7">Sections 4.4 and 6.7</a></li>
+  </ul></li>
+  <li><a href="#day-20" id="toc-day-20" class="nav-link" data-scroll-target="#day-20">Day 20</a>
+  <ul class="collapse">
+  <li><a href="#sections-4.7-6.8-and-9.6-and-pages-139-255" id="toc-sections-4.7-6.8-and-9.6-and-pages-139-255" class="nav-link" data-scroll-target="#sections-4.7-6.8-and-9.6-and-pages-139-255">Sections 4.7, 6.8, and 9.6 and pages 139, 255</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-intro-joint-dist" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Introduction to joint distributions</span></span></h1>
+</div>
 
 
 
-<section id="sec-intro-cont-rv" class="level1">
-<h1>Introduction to joint distributions</h1>
-<p>We will revisit chapters 4 and 6 of <span class="citation" data-cites="dobrow">@dobrow</span> to describe joint distributions that can explain/model bivariate relationships between two (or more) random variables. We jump around from chapter 4 (discrete) and chapter 6 (continuous) to cover this topic.</p>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>We will revisit chapters 4 and 6 of <span class="citation" data-cites="dobrow">Wagaman (<a href="references.html#ref-dobrow" role="doc-biblioref">2021</a>)</span> to describe joint distributions that can explain/model bivariate relationships between two (or more) random variables. We jump around from chapter 4 (discrete) and chapter 6 (continuous) to cover this topic.</p>
 <p>Make sure to review our <a href="https://docs.google.com/spreadsheets/d/10AP55TSo0bgqklDCOioCiiBYEZAyhIytcNe8qmd2nu8/edit?usp=sharing">week 7 schedule</a>.</p>
 <section id="day-18" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="day-18">Day 18</h2>
@@ -63,8 +249,8 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><p>After reading, take reading <a href="https://forms.gle/XKWqF5TZ1qVWDscE9">quiz 14</a></p></li>
 </ul>
-<section id="sections-4.3-and-4.6" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="sections-4.3-and-4.6">Sections 4.3 and 4.6</h3>
+<section id="sections-4.3-and-6.6" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="sections-4.3-and-6.6">Sections 4.3 and 6.6</h3>
 <p>Key terminology to know:</p>
 <ul class="task-list">
 <li><label><input type="checkbox">joint pmf (two discrete RV) and joint pdf (two continuous RV)</label></li>
@@ -133,12 +319,17 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Take a look at section 9.6 through page 391 to see an example of a joint pdf with a parameter that measures correlation.</li>
 </ul>
-</section>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-dobrow" class="csl-entry" role="listitem">
+Wagaman, &amp; Dobrow, A. S. 2021. <em>Probability: With Applications and r</em>. 2nd ed. Wiley.
+</div>
+</div>
 </section>
 </section>
 
-</main>
-<!-- /main column -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -559,6 +750,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./intro-poisson-process.html" class="pagination-link" aria-label="Poisson Process">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Poisson Process</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

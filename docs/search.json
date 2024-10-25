@@ -220,6 +220,46 @@
     ]
   },
   {
+    "objectID": "intro-joint-dist.html",
+    "href": "intro-joint-dist.html",
+    "title": "7  Introduction to joint distributions",
+    "section": "",
+    "text": "Day 18",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Introduction to joint distributions</span>"
+    ]
+  },
+  {
+    "objectID": "intro-joint-dist.html#day-18",
+    "href": "intro-joint-dist.html#day-18",
+    "title": "7  Introduction to joint distributions",
+    "section": "",
+    "text": "What to read: Read sections 4.3, 6.6, review Appendix D if you need multivariate integration review\nLearning objectives: These sections will help you\n\nunderstand what a joint distribution (pdf/pmf) is\nunderstand what a marginal distribution (pdf/pmf) is\ncompute a marginal pdf/pmf from a joint pdf/pmf\ncompute probabilities from a joint pdf/pmf\n\nAfter reading, take reading quiz 14\n\n\nSections 4.3 and 6.6\nKey terminology to know:\n\njoint pmf (two discrete RV) and joint pdf (two continuous RV)\nmarginal distribution (pmf or pdf)\ncontinuous joint cdf\ncontinuous bivariate pdf\n\nComments:\n\nYou can skip over the expectations on page 139 (equation 4.3) and 255 for now - we’ll cover this idea Friday.\nComputing probabilities from a joint pdf requires calculation of a double integral. As in single random variable integration, setting up the problem with the correct limits of integration is the key step here. Draw a picture of the event (region) that you want to find the probability of and intersect it with the support set for your pdf. It is this region that determines your limits!\nMake sure you review Appendix D if you are rusty with double integrals.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Introduction to joint distributions</span>"
+    ]
+  },
+  {
+    "objectID": "intro-joint-dist.html#day-19",
+    "href": "intro-joint-dist.html#day-19",
+    "title": "7  Introduction to joint distributions",
+    "section": "Day 19",
+    "text": "Day 19\n\nWhat to read: Read section 6.7, review independence from 4.4\nLearning objectives: These sections will help you\n\nunderstand what independence for two (or more) RV means\nhow to prove independence OR how to use independence to construct joint pdf/pmf\n\nAfter reading, take reading quiz 15\n\n\nSections 4.4 and 6.7\nKey terminology to know:\n\nindependent continuous RV\nindependent discrete RV\n\nComments:\n\nYou can skim 6.7.1 on the accept-reject method.\nThe assumption of independence between two RV makes the derivation of the joint pdf/pmf very easy since it is just the product of the two (marginal) pdf/pmf.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Introduction to joint distributions</span>"
+    ]
+  },
+  {
+    "objectID": "intro-joint-dist.html#day-20",
+    "href": "intro-joint-dist.html#day-20",
+    "title": "7  Introduction to joint distributions",
+    "section": "Day 20",
+    "text": "Day 20\n\nWhat to read: Read expectation definitions on pages 139 and 255 and sections 4.7, 6.8, 9.6\nLearning objectives: These sections will help you\n\ncompute the expected value of a function of two discrete or continuous RV\nunderstand how covariance and correlation are used to measure the linear dependence between two RV\ncompute the covariance and correlation between two RV\ncompute the variance of a linear combination of two RV when they are not independent\nsee an example of a bivariate distribution with a parameter that measures correlation\n\nAfter reading, take reading quiz 16\n\n\nSections 4.7, 6.8, and 9.6 and pages 139, 255\nKey terminology to know:\n\nexpected value of a function of two RV\ncovariance\ncorrelation\ngeneral formula for the variance of a sum of random variables\nbivariate normal model\n\nComments:\n\nTake a look at section 9.6 through page 391 to see an example of a joint pdf with a parameter that measures correlation.\n\n\n\n\n\nWagaman, & Dobrow, A. S. 2021. Probability: With Applications and r. 2nd ed. Wiley.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Introduction to joint distributions</span>"
+    ]
+  },
+  {
     "objectID": "references.html",
     "href": "references.html",
     "title": "References",

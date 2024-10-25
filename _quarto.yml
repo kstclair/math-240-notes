@@ -15,6 +15,7 @@ book:
     - more-discrete-rv.qmd
     - intro-continuous-rv.qmd
     - intro-poisson-process.qmd
+    - intro-joint-dist.qmd
     - references.qmd
 
 bibliography: references.bib
