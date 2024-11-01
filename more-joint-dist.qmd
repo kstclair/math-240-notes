@@ -1,0 +1,91 @@
+# More with joint and conditional distributions  {#sec-more-joint-dist}
+
+We will explore strategies for deriving the distribution of a function of a two (or more) random variables. Then we return to thinking conditionally (first introduced in @sec-think-cond) to see how to define a conditional pdf/pmf probability model. 
+
+Make sure to review our [week 8 schedule](https://docs.google.com/spreadsheets/d/1RrtZ7JiEBz_r4XMC7Eib2ObRZpGSXkg2fVV1h8YrnUw/edit?usp=sharing).
+
+
+
+## Day 21 {.unnumbered}
+
+- What to read: Read sections 8.2, 8.3, 8.4
+
+- Learning objectives: These sections will help you
+  - derive the pdf of a minimum or maximum 
+  - derive the pmf/pdf of a sum of two independent RV using a convolution of functions
+  
+- After reading, take reading [quiz 17](https://forms.gle/KsqVyoKtsQLFrZcs5)
+
+  
+### Sections 8.2 {.unnumbered}
+
+Key terminology to know:
+
+  - [ ] order statistics
+  - [ ] inequalities for mins and maxs
+
+Comments: 
+
+- Focus on material involving the min $X_{(1)}$ and max $X_{(n)}$ order statistics. 
+- You can skim the proof of the beta distribution for general $X_{(k)}$ for $1 < k < n$ when your sample is iid uniform. (pages 333-334)
+
+
+### Sections 8.3 {.unnumbered}
+
+Key terminology to know:
+
+  - [ ] convolution of two functions
+
+Comments: 
+
+- The convolution method of finding the pdf of $X+Y$ is an example of a CDF transformation method (i.e. find the CDF then differentiate to find PDF)
+- Review section 4.4.1 equation 4.7 for review of the analogous discrete version of 8.3. 
+
+
+### Sections 8.4 {.unnumbered}
+
+Comments: 
+
+- This section reviews both how to use geometry to compute probabilities from uniform pdfs and use of the CDF method to find PDF for a function of two RV.
+- You can skim 8.23 (Buffon's needle problem is fun but you won't necessarily see trig calculations in hw/exam problems!)
+
+
+## Day 22 {.unnumbered}
+
+- What to read: Read sections 4.8, 9.1, 9.2
+
+- Learning objectives: These sections will help you
+  - 
+  
+- After reading, take reading [quiz 18](https://forms.gle/aoCcCr7x9s8o6Uhk8)
+
+  
+### Sections  {.unnumbered}
+
+Key terminology to know:
+
+  - [ ] 
+
+Comments: 
+
+
+
+
+
+## Day 23 {.unnumbered}
+
+- What to read: Read sections 9.3, 9.5
+
+- Learning objectives: These sections will help you
+  - 
+  
+- After reading, take reading [quiz 19](https://forms.gle/AZmecHbJtKckUvkL6)
+
+  
+### Sections  {.unnumbered}
+
+Key terminology to know:
+
+  - [ ] 
+
+Comments: 

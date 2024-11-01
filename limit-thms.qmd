@@ -1,0 +1,31 @@
+# More with joint and conditional distributions  {#sec-limit-thms}
+
+We will explore strategies for deriving the distribution of a function of a two (or more) random variables. Then we return to thinking conditionally (first introduced in @sec-think-cond) to see how to define a conditional pdf/pmf probability model. 
+
+Make sure to review our [week 8 schedule](https://docs.google.com/spreadsheets/d/1RrtZ7JiEBz_r4XMC7Eib2ObRZpGSXkg2fVV1h8YrnUw/edit?usp=sharing).
+
+
+
+## Day 26 {.unnumbered}
+
+- What to read: Read sections 10.5 and 10.6 but skip section 10.5.1
+
+- Learning objectives: These sections will help you
+  - 
+  
+- After reading, take reading [quiz 20](https://forms.gle/6GziRQC46YbXrSE79)
+
+  
+### Sections {.unnumbered}
+
+Key terminology to know:
+
+  - [ ] joint pmf (two discrete RV) and joint pdf (two continuous RV)
+  - [ ] marginal distribution (pmf or pdf)
+  - [ ] continuous joint cdf 
+  - [ ] continuous bivariate pdf
+
+Comments: 
+
+- 
+

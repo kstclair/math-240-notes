@@ -260,6 +260,46 @@
     ]
   },
   {
+    "objectID": "more-joint-dist.html",
+    "href": "more-joint-dist.html",
+    "title": "8  More with joint and conditional distributions",
+    "section": "",
+    "text": "Day 21",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>More with joint and conditional distributions</span>"
+    ]
+  },
+  {
+    "objectID": "more-joint-dist.html#day-21",
+    "href": "more-joint-dist.html#day-21",
+    "title": "8  More with joint and conditional distributions",
+    "section": "",
+    "text": "What to read: Read sections 8.2, 8.3, 8.4\nLearning objectives: These sections will help you\n\nderive the pdf of a minimum or maximum\nderive the pmf/pdf of a sum of two independent RV using a convolution of functions\n\nAfter reading, take reading quiz 17\n\n\nSections 8.2\nKey terminology to know:\n\norder statistics\ninequalities for mins and maxs\n\nComments:\n\nFocus on material involving the min \\(X_{(1)}\\) and max \\(X_{(n)}\\) order statistics.\nYou can skim the proof of the beta distribution for general \\(X_{(k)}\\) for \\(1 &lt; k &lt; n\\) when your sample is iid uniform. (pages 333-334)\n\n\n\nSections 8.3\nKey terminology to know:\n\nconvolution of two functions\n\nComments:\n\nThe convolution method of finding the pdf of \\(X+Y\\) is an example of a CDF transformation method (i.e. find the CDF then differentiate to find PDF)\nReview section 4.4.1 equation 4.7 for review of the analogous discrete version of 8.3.\n\n\n\nSections 8.4\nComments:\n\nThis section reviews both how to use geometry to compute probabilities from uniform pdfs and use of the CDF method to find PDF for a function of two RV.\nYou can skim 8.23 (Buffon’s needle problem is fun but you won’t necessarily see trig calculations in hw/exam problems!)",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>More with joint and conditional distributions</span>"
+    ]
+  },
+  {
+    "objectID": "more-joint-dist.html#day-22",
+    "href": "more-joint-dist.html#day-22",
+    "title": "8  More with joint and conditional distributions",
+    "section": "Day 22",
+    "text": "Day 22\n\nWhat to read: Read sections 4.8, 9.1, 9.2\n8.1 Learning objectives: These sections will help you\nAfter reading, take reading quiz 18\n\n\nSections\nKey terminology to know:\n\n[ ]\n\nComments:",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>More with joint and conditional distributions</span>"
+    ]
+  },
+  {
+    "objectID": "more-joint-dist.html#day-23",
+    "href": "more-joint-dist.html#day-23",
+    "title": "8  More with joint and conditional distributions",
+    "section": "Day 23",
+    "text": "Day 23\n\nWhat to read: Read sections 9.3, 9.5\n8.2 Learning objectives: These sections will help you\nAfter reading, take reading quiz 19\n\n\nSections\nKey terminology to know:\n\n[ ]\n\nComments:",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>More with joint and conditional distributions</span>"
+    ]
+  },
+  {
     "objectID": "references.html",
     "href": "references.html",
     "title": "References",
