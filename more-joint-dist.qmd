@@ -55,19 +55,24 @@ Comments:
 - What to read: Read sections 4.8, 9.1, 9.2
 
 - Learning objectives: These sections will help you
-  - 
+  - derive conditional pmf/pdf from joint and marginal models
+  - apply Bayes formula to conditional pmf/pdf
   
 - After reading, take reading [quiz 18](https://forms.gle/aoCcCr7x9s8o6Uhk8)
 
   
-### Sections  {.unnumbered}
+### Sections 4.3, 9.1, and 9.2  {.unnumbered}
 
 Key terminology to know:
 
-  - [ ] 
+  - [ ] conditional pmf
+  - [ ] conditional pdf
+  - [ ] Bayes formula for pdf
 
 Comments: 
 
+- We will cover expected value in 4.8.1 on Day 23. 
+- Take care when deriving conditional pmf/pdf. E.g the pdf $f(y \mid x)$ of $Y \mid X=x$ is a function of $y$ and $x$ is a constant. 
 
 
 

@@ -284,7 +284,7 @@
     "href": "more-joint-dist.html#day-22",
     "title": "8  More with joint and conditional distributions",
     "section": "Day 22",
-    "text": "Day 22\n\nWhat to read: Read sections 4.8, 9.1, 9.2\n8.1 Learning objectives: These sections will help you\nAfter reading, take reading quiz 18\n\n\nSections\nKey terminology to know:\n\n[ ]\n\nComments:",
+    "text": "Day 22\n\nWhat to read: Read sections 4.8, 9.1, 9.2\nLearning objectives: These sections will help you\n\nderive conditional pmf/pdf from joint and marginal models\napply Bayes formula to conditional pmf/pdf\n\nAfter reading, take reading quiz 18\n\n\nSections 4.3, 9.1, and 9.2\nKey terminology to know:\n\nconditional pmf\nconditional pdf\nBayes formula for pdf\n\nComments:\n\nWe will cover expected value in 4.8.1 on Day 23.\nTake care when deriving conditional pmf/pdf. E.g the pdf \\(f(y \\mid x)\\) of \\(Y \\mid X=x\\) is a function of \\(y\\) and \\(x\\) is a constant.",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>More with joint and conditional distributions</span>"
     ]
@@ -294,7 +294,7 @@
     "href": "more-joint-dist.html#day-23",
     "title": "8  More with joint and conditional distributions",
     "section": "Day 23",
-    "text": "Day 23\n\nWhat to read: Read sections 9.3, 9.5\n8.2 Learning objectives: These sections will help you\nAfter reading, take reading quiz 19\n\n\nSections\nKey terminology to know:\n\n[ ]\n\nComments:",
+    "text": "Day 23\n\nWhat to read: Read sections 9.3, 9.5\n8.1 Learning objectives: These sections will help you\nAfter reading, take reading quiz 19\n\n\nSections\nKey terminology to know:\n\n[ ]\n\nComments:",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>More with joint and conditional distributions</span>"
     ]
