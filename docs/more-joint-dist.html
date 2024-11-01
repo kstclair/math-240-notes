@@ -224,7 +224,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#day-23" id="toc-day-23" class="nav-link" data-scroll-target="#day-23">Day 23</a>
   <ul class="collapse">
-  <li><a href="#sections" id="toc-sections" class="nav-link" data-scroll-target="#sections">Sections</a></li>
+  <li><a href="#sections-9.3-and-9.5" id="toc-sections-9.3-and-9.5" class="nav-link" data-scroll-target="#sections-9.3-and-9.5">Sections 9.3 and 9.5</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -328,16 +328,44 @@ window.Quarto = {
 <h2 class="unnumbered anchored" data-anchor-id="day-23">Day 23</h2>
 <ul>
 <li><p>What to read: Read sections 9.3, 9.5</p></li>
-<li><h2 id="learning-objectives-these-sections-will-help-you" data-number="8.1" class="anchored"><span class="header-section-number">8.1</span> Learning objectives: These sections will help you</h2></li>
+<li><p>Learning objectives: These sections will help you</p>
+<ul>
+<li>Compute a conditional pmf/pdf’s expected value and variance given a fixed value of the conditioning variable</li>
+<li>Compute a marginal expected value or variance from a RV’s conditional distribution</li>
+</ul></li>
 <li><p>After reading, take reading <a href="https://forms.gle/AZmecHbJtKckUvkL6">quiz 19</a></p></li>
 </ul>
-<section id="sections" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="sections">Sections</h3>
+<section id="sections-9.3-and-9.5" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="sections-9.3-and-9.5">Sections 9.3 and 9.5</h3>
 <p>Key terminology to know:</p>
-<ul>
-<li>[ ]</li>
+<ul class="task-list">
+<li><label><input type="checkbox">Conditional expected value of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X=x\)</span>: <span class="math inline">\(E(Y \mid X=x)\)</span> (similar for flipping the roles of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>)</label></li>
+<li><label><input type="checkbox">Conditional variance of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X=x\)</span>: <span class="math inline">\(V(Y \mid X=x)\)</span> (similar for flipping the roles of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>)</label></li>
+<li><label><input type="checkbox">LOTUS for conditional distributions</label></li>
+<li><label><input type="checkbox">Conditional expected value of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X\)</span>: <span class="math inline">\(E(Y \mid X)\)</span> (similar for flipping the roles of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>)</label></li>
+<li><label><input type="checkbox">Conditional variance of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X\)</span>: <span class="math inline">\(V(Y \mid X)\)</span> (similar for flipping the roles of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>)</label></li>
+<li><label><input type="checkbox">Law of total expectation</label></li>
+<li><label><input type="checkbox">Law of total variance</label></li>
 </ul>
 <p>Comments:</p>
+<ul>
+<li><p>For these sections, we are framing the conditional relation as “<span class="math inline">\(Y\)</span> given <span class="math inline">\(X\)</span>”. The same rules/def/ideas apply if we flip the roles of <span class="math inline">\(Y\)</span> and <span class="math inline">\(X\)</span>, so don’t get stuck on a particular formula - try to see how things would generalize to any RV. E.g. examples 9.13 and 9.14 switch up notation.</p></li>
+<li><p>For these sections, we often frame the known information/models as being given the distribution (marginally) of <span class="math inline">\(X\)</span> and the conditional distribution of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X=x\)</span> (or <span class="math inline">\(X\)</span>). As already mentioned, we could flip the roles of the RVs and have the same general rules apply.</p></li>
+<li><p>I know these sections can get confusing since we are talking about very similar things with similar notation. One important idea, though, is whether a value (exp/var) is <em>fixed</em> (but maybe unknown, in formula form) or <em>random.</em></p>
+<ul>
+<li><span class="math inline">\(E(Y \mid X=x)\)</span> assumes that we know a value of <span class="math inline">\(X=x\)</span>. The final answer may be a function of <span class="math inline">\(x\)</span>, but <span class="math inline">\(x\)</span> is a fixed (not random) value. Like in Ex 9.12, <span class="math inline">\(E(Y \mid X=0.6) = (0.6)/2=0.3\)</span> is the expected value of Miguel’s number if Riley picks <span class="math inline">\(X=0.6\)</span>.</li>
+<li><span class="math inline">\(E(Y \mid X) = g(X)\)</span> keeps <span class="math inline">\(X\)</span> <em>random</em>. Why do this? We might want to know how <span class="math inline">\(E(Y \mid X) = g(X)\)</span> behaves over all possible, random, values of <span class="math inline">\(X\)</span>. Like in Ex 9.12, <span class="math inline">\(E(Y \mid X) = X/2\)</span> tells us that the random variable <span class="math inline">\(X/2\)</span> models the expected value of Miguel’s number as a function of the random value <span class="math inline">\(X\)</span> of Riley’s pick.</li>
+</ul></li>
+<li><p>The law of total expectation tells us the “average” value of <span class="math inline">\(E(Y \mid X)\)</span> over all values of <span class="math inline">\(X\)</span> (“averaged” over the pdf/pmf of <span class="math inline">\(X\)</span>). It is a way to get the unconditional expectation of <span class="math inline">\(Y\)</span> without having to compute the marginal distribution of <span class="math inline">\(Y\)</span>.</p>
+<ul>
+<li>e.g.&nbsp;in Ex 9.12, <span class="math inline">\(E(Y \mid X) = X/2\)</span> tells us the expected value of Miguel’s number as a function of the random value <span class="math inline">\(X\)</span>. If <span class="math inline">\(X \sim Unif(0,1)\)</span>, then <span class="math inline">\(E(X) = 0.5\)</span> and the unconditional expectation for Miguel’s number is <span class="math inline">\(E(Y) = E_x(E(Y \mid X)) = E_x(X/2) = (0.5)/2 = 0.25\)</span>. As a gut check, we should expect the expectation for Miguel to be lower than Riley because Riley’s number always dictates the upper bound on Miguel’s number.</li>
+</ul></li>
+<li><p>The law of total variance (LOTV) is similar in spirit to the law of total expectation, that we want to understand the variance of <span class="math inline">\(Y\)</span> unconditionally when what we are given is the conditional variance. But, the equation for the LOTV is more complex because the variance term is more complex: it involves taking an expectation of squared deviation of the RV from its expectation. The LOTV is computed with two parts:</p>
+<ul>
+<li><span class="math inline">\(E_x(V(Y \mid X))\)</span>: “average” the conditional variance (RV) <span class="math inline">\(V(Y\mid X)\)</span> over all values of <span class="math inline">\(X\)</span> (“averaged” over the pdf/pmf of <span class="math inline">\(X\)</span>).</li>
+<li><span class="math inline">\(V_x(E(Y \mid X))\)</span>: measure the variation of the conditional expected value (RV) <span class="math inline">\(E(Y\mid X)\)</span> over all values of <span class="math inline">\(X\)</span> (variation with respect to the pdf/pmf of <span class="math inline">\(X\)</span>).</li>
+</ul></li>
+</ul>
 
 
 </section>
