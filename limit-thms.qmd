@@ -11,21 +11,45 @@ Make sure to review our [week 8 schedule](https://docs.google.com/spreadsheets/d
 - What to read: Read sections 10.5 and 10.6 but skip section 10.5.1
 
 - Learning objectives: These sections will help you
-  - 
+  - understand and apply the Central Limit Theorem (CLT)
+  - understand how the CLT is proven with MGF
   
 - After reading, take reading [quiz 20](https://forms.gle/6GziRQC46YbXrSE79)
 
   
-### Sections {.unnumbered}
+### Sections 10.5 and 10.6 {.unnumbered}
 
 Key terminology to know:
 
-  - [ ] joint pmf (two discrete RV) and joint pdf (two continuous RV)
-  - [ ] marginal distribution (pmf or pdf)
-  - [ ] continuous joint cdf 
-  - [ ] continuous bivariate pdf
+  - [ ] sum $S_n$ of $n$ i.i.d. random variables
+  - [ ] mean $\bar{X}_n$ of $n$ i.i.d. random variables
+
+
 
 Comments: 
 
-- 
+- We will cover the proof of the CLT in 10.6 in class
 
+
+
+## Day 27 {.unnumbered}
+
+- What to read: Read sections 10.2 and 10.4
+
+- Learning objectives: These sections will help you
+  - understand the big picture implications of the Law of Large Numbers (LLN)
+  - understand how Monte Carlo integration is an application of the LLN
+  
+
+  
+### Sections 10.2 and 10.4 {.unnumbered}
+
+Key terminology to know:
+
+  - [ ] probability of a limit 
+  - [ ] Monte Carlo integration
+
+Comments: 
+
+- Focus on the LLN big picture in 10.2
+- We will use the LLN to justify an important application: Monte Carlo integration
