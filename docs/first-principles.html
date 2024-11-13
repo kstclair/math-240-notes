@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Introduction to continuous random variables – math-240-notes</title>
+<title>1&nbsp; First principles of probability – math-240-notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -50,8 +50,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro-poisson-process.html" rel="next">
-<link href="./more-discrete-rv.html" rel="prev">
+<link href="./thinking-conditionally.html" rel="next">
+<link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -130,7 +130,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro-continuous-rv.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Introduction to continuous random variables</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./first-principles.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">First principles of probability</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -170,7 +170,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./first-principles.html" class="sidebar-item-text sidebar-link">
+  <a href="./first-principles.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">First principles of probability</span></span></a>
   </div>
 </li>
@@ -194,7 +194,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-continuous-rv.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro-continuous-rv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Introduction to continuous random variables</span></span></a>
   </div>
 </li>
@@ -238,22 +238,20 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#day-13" id="toc-day-13" class="nav-link active" data-scroll-target="#day-13">Day 13</a>
+  <li><a href="#day-1" id="toc-day-1" class="nav-link active" data-scroll-target="#day-1">Day 1</a>
   <ul class="collapse">
-  <li><a href="#section-6.1" id="toc-section-6.1" class="nav-link" data-scroll-target="#section-6.1">Section 6.1</a></li>
-  <li><a href="#section-6.2-and-7.1.3" id="toc-section-6.2-and-7.1.3" class="nav-link" data-scroll-target="#section-6.2-and-7.1.3">Section 6.2 and 7.1.3</a></li>
-  <li><a href="#section-6.4" id="toc-section-6.4" class="nav-link" data-scroll-target="#section-6.4">Section 6.4</a></li>
+  <li><a href="#section-1.1" id="toc-section-1.1" class="nav-link" data-scroll-target="#section-1.1">Section 1.1</a></li>
+  <li><a href="#section-1.2-1.3" id="toc-section-1.2-1.3" class="nav-link" data-scroll-target="#section-1.2-1.3">Section 1.2-1.3</a></li>
+  <li><a href="#section-1.4-1.8" id="toc-section-1.4-1.8" class="nav-link" data-scroll-target="#section-1.4-1.8">Section 1.4 + 1.8</a></li>
   </ul></li>
-  <li><a href="#day-14" id="toc-day-14" class="nav-link" data-scroll-target="#day-14">Day 14</a>
+  <li><a href="#day-2" id="toc-day-2" class="nav-link" data-scroll-target="#day-2">Day 2</a>
   <ul class="collapse">
-  <li><a href="#section-6.3" id="toc-section-6.3" class="nav-link" data-scroll-target="#section-6.3">Section 6.3</a></li>
-  <li><a href="#section-6.5-and-7.2" id="toc-section-6.5-and-7.2" class="nav-link" data-scroll-target="#section-6.5-and-7.2">Section 6.5 and 7.2</a></li>
-  <li><a href="#section-7.1" id="toc-section-7.1" class="nav-link" data-scroll-target="#section-7.1">Section 7.1</a></li>
-  <li><a href="#section-7.4" id="toc-section-7.4" class="nav-link" data-scroll-target="#section-7.4">Section 7.4</a></li>
+  <li><a href="#section-1.5" id="toc-section-1.5" class="nav-link" data-scroll-target="#section-1.5">Section 1.5</a></li>
+  <li><a href="#section-1.6" id="toc-section-1.6" class="nav-link" data-scroll-target="#section-1.6">Section 1.6</a></li>
   </ul></li>
-  <li><a href="#day-15" id="toc-day-15" class="nav-link" data-scroll-target="#day-15">Day 15</a>
+  <li><a href="#day-3" id="toc-day-3" class="nav-link" data-scroll-target="#day-3">Day 3</a>
   <ul class="collapse">
-  <li><a href="#section-8.1" id="toc-section-8.1" class="nav-link" data-scroll-target="#section-8.1">Section 8.1</a></li>
+  <li><a href="#section-1.7" id="toc-section-1.7" class="nav-link" data-scroll-target="#section-1.7">Section 1.7</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -263,7 +261,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-intro-cont-rv" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Introduction to continuous random variables</span></span></h1>
+<h1 class="title"><span id="sec-first-p" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">First principles of probability</span></span></h1>
 </div>
 
 
@@ -280,152 +278,139 @@ window.Quarto = {
 </header>
 
 
-<p>Chapter 6 and 7 of <span class="citation" data-cites="dobrow">Wagaman (<a href="#ref-dobrow" role="doc-biblioref">2021</a>)</span> introduces us to continuous random variables.</p>
-<p>Make sure to review our <a href="https://docs.google.com/spreadsheets/d/1p4s9FLap8CUB40UYAzdxpDi8-PkoHUceGq0dNUmfE9c/edit?usp=sharing">week 5 schedule</a>.</p>
-<section id="day-13" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="day-13">Day 13</h2>
+<p>First principles cover sections in chapter 1 of <span class="citation" data-cites="dobrow">Wagaman (<a href="references.html#ref-dobrow" role="doc-biblioref">2021</a>)</span>. Make sure to review our <a href="https://docs.google.com/spreadsheets/d/1QKQFfuuDzFUpOdjMvmHWZpR6zUzoxd9UjE83vA0H1Fs/edit?usp=sharing">week 1 schedule</a>.</p>
+<section id="day-1" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="day-1">Day 1</h2>
 <ul>
-<li><p>What to read: Read intro to ch.&nbsp;6, sections 6.1, 6.2, 6.4, 7.1.3</p></li>
+<li><p>What to read: Read sections 1.1, 1.2, 1.3, 1.4, and 1.8 to see the generalization of property #3.</p></li>
 <li><p>Learning objectives: These sections will help you</p>
 <ul>
-<li>understand what a continuous random variable is</li>
-<li>use a probability mass function (pdf) to compute probabilities for events involving a continuous RV</li>
-<li>use a cumulative distribution function (cdf) to compute probabilities for events involving a continuous RV</li>
-<li>understand how to get a pdf from a cdf and vice versa</li>
-<li>compute quantiles for a continuous distribution</li>
-<li>get familiar with a (continuous) uniform RV</li>
+<li>define basic probability and set theory terminology</li>
+<li>define fundamental properties of probability</li>
 </ul></li>
-<li><p>After reading, take reading <a href="https://forms.gle/oZGaWtp9KkFa5MmCA">quiz 11</a></p></li>
 </ul>
-<section id="section-6.1" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-6.1">Section 6.1</h3>
+<section id="section-1.1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-1.1">Section 1.1</h3>
 <p>Key terminology to know:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">continuous random variable</label></li>
-<li><label><input type="checkbox">probability density function (pdf) of a continuous RV</label></li>
+<li><label><input type="checkbox">Sample space <span class="math inline">\(\Omega\)</span></label></li>
+<li><label><input type="checkbox">Outcome <span class="math inline">\(\omega\)</span>: this can also be called an <u>element</u></label></li>
+<li><label><input type="checkbox">Event <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, …</label></li>
 </ul>
 <p>Comments:</p>
-<ul>
-<li>Pay particular attention to the comment box on page 230. I am very particular when asking for pdf (or cdf) functions, especially on exams. If you are asked to define a pdf/cdf <em>over the entire real ine</em>, then you must get both the support <span class="math inline">\(S\)</span> and “0 otherwise” parts correct.</li>
-<li>Yes, you will be integrating functions in this class! While I may ask you do to more involved calculations, eg integration by parts, on homework, I don’t ask these longer calculation-focused questions on exams. Often (but not always) on exams, I’ll ask you to appropriately “set-up” an integral but not actually complete the calculation.</li>
-<li>You can check integration calculations using technology, but you can’t let technology do all the work. See the AI/tech homework policy on the syllabus.</li>
-</ul>
+<p>The sample space for a random experiment is the list of all possible outcomes. To define a sample space, start by thinking about how to define a couple individual outcomes and then generalize this to all outcomes. If there are a large or infinite number of outcomes, then you can use a “…” to show that a pattern will continue (like Examples 1.3 and 1.4).</p>
+<p>There may not be a unique way to define a sample space and outcomes for a random experiment. For example, one may chose to define the sample space for Example 1.3 as just the number of votes for Yolanda <span class="math display">\[\Omega = \{ 0, 1, 2, \dotsc, 999, 1000\}\]</span>. But all the outcomes in a sample space must define unique possibilities for a random experiment (i.e.&nbsp;they are mutually exclusive, section 1.4).</p>
+<p>“Complex” random experiments are often composed of simpler experiments. Example 1.2 is an example of this as we define one outcome for two dice rolls as the joint outcome of two individual die rolls. Similar for the sample space for three coin flips. In scenarios where the individual simpler experiments have equally likely outcomes, the outcomes in the more complex sample space (e.g.&nbsp;two dice rolls, three coin flips) are also equally likely outcomes.</p>
 </section>
-<section id="section-6.2-and-7.1.3" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-6.2-and-7.1.3">Section 6.2 and 7.1.3</h3>
-<p>Key terminology to know:</p>
+<section id="section-1.2-1.3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-1.2-1.3">Section 1.2-1.3</h3>
+<p>Key ideas to know:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">cumulative distribution function (cdf) of a continuous RV</label></li>
-<li><label><input type="checkbox">quantile of a continuous RV</label></li>
+<li><label><input type="checkbox">relative frequency interpretation of probability</label></li>
+<li><label><input type="checkbox">probability function and its essential properties</label></li>
 </ul>
 <p>Comments:</p>
-<ul>
-<li>Take some time to make sure you see how pdf’s and cdf’s are related for continuous random variables.</li>
-<li>Take a look at the cdf example for a discrete RV, but I find cdf most useful for continuous RV. It is essential that you can use/derive cdf for continuous RV, but not as important for discrete (in my class).</li>
-<li>In 7.1.3, I just want you to review the definition of a quantile and how it relates to a cdf (6.2). You can skim the examples in 7.1.3, but we will formally introduce the normal distribution on another day.</li>
-<li>I’ve seen quantile described either as a percentage or a proportion/probability. E.g. the 50th quantile or the 0.5 quantile. Your book defines it as the former, “50th”, but be comfortable with either description.</li>
-</ul>
+<p>Make sure you can put the probability function properties into words: (1) means probabilities can’t be negative, (2) means something in the sample space has to happen with probability 1 and (3) means the probability of an event is just the sum of the probabilities of outcomes that make up that event.</p>
 </section>
-<section id="section-6.4" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-6.4">Section 6.4</h3>
-<p>Key terminology to know:</p>
+<section id="section-1.4-1.8" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-1.4-1.8">Section 1.4 + 1.8</h3>
+<p>Key <u>set theory</u> ideas to know</p>
 <ul class="task-list">
-<li><label><input type="checkbox">uniform RV (know shorthand notation, basic properties)</label></li>
+<li><label><input type="checkbox">complement <span class="math inline">\(A^c\)</span> (not <span class="math inline">\(A\)</span>)</label></li>
+<li><label><input type="checkbox">union <span class="math inline">\(A \cup B\)</span> (at least one <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span> or both)</label></li>
+<li><label><input type="checkbox">intersection <span class="math inline">\(A \cap B = AB\)</span> (both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>)</label></li>
+<li><label><input type="checkbox"><span class="math inline">\((AB)^c = A^c \cup B^c\)</span> (at most one)</label></li>
+<li><label><input type="checkbox"><span class="math inline">\((A \cup B)^c = A^cB^c\)</span> (neither)</label></li>
+<li><label><input type="checkbox"><span class="math inline">\(AB^c\)</span> (<span class="math inline">\(A\)</span> but not <span class="math inline">\(B\)</span>)</label></li>
+<li><label><input type="checkbox">subset <span class="math inline">\(\subseteq\)</span></label></li>
+<li><label><input type="checkbox">mutually exclusive/disjoint events</label></li>
+<li><label><input type="checkbox">Venn diagram</label></li>
+<li><label><input type="checkbox">empty set <span class="math inline">\(\emptyset\)</span></label></li>
 </ul>
 <p>Comments:</p>
-<ul>
-<li>You can just read up to Expectation and Variance on page 240. Review these after day 14’s reading.</li>
-<li>Be comfortable computing probabilities for uniform RV using both a calculus approach and geometric approach. There are pros/cons to each, depending on the problem.</li>
+<p>The first six ideas create a new event out of one or more events (think addition, subtraction, etc). Subset, mutually exclusive and Venn diagrams tells us relational information about events (think less than, etc). The empty set is a set that has no outcomes (think zero).</p>
+<p>Key <u>probability properties</u> to know</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Addition rule for mutually exclusive events (only add probability of events when they are mutually exclusive)</label></li>
+<li><label><input type="checkbox">General addition rule (events do not need to be mutually exclusive)</label></li>
+<li><label><input type="checkbox">Complement rule</label></li>
 </ul>
+<p>Comments:</p>
+<p>The addition rule properties are used to find the probability of a <em>union</em> of two or more events. When events are mutually exclusive, we just add the individual event probabilities. Make sure that you assess whether events are mutually exclusive before simply adding their probabilities.</p>
+<p>When events are not mutually exclusive, you start by adding event probabilities but then you need to subtract out the probability of the overlap (intersection) between events. The inclusion/exclusion rule is an extension of property (3) (eq. 1.3).</p>
+<p>The complement rule along with the addition rule is useful for computing the probability of neither <span class="math inline">\(A\)</span> nor <span class="math inline">\(B\)</span>: <span class="math display">\[
+P(A^c B^c) = 1 - P(A \cap B)
+\]</span></p>
 </section>
 </section>
-<section id="day-14" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="day-14">Day 14</h2>
+<section id="day-2" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="day-2">Day 2</h2>
 <ul>
-<li><p>What to read: Read sections 6.3, 6.5, 7.1, 7.2, 7.4</p></li>
+<li><p>What to read: Read sections 1.5 and 1.6</p></li>
 <li><p>Learning objectives: These sections will help you</p>
 <ul>
-<li>compute the expected value, variance and sd of a continuous RV</li>
-<li>review important properties of expected values and variance/sd</li>
-<li>get familiar with some common continous RV types (exponential, normal, gamma, beta)</li>
+<li>use the multiplication principle to count the number of outcomes in a sample space or event</li>
+<li>compute event probabilities using counting when outcomes are equally likely</li>
+<li>define and count permutations</li>
 </ul></li>
-<li><p>After reading, take reading <a href="https://forms.gle/UEE5pFNSJ3weXMBQ6">quiz 12</a></p></li>
+<li><p>After reading, take reading <a href="https://forms.gle/JeRauvsZLp4FqnUK6">quiz 1</a></p></li>
 </ul>
-<section id="section-6.3" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-6.3">Section 6.3</h3>
-<p>Key terminology to know:</p>
+<section id="section-1.5" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-1.5">Section 1.5</h3>
+<p>Key idea to know:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">expected value of a continuous RV</label></li>
-<li><label><input type="checkbox">variance/sd of a continuous RV</label></li>
+<li><label><input type="checkbox">equally like outcomes</label></li>
 </ul>
 <p>Comments:</p>
-<ul>
-<li>We’ll cover 6.6-6.8 later this term</li>
-</ul>
+<p>Our definition of the probability function Section 1.3 means that the probability of any event <span class="math inline">\(A\)</span> is equal to the number of outcomes in <span class="math inline">\(A\)</span> divided by the total number of outcomes when all outcomes are equally likely.</p>
 </section>
-<section id="section-6.5-and-7.2" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-6.5-and-7.2">Section 6.5 and 7.2</h3>
-<p>Key terminology to know:</p>
+<section id="section-1.6" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-1.6">Section 1.6</h3>
+<p>Key ideas to know:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">exponential RV (know shorthand notation, basic properties)</label></li>
-<li><label><input type="checkbox">gamma RV (know shorthand notation, basic properties)</label></li>
-<li><label><input type="checkbox">gamma function <span class="math inline">\(\Gamma\)</span></label></li>
+<li><label><input type="checkbox">multiplication principle</label></li>
+<li><label><input type="checkbox">permutation</label></li>
+<li><label><input type="checkbox">counting the number of permutations of <span class="math inline">\(n\)</span> unique/distinct objects</label></li>
+<li><label><input type="checkbox">counting the number of permutations of size <span class="math inline">\(k\)</span> from <span class="math inline">\(n\)</span> unique/distinct objects</label></li>
+<li><label><input type="checkbox">sampling with vs without replacement</label></li>
 </ul>
 <p>Comments:</p>
-<ul>
-<li>Exponential and gamma are common models for “waiting times”, eg time until something happens.</li>
-<li>Make sure you recognize the exponential as a special case of the gamma</li>
-<li>We will cover the connection between these distributions and the Poisson distribution on another day</li>
-</ul>
-</section>
-<section id="section-7.1" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-7.1">Section 7.1</h3>
-<p>Key terminology to know:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">normal RV (know shorthand notation, basic properties)</label></li>
-</ul>
-<p>Comments:</p>
-<ul>
-<li>Skip 7.1.2 (pages 278-282)</li>
-</ul>
-</section>
-<section id="section-7.4" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-7.4">Section 7.4</h3>
-<p>Key terminology to know:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">beta RV (know shorthand notation, basic properties)</label></li>
-</ul>
-<p>Comments:</p>
-<ul>
-<li>The beta model is very useful for random variables that have a support between 0 and 1.</li>
-</ul>
+<p>The outcomes counted by the multiplication principle describe a specific ordering, or arrangement, of a random experiment. For example 1.13, the outcomes in the sample space are found by fixing the exam (eg exams 1-4) and randomly assigning one of five grades to each exam. There are <span class="math inline">\(5\times5\times5\times5 = 5^4\)</span> such outcomes in the sample space. The complement of the event of interest is getting no A’s and we must describe outcomes in this set the same way that we described them in the sample space (eg assigning one of four non-A grades to each exam). There are <span class="math inline">\(4^4\)</span> such ways to assign a non-A grade to each exam.</p>
+<p>Permutations are always ordered arrangements of unique/distinct objects or individual outcomes.</p>
+<p>Example 1.14 shows a common technique in counting problems. One outcome describes a specific (unique) arrangement of 15 books (eg positions 1-5 are top shelf, 6-10 middle, and 11-15 bottom). There are 15! such arrangements in the sample space. The event of interest, all math books on the bottom, uses both permutation counting and the multiplication principle. Permutations counts the number of ways to arrange math books (5!) and novels (10!). Each unique arrangement of math books can be combined with each unique arrangement of novels. Hence the multiplication principle is used to count the number of ways to get 10 novels on the top and middle shelves and 5 math books on the bottom: <span class="math inline">\(10! \times 5!\)</span>.</p>
+<p>One twist to problem 1.14: suppose the event of interest was simply that the 5 math books were on the same shelf (ie they could be on the top, middle or bottom shelves). Each of these three options, <span class="math inline">\(A_{top}, A_{middle}, A_{bottom}\)</span> for math book placement has <span class="math inline">\(10! \times 5!\)</span> ways to arrange the books and each of these shelf positions <span class="math inline">\(A_{i}\)</span> is mutually exclusive. Hence the probability that the 5 math books are on the same shelf is found using the addition rule for mutually exclusive events: <span class="math display">\[
+P(A_{top} \cup A_{middle} \cup A_{bottom}) = P(A_{top}) + P(A_{middle}) +  P(A_{bottom}) = 3 \times \dfrac{10! \times 5!}{15!}
+\]</span></p>
 </section>
 </section>
-<section id="day-15" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="day-15">Day 15</h2>
+<section id="day-3" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="day-3">Day 3</h2>
 <ul>
-<li><p>What to read: Read sections 8.1</p></li>
-<li><p>Learning objectives: This section will help you</p>
+<li><p>What to read: Read sections 1.7</p></li>
+<li><p>Learning objectives: These sections will help you</p>
 <ul>
-<li>use cdf’s to derive the distribution (cdf, then pdf) of a function of a continuous RV</li>
+<li>define and count combinations using the binomial coefficient</li>
+<li>use the binomial coefficient to count permutations of two types of objects (a binary sequence)</li>
+<li>distinguish between a permutation and a combination</li>
 </ul></li>
-<li><p>No reading quiz on section 8.1</p></li>
+<li><p>After reading, take reading <a href="https://forms.gle/D5hXDdpzE5mcBLkaA">quiz 2</a></p></li>
 </ul>
-<section id="section-8.1" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-8.1">Section 8.1</h3>
-<p>Key terminology to know:</p>
+<section id="section-1.7" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-1.7">Section 1.7</h3>
+<p>Key ideas to know:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">cdf and pdf (make sure these ideas are solid)</label></li>
+<li><label><input type="checkbox">combination</label></li>
+<li><label><input type="checkbox">correspondence between a binary sequence/list and an unordered subset/sample of size <span class="math inline">\(k\)</span> from <span class="math inline">\(n\)</span> unique objects</label></li>
+<li><label><input type="checkbox">binomial coefficient</label></li>
 </ul>
 <p>Comments:</p>
-<ul>
-<li>Skim 8.1.1 and skip 8.1.2</li>
-<li>This section outlines how to derive the pdf of a function of a RV using the cdf method.</li>
-<li>This method always “works”, though often the mgf method is simpler <em>if</em> the function is linear and the pdf distribution is a common one (eg normal, exponential, etc).</li>
-</ul>
+<p>We will be considering counting problems where outcomes are either <em>ordered</em> and <em>unordered</em>. Make sure that your strategy for solving a problem is consistent when counting sample space and event outcomes (eg don’t use an ordered strategy for one and an unordered strategy for the other).</p>
+<p>While you need to describe outcomes in an event and sample space of interest in the same manner, you don’t need to use the same counting method to count outcomes in each. e.g.&nbsp;Example 1.26 uses the multiplication principle to count all possible ways to flip a coin 20 times while the binomial coefficient is used to count how many of these outcomes contain example 10 H and 10 T.</p>
+<p>The binomial coefficient, which counts both the number of unordered subsets of unique objects and the number of binary sequences, can be generlized to a multinomial coefficient. Example 1.15(ii) involves picking 4 subsets of 13 cards from a deck of 52: <span class="math inline">\(\frac{52!}{13!13!13!13!}\)</span>. Example 1.27(ii) also uses a multinomial coefficient in the numerator: <span class="math inline">\(\frac{20!}{4!5!3!8!}\)</span> counts the number of ways to arrange 4 As, 5 Gs, 3 Ts, and 8 Cs.</p>
+<p>Don’t worry about the binomial theorem (and its proof) for now.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-dobrow" class="csl-entry" role="listitem">
 Wagaman, &amp; Dobrow, A. S. 2021. <em>Probability: With Applications and r</em>. 2nd ed. Wiley.
 </div>
@@ -856,13 +841,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./more-discrete-rv.html" class="pagination-link" aria-label="More with discrete random variables">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">More with discrete random variables</span></span>
+      <a href="./index.html" class="pagination-link" aria-label="Math 240 Probability">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Math 240 Probability</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro-poisson-process.html" class="pagination-link" aria-label="Poisson Process">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Poisson Process</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./thinking-conditionally.html" class="pagination-link" aria-label="Thinking conditionally">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Thinking conditionally</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

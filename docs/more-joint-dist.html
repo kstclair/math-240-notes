@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; First principles of probability – math-240-notes</title>
+<title>8&nbsp; More with joint and conditional distributions – math-240-notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -50,8 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./thinking-conditionally.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./limit-thms.html" rel="next">
+<link href="./intro-joint-dist.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -130,7 +110,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./first-principles.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">First principles of probability</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./more-joint-dist.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">More with joint and conditional distributions</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -170,7 +150,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./first-principles.html" class="sidebar-item-text sidebar-link active">
+  <a href="./first-principles.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">First principles of probability</span></span></a>
   </div>
 </li>
@@ -212,7 +192,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./more-joint-dist.html" class="sidebar-item-text sidebar-link">
+  <a href="./more-joint-dist.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">More with joint and conditional distributions</span></span></a>
   </div>
 </li>
@@ -238,20 +218,19 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#day-1" id="toc-day-1" class="nav-link active" data-scroll-target="#day-1">Day 1</a>
+  <li><a href="#day-21" id="toc-day-21" class="nav-link active" data-scroll-target="#day-21">Day 21</a>
   <ul class="collapse">
-  <li><a href="#section-1.1" id="toc-section-1.1" class="nav-link" data-scroll-target="#section-1.1">Section 1.1</a></li>
-  <li><a href="#section-1.2-1.3" id="toc-section-1.2-1.3" class="nav-link" data-scroll-target="#section-1.2-1.3">Section 1.2-1.3</a></li>
-  <li><a href="#section-1.4-1.8" id="toc-section-1.4-1.8" class="nav-link" data-scroll-target="#section-1.4-1.8">Section 1.4 + 1.8</a></li>
+  <li><a href="#sections-8.2" id="toc-sections-8.2" class="nav-link" data-scroll-target="#sections-8.2">Sections 8.2</a></li>
+  <li><a href="#sections-8.3" id="toc-sections-8.3" class="nav-link" data-scroll-target="#sections-8.3">Sections 8.3</a></li>
+  <li><a href="#sections-8.4" id="toc-sections-8.4" class="nav-link" data-scroll-target="#sections-8.4">Sections 8.4</a></li>
   </ul></li>
-  <li><a href="#day-2" id="toc-day-2" class="nav-link" data-scroll-target="#day-2">Day 2</a>
+  <li><a href="#day-22" id="toc-day-22" class="nav-link" data-scroll-target="#day-22">Day 22</a>
   <ul class="collapse">
-  <li><a href="#section-1.5" id="toc-section-1.5" class="nav-link" data-scroll-target="#section-1.5">Section 1.5</a></li>
-  <li><a href="#section-1.6" id="toc-section-1.6" class="nav-link" data-scroll-target="#section-1.6">Section 1.6</a></li>
+  <li><a href="#sections-4.3-9.1-and-9.2" id="toc-sections-4.3-9.1-and-9.2" class="nav-link" data-scroll-target="#sections-4.3-9.1-and-9.2">Sections 4.3, 9.1, and 9.2</a></li>
   </ul></li>
-  <li><a href="#day-3" id="toc-day-3" class="nav-link" data-scroll-target="#day-3">Day 3</a>
+  <li><a href="#day-23" id="toc-day-23" class="nav-link" data-scroll-target="#day-23">Day 23</a>
   <ul class="collapse">
-  <li><a href="#section-1.7" id="toc-section-1.7" class="nav-link" data-scroll-target="#section-1.7">Section 1.7</a></li>
+  <li><a href="#sections-9.3-and-9.5" id="toc-sections-9.3-and-9.5" class="nav-link" data-scroll-target="#sections-9.3-and-9.5">Sections 9.3 and 9.5</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -261,7 +240,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-first-p" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">First principles of probability</span></span></h1>
+<h1 class="title"><span id="sec-more-joint-dist" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">More with joint and conditional distributions</span></span></h1>
 </div>
 
 
@@ -278,143 +257,123 @@ window.Quarto = {
 </header>
 
 
-<p>First principles cover sections in chapter 1 of <span class="citation" data-cites="dobrow">Wagaman (<a href="#ref-dobrow" role="doc-biblioref">2021</a>)</span>. Make sure to review our <a href="https://docs.google.com/spreadsheets/d/1QKQFfuuDzFUpOdjMvmHWZpR6zUzoxd9UjE83vA0H1Fs/edit?usp=sharing">week 1 schedule</a>.</p>
-<section id="day-1" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="day-1">Day 1</h2>
+<p>We will explore strategies for deriving the distribution of a function of a two (or more) random variables. Then we return to thinking conditionally (first introduced in <a href="thinking-conditionally.html" class="quarto-xref"><span>Chapter 2</span></a>) to see how to define a conditional pdf/pmf probability model.</p>
+<p>Make sure to review our <a href="https://docs.google.com/spreadsheets/d/1RrtZ7JiEBz_r4XMC7Eib2ObRZpGSXkg2fVV1h8YrnUw/edit?usp=sharing">week 8 schedule</a>.</p>
+<section id="day-21" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="day-21">Day 21</h2>
 <ul>
-<li><p>What to read: Read sections 1.1, 1.2, 1.3, 1.4, and 1.8 to see the generalization of property #3.</p></li>
+<li><p>What to read: Read sections 8.2, 8.3, 8.4</p></li>
 <li><p>Learning objectives: These sections will help you</p>
 <ul>
-<li>define basic probability and set theory terminology</li>
-<li>define fundamental properties of probability</li>
+<li>derive the pdf of a minimum or maximum</li>
+<li>derive the pmf/pdf of a sum of two independent RV using a convolution of functions</li>
 </ul></li>
+<li><p>After reading, take reading <a href="https://forms.gle/KsqVyoKtsQLFrZcs5">quiz 17</a></p></li>
 </ul>
-<section id="section-1.1" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-1.1">Section 1.1</h3>
+<section id="sections-8.2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="sections-8.2">Sections 8.2</h3>
 <p>Key terminology to know:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">Sample space <span class="math inline">\(\Omega\)</span></label></li>
-<li><label><input type="checkbox">Outcome <span class="math inline">\(\omega\)</span>: this can also be called an <u>element</u></label></li>
-<li><label><input type="checkbox">Event <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, …</label></li>
+<li><label><input type="checkbox">order statistics</label></li>
+<li><label><input type="checkbox">inequalities for mins and maxs</label></li>
 </ul>
 <p>Comments:</p>
-<p>The sample space for a random experiment is the list of all possible outcomes. To define a sample space, start by thinking about how to define a couple individual outcomes and then generalize this to all outcomes. If there are a large or infinite number of outcomes, then you can use a “…” to show that a pattern will continue (like Examples 1.3 and 1.4).</p>
-<p>There may not be a unique way to define a sample space and outcomes for a random experiment. For example, one may chose to define the sample space for Example 1.3 as just the number of votes for Yolanda <span class="math display">\[\Omega = \{ 0, 1, 2, \dotsc, 999, 1000\}\]</span>. But all the outcomes in a sample space must define unique possibilities for a random experiment (i.e.&nbsp;they are mutually exclusive, section 1.4).</p>
-<p>“Complex” random experiments are often composed of simpler experiments. Example 1.2 is an example of this as we define one outcome for two dice rolls as the joint outcome of two individual die rolls. Similar for the sample space for three coin flips. In scenarios where the individual simpler experiments have equally likely outcomes, the outcomes in the more complex sample space (e.g.&nbsp;two dice rolls, three coin flips) are also equally likely outcomes.</p>
-</section>
-<section id="section-1.2-1.3" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-1.2-1.3">Section 1.2-1.3</h3>
-<p>Key ideas to know:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">relative frequency interpretation of probability</label></li>
-<li><label><input type="checkbox">probability function and its essential properties</label></li>
-</ul>
-<p>Comments:</p>
-<p>Make sure you can put the probability function properties into words: (1) means probabilities can’t be negative, (2) means something in the sample space has to happen with probability 1 and (3) means the probability of an event is just the sum of the probabilities of outcomes that make up that event.</p>
-</section>
-<section id="section-1.4-1.8" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-1.4-1.8">Section 1.4 + 1.8</h3>
-<p>Key <u>set theory</u> ideas to know</p>
-<ul class="task-list">
-<li><label><input type="checkbox">complement <span class="math inline">\(A^c\)</span> (not <span class="math inline">\(A\)</span>)</label></li>
-<li><label><input type="checkbox">union <span class="math inline">\(A \cup B\)</span> (at least one <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span> or both)</label></li>
-<li><label><input type="checkbox">intersection <span class="math inline">\(A \cap B = AB\)</span> (both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>)</label></li>
-<li><label><input type="checkbox"><span class="math inline">\((AB)^c = A^c \cup B^c\)</span> (at most one)</label></li>
-<li><label><input type="checkbox"><span class="math inline">\((A \cup B)^c = A^cB^c\)</span> (neither)</label></li>
-<li><label><input type="checkbox"><span class="math inline">\(AB^c\)</span> (<span class="math inline">\(A\)</span> but not <span class="math inline">\(B\)</span>)</label></li>
-<li><label><input type="checkbox">subset <span class="math inline">\(\subseteq\)</span></label></li>
-<li><label><input type="checkbox">mutually exclusive/disjoint events</label></li>
-<li><label><input type="checkbox">Venn diagram</label></li>
-<li><label><input type="checkbox">empty set <span class="math inline">\(\emptyset\)</span></label></li>
-</ul>
-<p>Comments:</p>
-<p>The first six ideas create a new event out of one or more events (think addition, subtraction, etc). Subset, mutually exclusive and Venn diagrams tells us relational information about events (think less than, etc). The empty set is a set that has no outcomes (think zero).</p>
-<p>Key <u>probability properties</u> to know</p>
-<ul class="task-list">
-<li><label><input type="checkbox">Addition rule for mutually exclusive events (only add probability of events when they are mutually exclusive)</label></li>
-<li><label><input type="checkbox">General addition rule (events do not need to be mutually exclusive)</label></li>
-<li><label><input type="checkbox">Complement rule</label></li>
-</ul>
-<p>Comments:</p>
-<p>The addition rule properties are used to find the probability of a <em>union</em> of two or more events. When events are mutually exclusive, we just add the individual event probabilities. Make sure that you assess whether events are mutually exclusive before simply adding their probabilities.</p>
-<p>When events are not mutually exclusive, you start by adding event probabilities but then you need to subtract out the probability of the overlap (intersection) between events. The inclusion/exclusion rule is an extension of property (3) (eq. 1.3).</p>
-<p>The complement rule along with the addition rule is useful for computing the probability of neither <span class="math inline">\(A\)</span> nor <span class="math inline">\(B\)</span>: <span class="math display">\[
-P(A^c B^c) = 1 - P(A \cap B)
-\]</span></p>
-</section>
-</section>
-<section id="day-2" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="day-2">Day 2</h2>
 <ul>
-<li><p>What to read: Read sections 1.5 and 1.6</p></li>
+<li>Focus on material involving the min <span class="math inline">\(X_{(1)}\)</span> and max <span class="math inline">\(X_{(n)}\)</span> order statistics.</li>
+<li>You can skim the proof of the beta distribution for general <span class="math inline">\(X_{(k)}\)</span> for <span class="math inline">\(1 &lt; k &lt; n\)</span> when your sample is iid uniform. (pages 333-334)</li>
+</ul>
+</section>
+<section id="sections-8.3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="sections-8.3">Sections 8.3</h3>
+<p>Key terminology to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">convolution of two functions</label></li>
+</ul>
+<p>Comments:</p>
+<ul>
+<li>The convolution method of finding the pdf of <span class="math inline">\(X+Y\)</span> is an example of a CDF transformation method (i.e.&nbsp;find the CDF then differentiate to find PDF)</li>
+<li>Review section 4.4.1 equation 4.7 for review of the analogous discrete version of 8.3.</li>
+</ul>
+</section>
+<section id="sections-8.4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="sections-8.4">Sections 8.4</h3>
+<p>Comments:</p>
+<ul>
+<li>This section reviews both how to use geometry to compute probabilities from uniform pdfs and use of the CDF method to find PDF for a function of two RV.</li>
+<li>You can skim 8.23 (Buffon’s needle problem is fun but you won’t necessarily see trig calculations in hw/exam problems!)</li>
+</ul>
+</section>
+</section>
+<section id="day-22" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="day-22">Day 22</h2>
+<ul>
+<li><p>What to read: Read sections 4.8, 9.1, 9.2</p></li>
 <li><p>Learning objectives: These sections will help you</p>
 <ul>
-<li>use the multiplication principle to count the number of outcomes in a sample space or event</li>
-<li>compute event probabilities using counting when outcomes are equally likely</li>
-<li>define and count permutations</li>
+<li>derive conditional pmf/pdf from joint and marginal models</li>
+<li>apply Bayes formula to conditional pmf/pdf</li>
 </ul></li>
-<li><p>After reading, take reading <a href="https://forms.gle/JeRauvsZLp4FqnUK6">quiz 1</a></p></li>
+<li><p>After reading, take reading <a href="https://forms.gle/aoCcCr7x9s8o6Uhk8">quiz 18</a></p></li>
 </ul>
-<section id="section-1.5" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-1.5">Section 1.5</h3>
-<p>Key idea to know:</p>
+<section id="sections-4.3-9.1-and-9.2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="sections-4.3-9.1-and-9.2">Sections 4.3, 9.1, and 9.2</h3>
+<p>Key terminology to know:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">equally like outcomes</label></li>
+<li><label><input type="checkbox">conditional pmf</label></li>
+<li><label><input type="checkbox">conditional pdf</label></li>
+<li><label><input type="checkbox">Bayes formula for pdf</label></li>
 </ul>
 <p>Comments:</p>
-<p>Our definition of the probability function Section 1.3 means that the probability of any event <span class="math inline">\(A\)</span> is equal to the number of outcomes in <span class="math inline">\(A\)</span> divided by the total number of outcomes when all outcomes are equally likely.</p>
-</section>
-<section id="section-1.6" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-1.6">Section 1.6</h3>
-<p>Key ideas to know:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">multiplication principle</label></li>
-<li><label><input type="checkbox">permutation</label></li>
-<li><label><input type="checkbox">counting the number of permutations of <span class="math inline">\(n\)</span> unique/distinct objects</label></li>
-<li><label><input type="checkbox">counting the number of permutations of size <span class="math inline">\(k\)</span> from <span class="math inline">\(n\)</span> unique/distinct objects</label></li>
-<li><label><input type="checkbox">sampling with vs without replacement</label></li>
-</ul>
-<p>Comments:</p>
-<p>The outcomes counted by the multiplication principle describe a specific ordering, or arrangement, of a random experiment. For example 1.13, the outcomes in the sample space are found by fixing the exam (eg exams 1-4) and randomly assigning one of five grades to each exam. There are <span class="math inline">\(5\times5\times5\times5 = 5^4\)</span> such outcomes in the sample space. The complement of the event of interest is getting no A’s and we must describe outcomes in this set the same way that we described them in the sample space (eg assigning one of four non-A grades to each exam). There are <span class="math inline">\(4^4\)</span> such ways to assign a non-A grade to each exam.</p>
-<p>Permutations are always ordered arrangements of unique/distinct objects or individual outcomes.</p>
-<p>Example 1.14 shows a common technique in counting problems. One outcome describes a specific (unique) arrangement of 15 books (eg positions 1-5 are top shelf, 6-10 middle, and 11-15 bottom). There are 15! such arrangements in the sample space. The event of interest, all math books on the bottom, uses both permutation counting and the multiplication principle. Permutations counts the number of ways to arrange math books (5!) and novels (10!). Each unique arrangement of math books can be combined with each unique arrangement of novels. Hence the multiplication principle is used to count the number of ways to get 10 novels on the top and middle shelves and 5 math books on the bottom: <span class="math inline">\(10! \times 5!\)</span>.</p>
-<p>One twist to problem 1.14: suppose the event of interest was simply that the 5 math books were on the same shelf (ie they could be on the top, middle or bottom shelves). Each of these three options, <span class="math inline">\(A_{top}, A_{middle}, A_{bottom}\)</span> for math book placement has <span class="math inline">\(10! \times 5!\)</span> ways to arrange the books and each of these shelf positions <span class="math inline">\(A_{i}\)</span> is mutually exclusive. Hence the probability that the 5 math books are on the same shelf is found using the addition rule for mutually exclusive events: <span class="math display">\[
-P(A_{top} \cup A_{middle} \cup A_{bottom}) = P(A_{top}) + P(A_{middle}) +  P(A_{bottom}) = 3 \times \dfrac{10! \times 5!}{15!}
-\]</span></p>
-</section>
-</section>
-<section id="day-3" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="day-3">Day 3</h2>
 <ul>
-<li><p>What to read: Read sections 1.7</p></li>
+<li>We will cover expected value in 4.8.1 on Day 23.</li>
+<li>Take care when deriving conditional pmf/pdf. E.g the pdf <span class="math inline">\(f(y \mid x)\)</span> of <span class="math inline">\(Y \mid X=x\)</span> is a function of <span class="math inline">\(y\)</span> and <span class="math inline">\(x\)</span> is a constant.</li>
+</ul>
+</section>
+</section>
+<section id="day-23" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="day-23">Day 23</h2>
+<ul>
+<li><p>What to read: Read sections 9.3, 9.5</p></li>
 <li><p>Learning objectives: These sections will help you</p>
 <ul>
-<li>define and count combinations using the binomial coefficient</li>
-<li>use the binomial coefficient to count permutations of two types of objects (a binary sequence)</li>
-<li>distinguish between a permutation and a combination</li>
+<li>Compute a conditional pmf/pdf’s expected value and variance given a fixed value of the conditioning variable</li>
+<li>Compute a marginal expected value or variance from a RV’s conditional distribution</li>
 </ul></li>
-<li><p>After reading, take reading <a href="https://forms.gle/D5hXDdpzE5mcBLkaA">quiz 2</a></p></li>
+<li><p>After reading, take reading <a href="https://forms.gle/AZmecHbJtKckUvkL6">quiz 19</a></p></li>
 </ul>
-<section id="section-1.7" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-1.7">Section 1.7</h3>
-<p>Key ideas to know:</p>
+<section id="sections-9.3-and-9.5" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="sections-9.3-and-9.5">Sections 9.3 and 9.5</h3>
+<p>Key terminology to know:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">combination</label></li>
-<li><label><input type="checkbox">correspondence between a binary sequence/list and an unordered subset/sample of size <span class="math inline">\(k\)</span> from <span class="math inline">\(n\)</span> unique objects</label></li>
-<li><label><input type="checkbox">binomial coefficient</label></li>
+<li><label><input type="checkbox">Conditional expected value of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X=x\)</span>: <span class="math inline">\(E(Y \mid X=x)\)</span> (similar for flipping the roles of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>)</label></li>
+<li><label><input type="checkbox">Conditional variance of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X=x\)</span>: <span class="math inline">\(V(Y \mid X=x)\)</span> (similar for flipping the roles of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>)</label></li>
+<li><label><input type="checkbox">LOTUS for conditional distributions</label></li>
+<li><label><input type="checkbox">Conditional expected value of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X\)</span>: <span class="math inline">\(E(Y \mid X)\)</span> (similar for flipping the roles of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>)</label></li>
+<li><label><input type="checkbox">Conditional variance of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X\)</span>: <span class="math inline">\(V(Y \mid X)\)</span> (similar for flipping the roles of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>)</label></li>
+<li><label><input type="checkbox">Law of total expectation</label></li>
+<li><label><input type="checkbox">Law of total variance</label></li>
 </ul>
 <p>Comments:</p>
-<p>We will be considering counting problems where outcomes are either <em>ordered</em> and <em>unordered</em>. Make sure that your strategy for solving a problem is consistent when counting sample space and event outcomes (eg don’t use an ordered strategy for one and an unordered strategy for the other).</p>
-<p>While you need to describe outcomes in an event and sample space of interest in the same manner, you don’t need to use the same counting method to count outcomes in each. e.g.&nbsp;Example 1.26 uses the multiplication principle to count all possible ways to flip a coin 20 times while the binomial coefficient is used to count how many of these outcomes contain example 10 H and 10 T.</p>
-<p>The binomial coefficient, which counts both the number of unordered subsets of unique objects and the number of binary sequences, can be generlized to a multinomial coefficient. Example 1.15(ii) involves picking 4 subsets of 13 cards from a deck of 52: <span class="math inline">\(\frac{52!}{13!13!13!13!}\)</span>. Example 1.27(ii) also uses a multinomial coefficient in the numerator: <span class="math inline">\(\frac{20!}{4!5!3!8!}\)</span> counts the number of ways to arrange 4 As, 5 Gs, 3 Ts, and 8 Cs.</p>
-<p>Don’t worry about the binomial theorem (and its proof) for now.</p>
+<ul>
+<li><p>For these sections, we are framing the conditional relation as “<span class="math inline">\(Y\)</span> given <span class="math inline">\(X\)</span>”. The same rules/def/ideas apply if we flip the roles of <span class="math inline">\(Y\)</span> and <span class="math inline">\(X\)</span>, so don’t get stuck on a particular formula - try to see how things would generalize to any RV. E.g. examples 9.13 and 9.14 switch up notation.</p></li>
+<li><p>For these sections, we often frame the known information/models as being given the distribution (marginally) of <span class="math inline">\(X\)</span> and the conditional distribution of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X=x\)</span> (or <span class="math inline">\(X\)</span>). As already mentioned, we could flip the roles of the RVs and have the same general rules apply.</p></li>
+<li><p>I know these sections can get confusing since we are talking about very similar things with similar notation. One important idea, though, is whether a value (exp/var) is <em>fixed</em> (but maybe unknown, in formula form) or <em>random.</em></p>
+<ul>
+<li><span class="math inline">\(E(Y \mid X=x)\)</span> assumes that we know a value of <span class="math inline">\(X=x\)</span>. The final answer may be a function of <span class="math inline">\(x\)</span>, but <span class="math inline">\(x\)</span> is a fixed (not random) value. Like in Ex 9.12, <span class="math inline">\(E(Y \mid X=0.6) = (0.6)/2=0.3\)</span> is the expected value of Miguel’s number if Riley picks <span class="math inline">\(X=0.6\)</span>.</li>
+<li><span class="math inline">\(E(Y \mid X) = g(X)\)</span> keeps <span class="math inline">\(X\)</span> <em>random</em>. Why do this? We might want to know how <span class="math inline">\(E(Y \mid X) = g(X)\)</span> behaves over all possible, random, values of <span class="math inline">\(X\)</span>. Like in Ex 9.12, <span class="math inline">\(E(Y \mid X) = X/2\)</span> tells us that the random variable <span class="math inline">\(X/2\)</span> models the expected value of Miguel’s number as a function of the random value <span class="math inline">\(X\)</span> of Riley’s pick.</li>
+</ul></li>
+<li><p>The law of total expectation tells us the “average” value of <span class="math inline">\(E(Y \mid X)\)</span> over all values of <span class="math inline">\(X\)</span> (“averaged” over the pdf/pmf of <span class="math inline">\(X\)</span>). It is a way to get the unconditional expectation of <span class="math inline">\(Y\)</span> without having to compute the marginal distribution of <span class="math inline">\(Y\)</span>.</p>
+<ul>
+<li>e.g.&nbsp;in Ex 9.12, <span class="math inline">\(E(Y \mid X) = X/2\)</span> tells us the expected value of Miguel’s number as a function of the random value <span class="math inline">\(X\)</span>. If <span class="math inline">\(X \sim Unif(0,1)\)</span>, then <span class="math inline">\(E(X) = 0.5\)</span> and the unconditional expectation for Miguel’s number is <span class="math inline">\(E(Y) = E_x(E(Y \mid X)) = E_x(X/2) = (0.5)/2 = 0.25\)</span>. As a gut check, we should expect the expectation for Miguel to be lower than Riley because Riley’s number always dictates the upper bound on Miguel’s number.</li>
+</ul></li>
+<li><p>The law of total variance (LOTV) is similar in spirit to the law of total expectation, that we want to understand the variance of <span class="math inline">\(Y\)</span> unconditionally when what we are given is the conditional variance. But, the equation for the LOTV is more complex because the variance term is more complex: it involves taking an expectation of squared deviation of the RV from its expectation. The LOTV is computed with two parts:</p>
+<ul>
+<li><span class="math inline">\(E_x(V(Y \mid X))\)</span>: “average” the conditional variance (RV) <span class="math inline">\(V(Y\mid X)\)</span> over all values of <span class="math inline">\(X\)</span> (“averaged” over the pdf/pmf of <span class="math inline">\(X\)</span>).</li>
+<li><span class="math inline">\(V_x(E(Y \mid X))\)</span>: measure the variation of the conditional expected value (RV) <span class="math inline">\(E(Y\mid X)\)</span> over all values of <span class="math inline">\(X\)</span> (variation with respect to the pdf/pmf of <span class="math inline">\(X\)</span>).</li>
+</ul></li>
+</ul>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-dobrow" class="csl-entry" role="listitem">
-Wagaman, &amp; Dobrow, A. S. 2021. <em>Probability: With Applications and r</em>. 2nd ed. Wiley.
-</div>
-</div>
 </section>
 </section>
 
@@ -841,13 +800,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Math 240 Probability">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Math 240 Probability</span>
+      <a href="./intro-joint-dist.html" class="pagination-link" aria-label="Introduction to joint distributions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Introduction to joint distributions</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./thinking-conditionally.html" class="pagination-link" aria-label="Thinking conditionally">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Thinking conditionally</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./limit-thms.html" class="pagination-link" aria-label="Some Limit Theorems">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Some Limit Theorems</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

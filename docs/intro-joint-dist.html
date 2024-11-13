@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>References – math-240-notes</title>
+<title>7&nbsp; Introduction to joint distributions – math-240-notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,6 +24,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -49,7 +50,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./limit-thms.html" rel="prev">
+<link href="./more-joint-dist.html" rel="next">
+<link href="./intro-poisson-process.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -99,7 +101,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro-joint-dist.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Introduction to joint distributions</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -175,7 +177,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-joint-dist.html" class="sidebar-item-text sidebar-link">
+  <a href="./intro-joint-dist.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Introduction to joint distributions</span></span></a>
   </div>
 </li>
@@ -193,7 +195,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -202,15 +204,32 @@ div.csl-indent {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#day-18" id="toc-day-18" class="nav-link active" data-scroll-target="#day-18">Day 18</a>
+  <ul class="collapse">
+  <li><a href="#sections-4.3-and-6.6" id="toc-sections-4.3-and-6.6" class="nav-link" data-scroll-target="#sections-4.3-and-6.6">Sections 4.3 and 6.6</a></li>
+  </ul></li>
+  <li><a href="#day-19" id="toc-day-19" class="nav-link" data-scroll-target="#day-19">Day 19</a>
+  <ul class="collapse">
+  <li><a href="#sections-4.4-and-6.7" id="toc-sections-4.4-and-6.7" class="nav-link" data-scroll-target="#sections-4.4-and-6.7">Sections 4.4 and 6.7</a></li>
+  </ul></li>
+  <li><a href="#day-20" id="toc-day-20" class="nav-link" data-scroll-target="#day-20">Day 20</a>
+  <ul class="collapse">
+  <li><a href="#sections-4.7-6.8-and-9.6-and-pages-139-255" id="toc-sections-4.7-6.8-and-9.6-and-pages-139-255" class="nav-link" data-scroll-target="#sections-4.7-6.8-and-9.6-and-pages-139-255">Sections 4.7, 6.8, and 9.6 and pages 139, 255</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title"><span id="sec-intro-joint-dist" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Introduction to joint distributions</span></span></h1>
 </div>
 
 
@@ -227,11 +246,100 @@ div.csl-indent {
 </header>
 
 
-<div id="refs" role="list">
+<p>We will revisit chapters 4 and 6 of <span class="citation" data-cites="dobrow">Wagaman (<a href="references.html#ref-dobrow" role="doc-biblioref">2021</a>)</span> to describe joint distributions that can explain/model bivariate relationships between two (or more) random variables. We jump around from chapter 4 (discrete) and chapter 6 (continuous) to cover this topic.</p>
+<p>Make sure to review our <a href="https://docs.google.com/spreadsheets/d/10AP55TSo0bgqklDCOioCiiBYEZAyhIytcNe8qmd2nu8/edit?usp=sharing">week 7 schedule</a>.</p>
+<section id="day-18" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="day-18">Day 18</h2>
+<ul>
+<li><p>What to read: Read sections 4.3, 6.6, review Appendix D if you need multivariate integration review</p></li>
+<li><p>Learning objectives: These sections will help you</p>
+<ul>
+<li>understand what a joint distribution (pdf/pmf) is</li>
+<li>understand what a marginal distribution (pdf/pmf) is</li>
+<li>compute a marginal pdf/pmf from a joint pdf/pmf</li>
+<li>compute probabilities from a joint pdf/pmf</li>
+</ul></li>
+<li><p>After reading, take reading <a href="https://forms.gle/XKWqF5TZ1qVWDscE9">quiz 14</a></p></li>
+</ul>
+<section id="sections-4.3-and-6.6" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="sections-4.3-and-6.6">Sections 4.3 and 6.6</h3>
+<p>Key terminology to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">joint pmf (two discrete RV) and joint pdf (two continuous RV)</label></li>
+<li><label><input type="checkbox">marginal distribution (pmf or pdf)</label></li>
+<li><label><input type="checkbox">continuous joint cdf</label></li>
+<li><label><input type="checkbox">continuous bivariate pdf</label></li>
+</ul>
+<p>Comments:</p>
+<ul>
+<li>You can skip over the expectations on page 139 (equation 4.3) and 255 for now - we’ll cover this idea Friday.</li>
+<li>Computing probabilities from a joint pdf requires calculation of a double integral. As in single random variable integration, setting up the problem with the correct limits of integration is the key step here. <strong>Draw a picture</strong> of the event (region) that you want to find the probability of and <strong>intersect</strong> it with the support set for your pdf. It is this region that determines your limits!</li>
+<li>Make sure you review Appendix D if you are rusty with double integrals.</li>
+</ul>
+</section>
+</section>
+<section id="day-19" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="day-19">Day 19</h2>
+<ul>
+<li><p>What to read: Read section 6.7, review independence from 4.4</p></li>
+<li><p>Learning objectives: These sections will help you</p>
+<ul>
+<li>understand what independence for two (or more) RV means</li>
+<li>how to <em>prove</em> independence OR how to <em>use</em> independence to construct joint pdf/pmf</li>
+</ul></li>
+<li><p>After reading, take reading <a href="https://forms.gle/UvGofRr38VkZCCtf7">quiz 15</a></p></li>
+</ul>
+<section id="sections-4.4-and-6.7" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="sections-4.4-and-6.7">Sections 4.4 and 6.7</h3>
+<p>Key terminology to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">independent continuous RV</label></li>
+<li><label><input type="checkbox">independent discrete RV</label></li>
+</ul>
+<p>Comments:</p>
+<ul>
+<li>You can skim 6.7.1 on the accept-reject method.</li>
+<li>The assumption of independence between two RV makes the derivation of the joint pdf/pmf very easy since it is just the product of the two (marginal) pdf/pmf.</li>
+</ul>
+</section>
+</section>
+<section id="day-20" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="day-20">Day 20</h2>
+<ul>
+<li><p>What to read: Read expectation definitions on pages 139 and 255 and sections 4.7, 6.8, 9.6</p></li>
+<li><p>Learning objectives: These sections will help you</p>
+<ul>
+<li>compute the expected value of a function of two discrete or continuous RV</li>
+<li>understand how covariance and correlation are used to measure the <em>linear</em> dependence between two RV</li>
+<li>compute the covariance and correlation between two RV</li>
+<li>compute the variance of a linear combination of two RV when they are not independent</li>
+<li>see an example of a bivariate distribution with a parameter that measures correlation</li>
+</ul></li>
+<li><p>After reading, take reading <a href="https://forms.gle/b5vx8Ezd2b5SB2Jz9">quiz 16</a></p></li>
+</ul>
+<section id="sections-4.7-6.8-and-9.6-and-pages-139-255" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="sections-4.7-6.8-and-9.6-and-pages-139-255">Sections 4.7, 6.8, and 9.6 and pages 139, 255</h3>
+<p>Key terminology to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">expected value of a function of two RV</label></li>
+<li><label><input type="checkbox">covariance</label></li>
+<li><label><input type="checkbox">correlation</label></li>
+<li><label><input type="checkbox">general formula for the variance of a sum of random variables</label></li>
+<li><label><input type="checkbox">bivariate normal model</label></li>
+</ul>
+<p>Comments:</p>
+<ul>
+<li>Take a look at section 9.6 through page 391 to see an example of a joint pdf with a parameter that measures correlation.</li>
+</ul>
 
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-dobrow" class="csl-entry" role="listitem">
+Wagaman, &amp; Dobrow, A. S. 2021. <em>Probability: With Applications and r</em>. 2nd ed. Wiley.
 </div>
-
-
+</div>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -656,11 +764,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./limit-thms.html" class="pagination-link" aria-label="Some Limit Theorems">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Some Limit Theorems</span></span>
+      <a href="./intro-poisson-process.html" class="pagination-link" aria-label="Poisson Process">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Poisson Process</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./more-joint-dist.html" class="pagination-link" aria-label="More with joint and conditional distributions">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">More with joint and conditional distributions</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
