@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>7&nbsp; Introduction to joint distributions – math-240-notes</title>
+<title>8&nbsp; More with joint and conditional distributions – math-240-notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -50,8 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./more-joint-dist.html" rel="next">
-<link href="./intro-poisson-process.html" rel="prev">
+<link href="./limit-thms.html" rel="next">
+<link href="./intro-joint-dist.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -89,6 +69,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -101,7 +110,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro-joint-dist.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Introduction to joint distributions</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./more-joint-dist.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">More with joint and conditional distributions</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -177,20 +186,20 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-joint-dist.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro-joint-dist.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Introduction to joint distributions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./more-joint-dist.html" class="sidebar-item-text sidebar-link">
+  <a href="./more-joint-dist.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">More with joint and conditional distributions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./limit-thms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">More with joint and conditional distributions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Some Limit Theorems</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -209,17 +218,19 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#day-18" id="toc-day-18" class="nav-link active" data-scroll-target="#day-18">Day 18</a>
+  <li><a href="#day-21" id="toc-day-21" class="nav-link active" data-scroll-target="#day-21">Day 21</a>
   <ul class="collapse">
-  <li><a href="#sections-4.3-and-6.6" id="toc-sections-4.3-and-6.6" class="nav-link" data-scroll-target="#sections-4.3-and-6.6">Sections 4.3 and 6.6</a></li>
+  <li><a href="#sections-8.2" id="toc-sections-8.2" class="nav-link" data-scroll-target="#sections-8.2">Sections 8.2</a></li>
+  <li><a href="#sections-8.3" id="toc-sections-8.3" class="nav-link" data-scroll-target="#sections-8.3">Sections 8.3</a></li>
+  <li><a href="#sections-8.4" id="toc-sections-8.4" class="nav-link" data-scroll-target="#sections-8.4">Sections 8.4</a></li>
   </ul></li>
-  <li><a href="#day-19" id="toc-day-19" class="nav-link" data-scroll-target="#day-19">Day 19</a>
+  <li><a href="#day-22" id="toc-day-22" class="nav-link" data-scroll-target="#day-22">Day 22</a>
   <ul class="collapse">
-  <li><a href="#sections-4.4-and-6.7" id="toc-sections-4.4-and-6.7" class="nav-link" data-scroll-target="#sections-4.4-and-6.7">Sections 4.4 and 6.7</a></li>
+  <li><a href="#sections-4.3-9.1-and-9.2" id="toc-sections-4.3-9.1-and-9.2" class="nav-link" data-scroll-target="#sections-4.3-9.1-and-9.2">Sections 4.3, 9.1, and 9.2</a></li>
   </ul></li>
-  <li><a href="#day-20" id="toc-day-20" class="nav-link" data-scroll-target="#day-20">Day 20</a>
+  <li><a href="#day-23" id="toc-day-23" class="nav-link" data-scroll-target="#day-23">Day 23</a>
   <ul class="collapse">
-  <li><a href="#sections-4.7-6.8-and-9.6-and-pages-139-255" id="toc-sections-4.7-6.8-and-9.6-and-pages-139-255" class="nav-link" data-scroll-target="#sections-4.7-6.8-and-9.6-and-pages-139-255">Sections 4.7, 6.8, and 9.6 and pages 139, 255</a></li>
+  <li><a href="#sections-9.3-and-9.5" id="toc-sections-9.3-and-9.5" class="nav-link" data-scroll-target="#sections-9.3-and-9.5">Sections 9.3 and 9.5</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -229,7 +240,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-intro-joint-dist" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Introduction to joint distributions</span></span></h1>
+<h1 class="title"><span id="sec-more-joint-dist" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">More with joint and conditional distributions</span></span></h1>
 </div>
 
 
@@ -246,98 +257,123 @@ div.csl-indent {
 </header>
 
 
-<p>We will revisit chapters 4 and 6 of <span class="citation" data-cites="dobrow">Wagaman (<a href="references.html#ref-dobrow" role="doc-biblioref">2021</a>)</span> to describe joint distributions that can explain/model bivariate relationships between two (or more) random variables. We jump around from chapter 4 (discrete) and chapter 6 (continuous) to cover this topic.</p>
-<p>Make sure to review our <a href="https://docs.google.com/spreadsheets/d/10AP55TSo0bgqklDCOioCiiBYEZAyhIytcNe8qmd2nu8/edit?usp=sharing">week 7 schedule</a>.</p>
-<section id="day-18" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="day-18">Day 18</h2>
+<p>We will explore strategies for deriving the distribution of a function of a two (or more) random variables. Then we return to thinking conditionally (first introduced in <a href="#sec-think-cond" class="quarto-xref"><span class="quarto-unresolved-ref">sec-think-cond</span></a>) to see how to define a conditional pdf/pmf probability model.</p>
+<p>Make sure to review our <a href="https://docs.google.com/spreadsheets/d/1RrtZ7JiEBz_r4XMC7Eib2ObRZpGSXkg2fVV1h8YrnUw/edit?usp=sharing">week 8 schedule</a>.</p>
+<section id="day-21" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="day-21">Day 21</h2>
 <ul>
-<li><p>What to read: Read sections 4.3, 6.6, review Appendix D if you need multivariate integration review</p></li>
+<li><p>What to read: Read sections 8.2, 8.3, 8.4</p></li>
 <li><p>Learning objectives: These sections will help you</p>
 <ul>
-<li>understand what a joint distribution (pdf/pmf) is</li>
-<li>understand what a marginal distribution (pdf/pmf) is</li>
-<li>compute a marginal pdf/pmf from a joint pdf/pmf</li>
-<li>compute probabilities from a joint pdf/pmf</li>
+<li>derive the pdf of a minimum or maximum</li>
+<li>derive the pmf/pdf of a sum of two independent RV using a convolution of functions</li>
 </ul></li>
-<li><p>After reading, take reading <a href="https://forms.gle/XKWqF5TZ1qVWDscE9">quiz 14</a></p></li>
+<li><p>After reading, take reading <a href="https://forms.gle/KsqVyoKtsQLFrZcs5">quiz 17</a></p></li>
 </ul>
-<section id="sections-4.3-and-6.6" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="sections-4.3-and-6.6">Sections 4.3 and 6.6</h3>
+<section id="sections-8.2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="sections-8.2">Sections 8.2</h3>
 <p>Key terminology to know:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">joint pmf (two discrete RV) and joint pdf (two continuous RV)</label></li>
-<li><label><input type="checkbox">marginal distribution (pmf or pdf)</label></li>
-<li><label><input type="checkbox">continuous joint cdf</label></li>
-<li><label><input type="checkbox">continuous bivariate pdf</label></li>
+<li><label><input type="checkbox">order statistics</label></li>
+<li><label><input type="checkbox">inequalities for mins and maxs</label></li>
 </ul>
 <p>Comments:</p>
 <ul>
-<li>You can skip over the expectations on page 139 (equation 4.3) and 255 for now - we’ll cover this idea Friday.</li>
-<li>Computing probabilities from a joint pdf requires calculation of a double integral. As in single random variable integration, setting up the problem with the correct limits of integration is the key step here. <strong>Draw a picture</strong> of the event (region) that you want to find the probability of and <strong>intersect</strong> it with the support set for your pdf. It is this region that determines your limits!</li>
-<li>Make sure you review Appendix D if you are rusty with double integrals.</li>
+<li>Focus on material involving the min <span class="math inline">\(X_{(1)}\)</span> and max <span class="math inline">\(X_{(n)}\)</span> order statistics.</li>
+<li>You can skim the proof of the beta distribution for general <span class="math inline">\(X_{(k)}\)</span> for <span class="math inline">\(1 &lt; k &lt; n\)</span> when your sample is iid uniform. (pages 333-334)</li>
 </ul>
 </section>
-</section>
-<section id="day-19" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="day-19">Day 19</h2>
-<ul>
-<li><p>What to read: Read section 6.7, review independence from 4.4</p></li>
-<li><p>Learning objectives: These sections will help you</p>
-<ul>
-<li>understand what independence for two (or more) RV means</li>
-<li>how to <em>prove</em> independence OR how to <em>use</em> independence to construct joint pdf/pmf</li>
-</ul></li>
-<li><p>After reading, take reading <a href="https://forms.gle/UvGofRr38VkZCCtf7">quiz 15</a></p></li>
-</ul>
-<section id="sections-4.4-and-6.7" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="sections-4.4-and-6.7">Sections 4.4 and 6.7</h3>
+<section id="sections-8.3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="sections-8.3">Sections 8.3</h3>
 <p>Key terminology to know:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">independent continuous RV</label></li>
-<li><label><input type="checkbox">independent discrete RV</label></li>
+<li><label><input type="checkbox">convolution of two functions</label></li>
 </ul>
 <p>Comments:</p>
 <ul>
-<li>You can skim 6.7.1 on the accept-reject method.</li>
-<li>The assumption of independence between two RV makes the derivation of the joint pdf/pmf very easy since it is just the product of the two (marginal) pdf/pmf.</li>
+<li>The convolution method of finding the pdf of <span class="math inline">\(X+Y\)</span> is an example of a CDF transformation method (i.e.&nbsp;find the CDF then differentiate to find PDF)</li>
+<li>Review section 4.4.1 equation 4.7 for review of the analogous discrete version of 8.3.</li>
+</ul>
+</section>
+<section id="sections-8.4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="sections-8.4">Sections 8.4</h3>
+<p>Comments:</p>
+<ul>
+<li>This section reviews both how to use geometry to compute probabilities from uniform pdfs and use of the CDF method to find PDF for a function of two RV.</li>
+<li>You can skim 8.23 (Buffon’s needle problem is fun but you won’t necessarily see trig calculations in hw/exam problems!)</li>
 </ul>
 </section>
 </section>
-<section id="day-20" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="day-20">Day 20</h2>
+<section id="day-22" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="day-22">Day 22</h2>
 <ul>
-<li><p>What to read: Read expectation definitions on pages 139 and 255 and sections 4.7, 6.8, 9.6</p></li>
+<li><p>What to read: Read sections 4.8, 9.1, 9.2</p></li>
 <li><p>Learning objectives: These sections will help you</p>
 <ul>
-<li>compute the expected value of a function of two discrete or continuous RV</li>
-<li>understand how covariance and correlation are used to measure the <em>linear</em> dependence between two RV</li>
-<li>compute the covariance and correlation between two RV</li>
-<li>compute the variance of a linear combination of two RV when they are not independent</li>
-<li>see an example of a bivariate distribution with a parameter that measures correlation</li>
+<li>derive conditional pmf/pdf from joint and marginal models</li>
+<li>apply Bayes formula to conditional pmf/pdf</li>
 </ul></li>
-<li><p>After reading, take reading <a href="https://forms.gle/b5vx8Ezd2b5SB2Jz9">quiz 16</a></p></li>
+<li><p>After reading, take reading <a href="https://forms.gle/aoCcCr7x9s8o6Uhk8">quiz 18</a></p></li>
 </ul>
-<section id="sections-4.7-6.8-and-9.6-and-pages-139-255" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="sections-4.7-6.8-and-9.6-and-pages-139-255">Sections 4.7, 6.8, and 9.6 and pages 139, 255</h3>
+<section id="sections-4.3-9.1-and-9.2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="sections-4.3-9.1-and-9.2">Sections 4.3, 9.1, and 9.2</h3>
 <p>Key terminology to know:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">expected value of a function of two RV</label></li>
-<li><label><input type="checkbox">covariance</label></li>
-<li><label><input type="checkbox">correlation</label></li>
-<li><label><input type="checkbox">general formula for the variance of a sum of random variables</label></li>
-<li><label><input type="checkbox">bivariate normal model</label></li>
+<li><label><input type="checkbox">conditional pmf</label></li>
+<li><label><input type="checkbox">conditional pdf</label></li>
+<li><label><input type="checkbox">Bayes formula for pdf</label></li>
 </ul>
 <p>Comments:</p>
 <ul>
-<li>Take a look at section 9.6 through page 391 to see an example of a joint pdf with a parameter that measures correlation.</li>
+<li>We will cover expected value in 4.8.1 on Day 23.</li>
+<li>Take care when deriving conditional pmf/pdf. E.g the pdf <span class="math inline">\(f(y \mid x)\)</span> of <span class="math inline">\(Y \mid X=x\)</span> is a function of <span class="math inline">\(y\)</span> and <span class="math inline">\(x\)</span> is a constant.</li>
+</ul>
+</section>
+</section>
+<section id="day-23" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="day-23">Day 23</h2>
+<ul>
+<li><p>What to read: Read sections 9.3, 9.5</p></li>
+<li><p>Learning objectives: These sections will help you</p>
+<ul>
+<li>Compute a conditional pmf/pdf’s expected value and variance given a fixed value of the conditioning variable</li>
+<li>Compute a marginal expected value or variance from a RV’s conditional distribution</li>
+</ul></li>
+<li><p>After reading, take reading <a href="https://forms.gle/AZmecHbJtKckUvkL6">quiz 19</a></p></li>
+</ul>
+<section id="sections-9.3-and-9.5" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="sections-9.3-and-9.5">Sections 9.3 and 9.5</h3>
+<p>Key terminology to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Conditional expected value of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X=x\)</span>: <span class="math inline">\(E(Y \mid X=x)\)</span> (similar for flipping the roles of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>)</label></li>
+<li><label><input type="checkbox">Conditional variance of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X=x\)</span>: <span class="math inline">\(V(Y \mid X=x)\)</span> (similar for flipping the roles of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>)</label></li>
+<li><label><input type="checkbox">LOTUS for conditional distributions</label></li>
+<li><label><input type="checkbox">Conditional expected value of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X\)</span>: <span class="math inline">\(E(Y \mid X)\)</span> (similar for flipping the roles of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>)</label></li>
+<li><label><input type="checkbox">Conditional variance of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X\)</span>: <span class="math inline">\(V(Y \mid X)\)</span> (similar for flipping the roles of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>)</label></li>
+<li><label><input type="checkbox">Law of total expectation</label></li>
+<li><label><input type="checkbox">Law of total variance</label></li>
+</ul>
+<p>Comments:</p>
+<ul>
+<li><p>For these sections, we are framing the conditional relation as “<span class="math inline">\(Y\)</span> given <span class="math inline">\(X\)</span>”. The same rules/def/ideas apply if we flip the roles of <span class="math inline">\(Y\)</span> and <span class="math inline">\(X\)</span>, so don’t get stuck on a particular formula - try to see how things would generalize to any RV. E.g. examples 9.13 and 9.14 switch up notation.</p></li>
+<li><p>For these sections, we often frame the known information/models as being given the distribution (marginally) of <span class="math inline">\(X\)</span> and the conditional distribution of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X=x\)</span> (or <span class="math inline">\(X\)</span>). As already mentioned, we could flip the roles of the RVs and have the same general rules apply.</p></li>
+<li><p>I know these sections can get confusing since we are talking about very similar things with similar notation. One important idea, though, is whether a value (exp/var) is <em>fixed</em> (but maybe unknown, in formula form) or <em>random.</em></p>
+<ul>
+<li><span class="math inline">\(E(Y \mid X=x)\)</span> assumes that we know a value of <span class="math inline">\(X=x\)</span>. The final answer may be a function of <span class="math inline">\(x\)</span>, but <span class="math inline">\(x\)</span> is a fixed (not random) value. Like in Ex 9.12, <span class="math inline">\(E(Y \mid X=0.6) = (0.6)/2=0.3\)</span> is the expected value of Miguel’s number if Riley picks <span class="math inline">\(X=0.6\)</span>.</li>
+<li><span class="math inline">\(E(Y \mid X) = g(X)\)</span> keeps <span class="math inline">\(X\)</span> <em>random</em>. Why do this? We might want to know how <span class="math inline">\(E(Y \mid X) = g(X)\)</span> behaves over all possible, random, values of <span class="math inline">\(X\)</span>. Like in Ex 9.12, <span class="math inline">\(E(Y \mid X) = X/2\)</span> tells us that the random variable <span class="math inline">\(X/2\)</span> models the expected value of Miguel’s number as a function of the random value <span class="math inline">\(X\)</span> of Riley’s pick.</li>
+</ul></li>
+<li><p>The law of total expectation tells us the “average” value of <span class="math inline">\(E(Y \mid X)\)</span> over all values of <span class="math inline">\(X\)</span> (“averaged” over the pdf/pmf of <span class="math inline">\(X\)</span>). It is a way to get the unconditional expectation of <span class="math inline">\(Y\)</span> without having to compute the marginal distribution of <span class="math inline">\(Y\)</span>.</p>
+<ul>
+<li>e.g.&nbsp;in Ex 9.12, <span class="math inline">\(E(Y \mid X) = X/2\)</span> tells us the expected value of Miguel’s number as a function of the random value <span class="math inline">\(X\)</span>. If <span class="math inline">\(X \sim Unif(0,1)\)</span>, then <span class="math inline">\(E(X) = 0.5\)</span> and the unconditional expectation for Miguel’s number is <span class="math inline">\(E(Y) = E_x(E(Y \mid X)) = E_x(X/2) = (0.5)/2 = 0.25\)</span>. As a gut check, we should expect the expectation for Miguel to be lower than Riley because Riley’s number always dictates the upper bound on Miguel’s number.</li>
+</ul></li>
+<li><p>The law of total variance (LOTV) is similar in spirit to the law of total expectation, that we want to understand the variance of <span class="math inline">\(Y\)</span> unconditionally when what we are given is the conditional variance. But, the equation for the LOTV is more complex because the variance term is more complex: it involves taking an expectation of squared deviation of the RV from its expectation. The LOTV is computed with two parts:</p>
+<ul>
+<li><span class="math inline">\(E_x(V(Y \mid X))\)</span>: “average” the conditional variance (RV) <span class="math inline">\(V(Y\mid X)\)</span> over all values of <span class="math inline">\(X\)</span> (“averaged” over the pdf/pmf of <span class="math inline">\(X\)</span>).</li>
+<li><span class="math inline">\(V_x(E(Y \mid X))\)</span>: measure the variation of the conditional expected value (RV) <span class="math inline">\(E(Y\mid X)\)</span> over all values of <span class="math inline">\(X\)</span> (variation with respect to the pdf/pmf of <span class="math inline">\(X\)</span>).</li>
+</ul></li>
 </ul>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-dobrow" class="csl-entry" role="listitem">
-Wagaman, &amp; Dobrow, A. S. 2021. <em>Probability: With Applications and r</em>. 2nd ed. Wiley.
-</div>
-</div>
 </section>
 </section>
 
@@ -764,13 +800,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./intro-poisson-process.html" class="pagination-link" aria-label="Poisson Process">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Poisson Process</span></span>
+      <a href="./intro-joint-dist.html" class="pagination-link" aria-label="Introduction to joint distributions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Introduction to joint distributions</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./more-joint-dist.html" class="pagination-link" aria-label="More with joint and conditional distributions">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">More with joint and conditional distributions</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./limit-thms.html" class="pagination-link" aria-label="Some Limit Theorems">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Some Limit Theorems</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

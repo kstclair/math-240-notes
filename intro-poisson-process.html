@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; More with discrete random variables – math-240-notes</title>
+<title>6&nbsp; Poisson Process – math-240-notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -50,8 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro-continuous-rv.html" rel="next">
-<link href="./intro-discrete-rv.html" rel="prev">
+<link href="./intro-joint-dist.html" rel="next">
+<link href="./intro-continuous-rv.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -130,7 +110,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./more-discrete-rv.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">More with discrete random variables</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro-poisson-process.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Poisson Process</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -188,7 +168,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./more-discrete-rv.html" class="sidebar-item-text sidebar-link active">
+  <a href="./more-discrete-rv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">More with discrete random variables</span></span></a>
   </div>
 </li>
@@ -200,7 +180,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-poisson-process.html" class="sidebar-item-text sidebar-link">
+  <a href="./intro-poisson-process.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Poisson Process</span></span></a>
   </div>
 </li>
@@ -219,7 +199,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./limit-thms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">More with joint and conditional distributions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Some Limit Theorems</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -238,19 +218,9 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#day-10" id="toc-day-10" class="nav-link active" data-scroll-target="#day-10">Day 10</a>
+  <li><a href="#day-16" id="toc-day-16" class="nav-link active" data-scroll-target="#day-16">Day 16</a>
   <ul class="collapse">
-  <li><a href="#section-4.1-and-4.2" id="toc-section-4.1-and-4.2" class="nav-link" data-scroll-target="#section-4.1-and-4.2">Section 4.1 and 4.2</a></li>
-  <li><a href="#section-4.4-and-4.5" id="toc-section-4.4-and-4.5" class="nav-link" data-scroll-target="#section-4.4-and-4.5">Section 4.4 and 4.5</a></li>
-  </ul></li>
-  <li><a href="#day-11" id="toc-day-11" class="nav-link" data-scroll-target="#day-11">Day 11</a>
-  <ul class="collapse">
-  <li><a href="#section-4.6" id="toc-section-4.6" class="nav-link" data-scroll-target="#section-4.6">Section 4.6</a></li>
-  <li><a href="#section-5.2" id="toc-section-5.2" class="nav-link" data-scroll-target="#section-5.2">Section 5.2</a></li>
-  </ul></li>
-  <li><a href="#day-12" id="toc-day-12" class="nav-link" data-scroll-target="#day-12">Day 12</a>
-  <ul class="collapse">
-  <li><a href="#sections-5.1-5.3-5.4" id="toc-sections-5.1-5.3-5.4" class="nav-link" data-scroll-target="#sections-5.1-5.3-5.4">Sections 5.1, 5.3, 5.4</a></li>
+  <li><a href="#section-7.3" id="toc-section-7.3" class="nav-link" data-scroll-target="#section-7.3">Section 7.3</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -260,7 +230,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-more-disc-rv" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">More with discrete random variables</span></span></h1>
+<h1 class="title"><span id="sec-intro-cont-rv" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Poisson Process</span></span></h1>
 </div>
 
 
@@ -277,126 +247,33 @@ window.Quarto = {
 </header>
 
 
-<p>Chapters 4 and 5 of <span class="citation" data-cites="dobrow">Wagaman (<a href="references.html#ref-dobrow" role="doc-biblioref">2021</a>)</span> cover more properties and types of discrete random variables.</p>
-<p>Make sure to review <a href="intro-discrete-rv.html" class="quarto-xref"><span>Chapter 3</span></a> before these chapters and review our <a href="https://docs.google.com/spreadsheets/d/1DcSJuVX8xt5VTa5RV1PMZRaRvEhlWqvQaN7IacuW-ww/edit?usp=sharing">week 4 schedule</a>.</p>
-<section id="day-10" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="day-10">Day 10</h2>
+<p>Make sure to review our <a href="https://docs.google.com/spreadsheets/d/1qnz5t0OptIaeS-C-bjW4AMzgbrhckJPz4PuElSgGPac/edit?usp=sharing">week 6 schedule</a>.</p>
+<section id="day-16" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="day-16">Day 16</h2>
 <ul>
-<li><p>What to read: Read sections 4.1, 4.2, 4.4, 4.5 but review the comments below on what to skim/skip.</p></li>
+<li><p>What to read: Read section 7.3 through page 299.</p></li>
 <li><p>Learning objectives: These sections will help you</p>
 <ul>
-<li>conceptualize and compute the expected value of a discrete random variable and a function of a discrete random variable</li>
-<li>conceptualize and compute the expected value of a linear function of <strong>two or more</strong> discrete random variable</li>
-<li>conceptualize and compute the expected value of a product of <strong>two independent</strong> discrete random variable</li>
+<li>understand what a Poisson process is</li>
+<li>see how “interarrival” or waiting times between Poisson events can be modeled by exponential or gamma distributed random variables</li>
 </ul></li>
-<li><p>After reading, take reading <a href="https://forms.gle/Hguw2WYckTfeXiE89">quiz 8</a></p></li>
+<li><p>After reading, take reading <a href="https://forms.gle/8nwGZxx77bxcvn2f7">quiz 13</a></p></li>
 </ul>
-<section id="section-4.1-and-4.2" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-4.1-and-4.2">Section 4.1 and 4.2</h3>
+<section id="section-7.3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-7.3">Section 7.3</h3>
 <p>Key terminology to know:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">Expectation, or expected value, of a random variable, denoted <span class="math inline">\(E(X)\)</span> where <span class="math inline">\(X\)</span> is the random variable</label></li>
-<li><label><input type="checkbox">A function of a random variable, often denoted <span class="math inline">\(g(X)\)</span>, and its expectation</label></li>
-<li><label><input type="checkbox">A <em>linear</em> function of a random variable, denoted <span class="math inline">\(aX+b\)</span>, and its expectation</label></li>
+<li><label><input type="checkbox">Poisson process with <span class="math inline">\(N_t \sim Pois(\lambda t)\)</span></label></li>
+<li><label><input type="checkbox">Interarrival times <span class="math inline">\(E_k \sim Exp(\lambda)\)</span></label></li>
+<li><label><input type="checkbox">Time until the <span class="math inline">\(nth\)</span> event <span class="math inline">\(S_n \sim Gamma(n,\lambda)\)</span></label></li>
 </ul>
 <p>Comments:</p>
 <ul>
-<li>We will skip 4.3 for now and we’ll formally cover joint pmf in a couple weeks.</li>
-<li>Examples 4.3, 4.4, 4.8 use Series facts shown in Appendix C. Be comfortable using these facts to compute expectations.</li>
-<li>The expectation of a linear function of a random variable is an <em>extremely</em> useful fact so make sure you spend some time absorbing it. For example, suppose <span class="math inline">\(X\)</span> counts the number of red lights in 5 days (ie it is Binomial). We might care more about <span class="math inline">\(X/5\)</span>, which is the <em>proportion</em> of read lights in a week. If we know <span class="math inline">\(E(X)\)</span>, the average <em>number</em> of red lights in a week, then we can easily compute <span class="math inline">\(E(X/5)\)</span> using this rule.</li>
-<li>The R code shows simulation examples that can be used to approximate an expected value. We won’t be doing simulations this term but feel free to run the code if you want to learn how to do this for selected examples.</li>
-</ul>
-</section>
-<section id="section-4.4-and-4.5" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-4.4-and-4.5">Section 4.4 and 4.5</h3>
-<p>Key terminology to know:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">Expectation of the product of two independent random variables</label></li>
-<li><label><input type="checkbox">Expectation of a linear combination of two or more random variables</label></li>
-</ul>
-<p>Comments:</p>
-<ul>
-<li>For section 4.4, focus on the expectation rules for indep. RV in Equations 4.4 and 4.5. We will formally define and work with joint pmf later this term.</li>
-<li>Skim Section 4.4.1. We will prove that sums of independent Poisson RVs is Poisson using a different method.</li>
-<li>For section 4.5, focus on the linearity result at the start of the section but don’t worry about the proof (for now)</li>
-<li>The expectation of a linear function of <em>two or more</em> random variable is an <em>extremely</em> useful fact so make sure you spend some time absorbing it.</li>
-</ul>
-</section>
-</section>
-<section id="day-11" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="day-11">Day 11</h2>
-<ul>
-<li><p>What to read: Read sections 4.6, 5.2</p></li>
-<li><p>Learning objectives: These sections will help you</p>
-<ul>
-<li>conceptualize and compute the variance and standard deviation of a discrete random variable</li>
-<li>compute the variance and standard deviation of a linear function of a discrete random variable</li>
-<li>compute the variance and standard deviation of a linear function of two independent discrete random variables</li>
-<li>understand how moments of a random variable can be computed via the moment generating function</li>
-<li>understand how to use moment generating functions to determine the distribution of a function of one or more random variables</li>
-</ul></li>
-<li><p>After reading, take reading <a href="https://forms.gle/oQ9ZMzGcAznhwoZa6">quiz 9</a></p></li>
-</ul>
-<section id="section-4.6" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-4.6">Section 4.6</h3>
-<p>Key terminology to know:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">variance</label></li>
-<li><label><input type="checkbox">standard deviation</label></li>
-</ul>
-<p>Comments:</p>
-<ul>
-<li>Equation 4.10 will be the typical way we compute variance/standard deviation since it is less mathematically intensive to compute compared to the expected value used to define it.</li>
-<li>Example 4.24 use Series facts shown in Appendix C.</li>
-</ul>
-</section>
-<section id="section-5.2" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-5.2">Section 5.2</h3>
-<p>Key terminology to know:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">the <span class="math inline">\(k\)</span>th moments of a random variable</label></li>
-<li><label><input type="checkbox">moment generating function (mgf)</label></li>
-</ul>
-<p>Comments:</p>
-<ul>
-<li>We jump ahead a bit to cover moment generating functions (mgf) which can be used to find expectations of the form <span class="math inline">\(E(X^k)\)</span> (the <span class="math inline">\(k\)</span>th moment).</li>
-<li>An <em>extremely</em> useful fact about mgf’s is that they uniquely identify a random variable, eg if two random variables have the same mgf then they have the same distribution. This combined with the properties described on pages 195-6 make mgf’s a very useful tool for determining the distribution of linear combinations of one or more random variables.</li>
-</ul>
-</section>
-</section>
-<section id="day-12" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="day-12">Day 12</h2>
-<ul>
-<li><p>What to read: Read sections 5.1, 5.3, 5.4</p></li>
-<li><p>Learning objectives: These sections will help you</p>
-<ul>
-<li>get familiar with a few more common discrete RV types (geometric, negative binomial, and hypergeometric)</li>
-</ul></li>
-<li><p>After reading, take reading <a href="https://forms.gle/BmZE2tNwiM2tcVmd8">quiz 10</a></p></li>
-</ul>
-<section id="sections-5.1-5.3-5.4" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="sections-5.1-5.3-5.4">Sections 5.1, 5.3, 5.4</h3>
-<p>Key terminology to know:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">geometric RV (know shorthand notation, pmf and support set)</label></li>
-<li><label><input type="checkbox">memorylessness of the geometric distribution</label></li>
-<li><label><input type="checkbox">negative binomial RV (know shorthand notation, pmf and support set)</label></li>
-<li><label><input type="checkbox">hypergeometric RV (know shorthand notation, pmf and support set)</label></li>
-</ul>
-<p>Comments:</p>
-<ul>
-<li>skim 5.1.2</li>
-<li>Take care to understand what the geometric and negative binomial random variables count. While the Binomial counts the number of “successes” in a fixed number of trials, the geometric/negative binomail fix the number of successes while the number of trials that it takes to get those successes is random.</li>
-<li>Some probability books or online sources define geometric and negative binomial random variables as the number <em>failures</em> until some fixed number of successes. Eg. if <span class="math inline">\(X\)</span> is the number of trials until the 1st success, then <span class="math inline">\(Y = X-1\)</span> is the number of failures until the 1st success. We will stick with the number of <em>trials</em> definition in this course.</li>
-<li>A hypergeometric random variable is similar in spirit as the binomial, but the hypergeometric counts the number of successes in a fixed sample size taken <em>without replacement</em> from a group of unique individuals. A binomial random variable is similar but it assumes with replacement, or independent sampling draw-to-draw.</li>
+<li><p>You can skim/skip the proof on page 296 (up to example 7.15). This proof of the Poisson process model relies on joint pdf which we haven’t covered yet.</p></li>
+<li><p>There is a <strong>typo</strong> on page 298: The <em>Stationary increments</em> property should state that “For all <span class="math inline">\(0 &lt; s,t\)</span>, …” instead of <span class="math inline">\(0 &lt; s &lt; t\)</span></p></li>
 </ul>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-dobrow" class="csl-entry" role="listitem">
-Wagaman, &amp; Dobrow, A. S. 2021. <em>Probability: With Applications and r</em>. 2nd ed. Wiley.
-</div>
-</div>
 </section>
 </section>
 
@@ -823,13 +700,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./intro-discrete-rv.html" class="pagination-link" aria-label="Introduction to discrete random variables">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to discrete random variables</span></span>
+      <a href="./intro-continuous-rv.html" class="pagination-link" aria-label="Introduction to continuous random variables">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Introduction to continuous random variables</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro-continuous-rv.html" class="pagination-link" aria-label="Introduction to continuous random variables">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Introduction to continuous random variables</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./intro-joint-dist.html" class="pagination-link" aria-label="Introduction to joint distributions">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Introduction to joint distributions</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

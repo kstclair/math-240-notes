@@ -1,4 +1,4 @@
-# More with joint and conditional distributions  {#sec-limit-thms}
+# Some Limit Theorems {#sec-limit-thms}
 
 We will explore strategies for deriving the distribution of a function of a two (or more) random variables. Then we return to thinking conditionally (first introduced in @sec-think-cond) to see how to define a conditional pdf/pmf probability model. 
 

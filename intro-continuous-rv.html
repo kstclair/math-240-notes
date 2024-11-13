@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Introduction to discrete random variables – math-240-notes</title>
+<title>5&nbsp; Introduction to continuous random variables – math-240-notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -50,8 +50,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./more-discrete-rv.html" rel="next">
-<link href="./thinking-conditionally.html" rel="prev">
+<link href="./intro-poisson-process.html" rel="next">
+<link href="./more-discrete-rv.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -130,7 +130,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro-discrete-rv.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to discrete random variables</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro-continuous-rv.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Introduction to continuous random variables</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -182,7 +182,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-discrete-rv.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro-discrete-rv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to discrete random variables</span></span></a>
   </div>
 </li>
@@ -194,7 +194,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-continuous-rv.html" class="sidebar-item-text sidebar-link">
+  <a href="./intro-continuous-rv.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Introduction to continuous random variables</span></span></a>
   </div>
 </li>
@@ -219,7 +219,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./limit-thms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">More with joint and conditional distributions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Some Limit Theorems</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -238,15 +238,22 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#day-7" id="toc-day-7" class="nav-link active" data-scroll-target="#day-7">Day 7</a>
+  <li><a href="#day-13" id="toc-day-13" class="nav-link active" data-scroll-target="#day-13">Day 13</a>
   <ul class="collapse">
-  <li><a href="#section-3.1-and-page-126" id="toc-section-3.1-and-page-126" class="nav-link" data-scroll-target="#section-3.1-and-page-126">Section 3.1 and page 126</a></li>
-  <li><a href="#section-3.2" id="toc-section-3.2" class="nav-link" data-scroll-target="#section-3.2">Section 3.2</a></li>
-  <li><a href="#section-3.3-and-3.4" id="toc-section-3.3-and-3.4" class="nav-link" data-scroll-target="#section-3.3-and-3.4">Section 3.3 and 3.4</a></li>
+  <li><a href="#section-6.1" id="toc-section-6.1" class="nav-link" data-scroll-target="#section-6.1">Section 6.1</a></li>
+  <li><a href="#section-6.2-and-7.1.3" id="toc-section-6.2-and-7.1.3" class="nav-link" data-scroll-target="#section-6.2-and-7.1.3">Section 6.2 and 7.1.3</a></li>
+  <li><a href="#section-6.4" id="toc-section-6.4" class="nav-link" data-scroll-target="#section-6.4">Section 6.4</a></li>
   </ul></li>
-  <li><a href="#day-8" id="toc-day-8" class="nav-link" data-scroll-target="#day-8">Day 8</a>
+  <li><a href="#day-14" id="toc-day-14" class="nav-link" data-scroll-target="#day-14">Day 14</a>
   <ul class="collapse">
-  <li><a href="#section-3.5" id="toc-section-3.5" class="nav-link" data-scroll-target="#section-3.5">Section 3.5</a></li>
+  <li><a href="#section-6.3" id="toc-section-6.3" class="nav-link" data-scroll-target="#section-6.3">Section 6.3</a></li>
+  <li><a href="#section-6.5-and-7.2" id="toc-section-6.5-and-7.2" class="nav-link" data-scroll-target="#section-6.5-and-7.2">Section 6.5 and 7.2</a></li>
+  <li><a href="#section-7.1" id="toc-section-7.1" class="nav-link" data-scroll-target="#section-7.1">Section 7.1</a></li>
+  <li><a href="#section-7.4" id="toc-section-7.4" class="nav-link" data-scroll-target="#section-7.4">Section 7.4</a></li>
+  </ul></li>
+  <li><a href="#day-15" id="toc-day-15" class="nav-link" data-scroll-target="#day-15">Day 15</a>
+  <ul class="collapse">
+  <li><a href="#section-8.1" id="toc-section-8.1" class="nav-link" data-scroll-target="#section-8.1">Section 8.1</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -256,7 +263,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-intro-disc-rv" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to discrete random variables</span></span></h1>
+<h1 class="title"><span id="sec-intro-cont-rv" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Introduction to continuous random variables</span></span></h1>
 </div>
 
 
@@ -273,85 +280,152 @@ window.Quarto = {
 </header>
 
 
-<p>Chapter 3 of <span class="citation" data-cites="dobrow">Wagaman (<a href="references.html#ref-dobrow" role="doc-biblioref">2021</a>)</span> introduces us to discrete random variables and some common probability models used to describe these random variables.</p>
-<p>Make sure to review our <a href="https://docs.google.com/spreadsheets/d/1u4l1ho1V35AJJSlt2-UaOW_C8xn46YK5UqrQjajpDH4/edit?usp=sharing">week 3 schedule</a>.</p>
-<section id="day-7" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="day-7">Day 7</h2>
+<p>Chapter 6 and 7 of <span class="citation" data-cites="dobrow">Wagaman (<a href="#ref-dobrow" role="doc-biblioref">2021</a>)</span> introduces us to continuous random variables.</p>
+<p>Make sure to review our <a href="https://docs.google.com/spreadsheets/d/1p4s9FLap8CUB40UYAzdxpDi8-PkoHUceGq0dNUmfE9c/edit?usp=sharing">week 5 schedule</a>.</p>
+<section id="day-13" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="day-13">Day 13</h2>
 <ul>
-<li><p>What to read: Read sections 3.1, 3.2, 3.3, 3.4, plus the pmf definition on page 126</p></li>
+<li><p>What to read: Read intro to ch.&nbsp;6, sections 6.1, 6.2, 6.4, 7.1.3</p></li>
 <li><p>Learning objectives: These sections will help you</p>
 <ul>
-<li>understand what a “random variable” (RV) is</li>
-<li>define a probability mass function and support set for a discrete RV</li>
-<li>understand whether discrete RV are independent</li>
-<li>get familiar with some common discrete RV types (uniform, Bernoulli, binomial, Poisson)</li>
+<li>understand what a continuous random variable is</li>
+<li>use a probability mass function (pdf) to compute probabilities for events involving a continuous RV</li>
+<li>use a cumulative distribution function (cdf) to compute probabilities for events involving a continuous RV</li>
+<li>understand how to get a pdf from a cdf and vice versa</li>
+<li>compute quantiles for a continuous distribution</li>
+<li>get familiar with a (continuous) uniform RV</li>
 </ul></li>
-<li><p>After reading, take reading <a href="https://forms.gle/gMDmvhPHPysXiPkK8">quiz 6</a></p></li>
+<li><p>After reading, take reading <a href="https://forms.gle/oZGaWtp9KkFa5MmCA">quiz 11</a></p></li>
 </ul>
-<section id="section-3.1-and-page-126" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-3.1-and-page-126">Section 3.1 and page 126</h3>
+<section id="section-6.1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-6.1">Section 6.1</h3>
 <p>Key terminology to know:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">random variable</label></li>
-<li><label><input type="checkbox">discrete random variable</label></li>
-<li><label><input type="checkbox">probability mass function (pmf) of a RV</label></li>
-<li><label><input type="checkbox">the (support) set <span class="math inline">\(S\)</span> of a RV</label></li>
-<li><label><input type="checkbox">uniform RV (know shorthand notation, pmf and support set)</label></li>
+<li><label><input type="checkbox">continuous random variable</label></li>
+<li><label><input type="checkbox">probability density function (pdf) of a continuous RV</label></li>
 </ul>
 <p>Comments:</p>
-<p>Pay special attention to the notation used for random variables (RV). Uppercase letters (typically at the end of the English alphabet) are used to denote the RV (which is random and doesn’t have a fixed value) while lower case are used to denote a fixed numeric value (which is fixed even though there may not be a value specified).</p>
-<p>The “distribution” of a random variable describes the probability structure of the RV, so think pmf if you are asked to describe a distribution. (ie what values of the RV are most likely, which ones are less likely, etc) You can also describe a distribution of a RV by name if it has a common pmf (eg “The distribution of <span class="math inline">\(X\)</span> is discrete uniform.”)</p>
-<p>The subsection “Random variables as function” explains how a RV <span class="math inline">\(X(\cdot)\)</span> takes in one or more outcomes <span class="math inline">\(\omega\)</span> from the sample space of an experiment and outputs a numeric value. This is our formal definition of a RV but we typically won’t be using the <span class="math inline">\(X(\omega)\)</span> notation for a RV. Instead we will just refer to RV as <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span>, etc. But keep this underlying connection with the sample space in mind as the term progresses (especially for discrete RV).</p>
-<p>The uniform random variable box on page 96 is an example of a probability mass function (pmf) and support set <span class="math inline">\(S\)</span>. Even though pmf aren’t formally defined until ch.&nbsp;4, I find it useful to use that language at the start of discrete RV discussions.</p>
-</section>
-<section id="section-3.2" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-3.2">Section 3.2</h3>
-<p>Key terminology to know:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">independent discrete random variables</label></li>
-</ul>
-<p>Comments:</p>
-<p>We can use either Equations 3.1 or 3.2 to define two independent discrete RV. The general definition of independent random variables on page 98 extends beyond discrete RV to continuous RV (which we will cover soon). Skim this idea but our main focus right now is discrete RV.</p>
-</section>
-<section id="section-3.3-and-3.4" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-3.3-and-3.4">Section 3.3 and 3.4</h3>
-<p>Key terminology to know:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">Bernoulli RV (know shorthand notation, what it counts, pmf and support set)</label></li>
-<li><label><input type="checkbox">Independent and identically distributed (i.i.d.)</label></li>
-<li><label><input type="checkbox">Binomial RV (know shorthand notation, what it counts, pmf and support set)</label></li>
-</ul>
-<p>Comments:</p>
-<p>Bernoulli and binomial RV are extremely common types of RV so make sure to carefully review these sections.</p>
-<p>Your book describes a binomial RV as the sum of an [i.i.d.] Bernoulli “sequence” of length <span class="math inline">\(n\)</span>. Another common way to describe this is the use the phrasing “trials” instead of “sequence”: a binomial RV is the sum of <span class="math inline">\(n\)</span> i.i.d. Bernoulli trials.</p>
-<p>The R code on pages 102 and 104 will be talked about on day 8.</p>
-<p>Skim Example 3.14 but we will focus on solving problems involving two RV later on this term.</p>
-</section>
-</section>
-<section id="day-8" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="day-8">Day 8</h2>
 <ul>
-<li><p>What to read: Read sections 3.5</p></li>
+<li>Pay particular attention to the comment box on page 230. I am very particular when asking for pdf (or cdf) functions, especially on exams. If you are asked to define a pdf/cdf <em>over the entire real ine</em>, then you must get both the support <span class="math inline">\(S\)</span> and “0 otherwise” parts correct.</li>
+<li>Yes, you will be integrating functions in this class! While I may ask you do to more involved calculations, eg integration by parts, on homework, I don’t ask these longer calculation-focused questions on exams. Often (but not always) on exams, I’ll ask you to appropriately “set-up” an integral but not actually complete the calculation.</li>
+<li>You can check integration calculations using technology, but you can’t let technology do all the work. See the AI/tech homework policy on the syllabus.</li>
+</ul>
+</section>
+<section id="section-6.2-and-7.1.3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-6.2-and-7.1.3">Section 6.2 and 7.1.3</h3>
+<p>Key terminology to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">cumulative distribution function (cdf) of a continuous RV</label></li>
+<li><label><input type="checkbox">quantile of a continuous RV</label></li>
+</ul>
+<p>Comments:</p>
+<ul>
+<li>Take some time to make sure you see how pdf’s and cdf’s are related for continuous random variables.</li>
+<li>Take a look at the cdf example for a discrete RV, but I find cdf most useful for continuous RV. It is essential that you can use/derive cdf for continuous RV, but not as important for discrete (in my class).</li>
+<li>In 7.1.3, I just want you to review the definition of a quantile and how it relates to a cdf (6.2). You can skim the examples in 7.1.3, but we will formally introduce the normal distribution on another day.</li>
+<li>I’ve seen quantile described either as a percentage or a proportion/probability. E.g. the 50th quantile or the 0.5 quantile. Your book defines it as the former, “50th”, but be comfortable with either description.</li>
+</ul>
+</section>
+<section id="section-6.4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-6.4">Section 6.4</h3>
+<p>Key terminology to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">uniform RV (know shorthand notation, basic properties)</label></li>
+</ul>
+<p>Comments:</p>
+<ul>
+<li>You can just read up to Expectation and Variance on page 240. Review these after day 14’s reading.</li>
+<li>Be comfortable computing probabilities for uniform RV using both a calculus approach and geometric approach. There are pros/cons to each, depending on the problem.</li>
+</ul>
+</section>
+</section>
+<section id="day-14" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="day-14">Day 14</h2>
+<ul>
+<li><p>What to read: Read sections 6.3, 6.5, 7.1, 7.2, 7.4</p></li>
 <li><p>Learning objectives: These sections will help you</p>
 <ul>
-<li>get familiar with the Poisson distribution</li>
-<li>review or get introduced to infinite series</li>
+<li>compute the expected value, variance and sd of a continuous RV</li>
+<li>review important properties of expected values and variance/sd</li>
+<li>get familiar with some common continous RV types (exponential, normal, gamma, beta)</li>
 </ul></li>
-<li><p>After reading, take reading <a href="https://forms.gle/GkduDGR42NEbizfE6">quiz 7</a></p></li>
+<li><p>After reading, take reading <a href="https://forms.gle/UEE5pFNSJ3weXMBQ6">quiz 12</a></p></li>
 </ul>
-<section id="section-3.5" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="section-3.5">Section 3.5</h3>
+<section id="section-6.3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-6.3">Section 6.3</h3>
 <p>Key terminology to know:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">Poisson RV (know shorthand notation, what it counts, pmf and support set)</label></li>
+<li><label><input type="checkbox">expected value of a continuous RV</label></li>
+<li><label><input type="checkbox">variance/sd of a continuous RV</label></li>
 </ul>
 <p>Comments:</p>
-<p>A Poisson RV is another RV that counts “things”, make sure you can distinguish settings where we should be modeling a count RV as a Poisson RV vs.&nbsp;a binomial RV (vs.&nbsp;something else).</p>
-<p>Series are a Calc BC or Math 210 topic that not all of you have seen. If you haven’t had prior exposure to these ideas please stop by drop-in hours (or make an appointment) if you have questions! Appendix C at the end of your book reviews some useful math/calc facts, including some common series. You can use these facts without deriving them from scratch.</p>
-<p>Skim 3.5.1 and 3.5.2. Time permitting, I’ll cover the proof connecting the binomial and Poisson distributions from 3.5.2 class (it’s fun!) but it isn’t essential course material.</p>
+<ul>
+<li>We’ll cover 6.6-6.8 later this term</li>
+</ul>
+</section>
+<section id="section-6.5-and-7.2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-6.5-and-7.2">Section 6.5 and 7.2</h3>
+<p>Key terminology to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">exponential RV (know shorthand notation, basic properties)</label></li>
+<li><label><input type="checkbox">gamma RV (know shorthand notation, basic properties)</label></li>
+<li><label><input type="checkbox">gamma function <span class="math inline">\(\Gamma\)</span></label></li>
+</ul>
+<p>Comments:</p>
+<ul>
+<li>Exponential and gamma are common models for “waiting times”, eg time until something happens.</li>
+<li>Make sure you recognize the exponential as a special case of the gamma</li>
+<li>We will cover the connection between these distributions and the Poisson distribution on another day</li>
+</ul>
+</section>
+<section id="section-7.1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-7.1">Section 7.1</h3>
+<p>Key terminology to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">normal RV (know shorthand notation, basic properties)</label></li>
+</ul>
+<p>Comments:</p>
+<ul>
+<li>Skip 7.1.2 (pages 278-282)</li>
+</ul>
+</section>
+<section id="section-7.4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-7.4">Section 7.4</h3>
+<p>Key terminology to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">beta RV (know shorthand notation, basic properties)</label></li>
+</ul>
+<p>Comments:</p>
+<ul>
+<li>The beta model is very useful for random variables that have a support between 0 and 1.</li>
+</ul>
+</section>
+</section>
+<section id="day-15" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="day-15">Day 15</h2>
+<ul>
+<li><p>What to read: Read sections 8.1</p></li>
+<li><p>Learning objectives: This section will help you</p>
+<ul>
+<li>use cdf’s to derive the distribution (cdf, then pdf) of a function of a continuous RV</li>
+</ul></li>
+<li><p>No reading quiz on section 8.1</p></li>
+</ul>
+<section id="section-8.1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="section-8.1">Section 8.1</h3>
+<p>Key terminology to know:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">cdf and pdf (make sure these ideas are solid)</label></li>
+</ul>
+<p>Comments:</p>
+<ul>
+<li>Skim 8.1.1 and skip 8.1.2</li>
+<li>This section outlines how to derive the pdf of a function of a RV using the cdf method.</li>
+<li>This method always “works”, though often the mgf method is simpler <em>if</em> the function is linear and the pdf distribution is a common one (eg normal, exponential, etc).</li>
+</ul>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-dobrow" class="csl-entry" role="listitem">
 Wagaman, &amp; Dobrow, A. S. 2021. <em>Probability: With Applications and r</em>. 2nd ed. Wiley.
 </div>
@@ -782,13 +856,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./thinking-conditionally.html" class="pagination-link" aria-label="Thinking conditionally">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Thinking conditionally</span></span>
+      <a href="./more-discrete-rv.html" class="pagination-link" aria-label="More with discrete random variables">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">More with discrete random variables</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./more-discrete-rv.html" class="pagination-link" aria-label="More with discrete random variables">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">More with discrete random variables</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./intro-poisson-process.html" class="pagination-link" aria-label="Poisson Process">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Poisson Process</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
