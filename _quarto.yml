@@ -17,6 +17,7 @@ book:
     - intro-poisson-process.qmd
     - intro-joint-dist.qmd
     - more-joint-dist.qmd
+    - limit-thms.qmd
     - references.qmd
 
 bibliography: references.bib

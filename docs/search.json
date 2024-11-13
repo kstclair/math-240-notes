@@ -300,6 +300,36 @@
     ]
   },
   {
+    "objectID": "limit-thms.html",
+    "href": "limit-thms.html",
+    "title": "9  More with joint and conditional distributions",
+    "section": "",
+    "text": "Day 26",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>More with joint and conditional distributions</span>"
+    ]
+  },
+  {
+    "objectID": "limit-thms.html#day-26",
+    "href": "limit-thms.html#day-26",
+    "title": "9  More with joint and conditional distributions",
+    "section": "",
+    "text": "What to read: Read sections 10.5 and 10.6 but skip section 10.5.1\nLearning objectives: These sections will help you\n\nunderstand and apply the Central Limit Theorem (CLT)\nunderstand how the CLT is proven with MGF\n\nAfter reading, take reading quiz 20\n\n\nSections 10.5 and 10.6\nKey terminology to know:\n\nsum \\(S_n\\) of \\(n\\) i.i.d. random variables\nmean \\(\\bar{X}_n\\) of \\(n\\) i.i.d. random variables\n\nComments:\n\nWe will cover the proof of the CLT in 10.6 in class",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>More with joint and conditional distributions</span>"
+    ]
+  },
+  {
+    "objectID": "limit-thms.html#day-27",
+    "href": "limit-thms.html#day-27",
+    "title": "9  More with joint and conditional distributions",
+    "section": "Day 27",
+    "text": "Day 27\n\nWhat to read: Read sections 10.2 and 10.4\nLearning objectives: These sections will help you\n\nunderstand the big picture implications of the Law of Large Numbers (LLN)\nunderstand how Monte Carlo integration is an application of the LLN\n\n\n\nSections 10.2 and 10.4\nKey terminology to know:\n\nprobability of a limit\nMonte Carlo integration\n\nComments:\n\nFocus on the LLN big picture in 10.2\nWe will use the LLN to justify an important application: Monte Carlo integration",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>More with joint and conditional distributions</span>"
+    ]
+  },
+  {
     "objectID": "references.html",
     "href": "references.html",
     "title": "References",
