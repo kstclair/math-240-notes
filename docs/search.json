@@ -14,7 +14,7 @@
     "href": "first-principles.html",
     "title": "1  First principles of probability",
     "section": "",
-    "text": "Day 1",
+    "text": "Day 1\nFirst principles cover sections in chapter 1 of Wagaman (2021). Make sure to review our week 1 schedule.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>First principles of probability</span>"
     ]
@@ -54,7 +54,7 @@
     "href": "thinking-conditionally.html",
     "title": "2  Thinking conditionally",
     "section": "",
-    "text": "Day 4",
+    "text": "Day 4\nChapter 2 of Wagaman (2021) covers conditional probabilities and the concept of independence.\nMake sure to review Chapter 1 before this chapter and review our week 2 schedule.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Thinking conditionally</span>"
     ]
@@ -94,7 +94,7 @@
     "href": "intro-discrete-rv.html",
     "title": "3  Introduction to discrete random variables",
     "section": "",
-    "text": "Day 7",
+    "text": "Day 7\nChapter 3 of Wagaman (2021) introduces us to discrete random variables and some common probability models used to describe these random variables.\nMake sure to review our week 3 schedule.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to discrete random variables</span>"
     ]
@@ -124,7 +124,7 @@
     "href": "more-discrete-rv.html",
     "title": "4  More with discrete random variables",
     "section": "",
-    "text": "Day 10",
+    "text": "Day 10\nChapters 4 and 5 of Wagaman (2021) cover more properties and types of discrete random variables.\nMake sure to review Chapter 3 before these chapters and review our week 4 schedule.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>More with discrete random variables</span>"
     ]
@@ -164,7 +164,7 @@
     "href": "intro-continuous-rv.html",
     "title": "5  Introduction to continuous random variables",
     "section": "",
-    "text": "Day 13",
+    "text": "Day 13\nChapter 6 and 7 of Wagaman (2021) introduces us to continuous random variables.\nMake sure to review our week 5 schedule.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Introduction to continuous random variables</span>"
     ]
@@ -204,7 +204,7 @@
     "href": "intro-poisson-process.html",
     "title": "6  Poisson Process",
     "section": "",
-    "text": "Day 16",
+    "text": "Day 16\nMake sure to review our week 6 schedule.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Poisson Process</span>"
     ]
@@ -224,7 +224,7 @@
     "href": "intro-joint-dist.html",
     "title": "7  Introduction to joint distributions",
     "section": "",
-    "text": "Day 18",
+    "text": "Day 18\nWe will revisit chapters 4 and 6 of Wagaman (2021) to describe joint distributions that can explain/model bivariate relationships between two (or more) random variables. We jump around from chapter 4 (discrete) and chapter 6 (continuous) to cover this topic.\nMake sure to review our week 7 schedule.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Introduction to joint distributions</span>"
     ]
@@ -264,7 +264,7 @@
     "href": "more-joint-dist.html",
     "title": "8  More with joint and conditional distributions",
     "section": "",
-    "text": "Day 21",
+    "text": "Day 21\nWe will explore strategies for deriving the distribution of a function of a two (or more) random variables. Then we return to thinking conditionally (first introduced in Chapter 2) to see how to define a conditional pdf/pmf probability model.\nMake sure to review our week 8 schedule.",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>More with joint and conditional distributions</span>"
     ]
@@ -304,7 +304,7 @@
     "href": "limit-thms.html",
     "title": "9  Some Limit Theorems",
     "section": "",
-    "text": "Day 26",
+    "text": "Day 26\nWe will explore strategies for deriving the distribution of a function of a two (or more) random variables. Then we return to thinking conditionally (first introduced in Chapter 2) to see how to define a conditional pdf/pmf probability model.\nMake sure to review our week 8 schedule.",
     "crumbs": [
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Some Limit Theorems</span>"
     ]
