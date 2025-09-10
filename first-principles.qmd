@@ -1,6 +1,6 @@
 # First principles of probability   {#sec-first-p}
 
-First principles cover sections in chapter 1 of @dobrow. Make sure to review our [week 1 schedule]().
+First principles cover sections in chapter 1 of @dobrow. Make sure to review our [week 1 schedule](https://docs.google.com/spreadsheets/d/1QKQFfuuDzFUpOdjMvmHWZpR6zUzoxd9UjE83vA0H1Fs/edit?usp=sharing).
 
 ## Day 1 {.unnumbered}
 
