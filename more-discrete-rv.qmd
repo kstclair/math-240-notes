@@ -15,7 +15,7 @@ Make sure to review @sec-intro-disc-rv before these chapters and review our [wee
   -  conceptualize and compute the expected value of a linear function of **two or more** discrete random variable 
   -  conceptualize and compute the expected value of a product of **two independent** discrete random variable 
   
-- After reading, take reading [quiz 8](https://forms.gle/Hguw2WYckTfeXiE89)
+- After reading, take reading [quiz 8](https://forms.gle/iHzoxjSaD49P33zW8)
 
   
 
@@ -65,7 +65,7 @@ Comments:
   - understand how moments of a random variable can be computed via the moment generating function
   - understand how to use moment generating functions to determine the distribution of a function of one or more random variables
   
-- After reading, take reading [quiz 9](https://forms.gle/oQ9ZMzGcAznhwoZa6)
+- After reading, take reading [quiz 9](https://forms.gle/GVopwZN691TKbUyu9)
 
   
 
@@ -104,7 +104,7 @@ Comments:
 - Learning objectives: These sections will help you
   - get familiar with a few more common discrete RV types (geometric, negative binomial, and hypergeometric)
   
-- After reading, take reading [quiz 10](https://forms.gle/BmZE2tNwiM2tcVmd8)
+- After reading, take reading [quiz 10](https://forms.gle/o4fGRHwhqb3d3PGR8)
 
   
 

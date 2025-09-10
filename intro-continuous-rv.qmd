@@ -18,7 +18,7 @@ Make sure to review our [week 5 schedule](https://docs.google.com/spreadsheets/d
   - compute quantiles for a continuous distribution
   - get familiar with a (continuous) uniform RV
   
-- After reading, take reading [quiz 11](https://forms.gle/oZGaWtp9KkFa5MmCA)
+- After reading, take reading [quiz 11](https://forms.gle/PnTbqQitwCLhoUZJ6)
 
   
 
@@ -74,7 +74,7 @@ Comments:
   - review important properties of expected values and variance/sd
   - get familiar with some common continous RV types (exponential, normal, gamma, beta)
   
-- After reading, take reading [quiz 12](https://forms.gle/UEE5pFNSJ3weXMBQ6)
+- After reading, take reading [quiz 12](https://forms.gle/9Fa2Zcs7SbUxoptm6)
 
   
 

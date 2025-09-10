@@ -12,7 +12,7 @@ Make sure to review our [week 6 schedule](https://docs.google.com/spreadsheets/d
   - understand what a Poisson process is
   - see how "interarrival" or waiting times between Poisson events can be modeled by exponential or gamma distributed random variables
   
-- After reading, take reading [quiz 13](https://forms.gle/8nwGZxx77bxcvn2f7)
+- After reading, take reading [quiz 13](https://forms.gle/uAfSZ3NQmiX7MorE8)
 
   
 

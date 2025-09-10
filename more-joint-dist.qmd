@@ -14,7 +14,7 @@ Make sure to review our [week 8 schedule](https://docs.google.com/spreadsheets/d
   - derive the pdf of a minimum or maximum 
   - derive the pmf/pdf of a sum of two independent RV using a convolution of functions
   
-- After reading, take reading [quiz 17](https://forms.gle/KsqVyoKtsQLFrZcs5)
+- After reading, take reading [quiz 17](https://forms.gle/koL2R5xHNKKPBpF78)
 
   
 ### Sections 8.2 {.unnumbered}
@@ -58,7 +58,7 @@ Comments:
   - derive conditional pmf/pdf from joint and marginal models
   - apply Bayes formula to conditional pmf/pdf
   
-- After reading, take reading [quiz 18](https://forms.gle/aoCcCr7x9s8o6Uhk8)
+- After reading, take reading [quiz 18](https://forms.gle/tEPcjY8M8PeM1BuZ9)
 
   
 ### Sections 4.3, 9.1, and 9.2  {.unnumbered}
@@ -85,7 +85,7 @@ Comments:
   - Compute a conditional pmf/pdf's expected value and variance given a fixed value of the conditioning variable
   - Compute a marginal expected value or variance from a RV's conditional distribution
   
-- After reading, take reading [quiz 19](https://forms.gle/AZmecHbJtKckUvkL6)
+- After reading, take reading [quiz 19](https://forms.gle/kudUAmV6xqY2Jkrg9)
 
   
 ### Sections  9.3 and 9.5 {.unnumbered}

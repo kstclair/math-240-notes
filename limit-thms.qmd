@@ -14,7 +14,7 @@ Make sure to review our [week 8 schedule](https://docs.google.com/spreadsheets/d
   - understand and apply the Central Limit Theorem (CLT)
   - understand how the CLT is proven with MGF
   
-- After reading, take reading [quiz 20](https://forms.gle/6GziRQC46YbXrSE79)
+- After reading, take reading [quiz 20](https://forms.gle/GK5weVcHN73WcQp8A)
 
   
 ### Sections 10.5 and 10.6 {.unnumbered}

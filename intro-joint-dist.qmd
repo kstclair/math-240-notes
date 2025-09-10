@@ -16,7 +16,7 @@ Make sure to review our [week 7 schedule](https://docs.google.com/spreadsheets/d
   - compute a marginal pdf/pmf from a joint pdf/pmf
   - compute probabilities from a joint pdf/pmf
   
-- After reading, take reading [quiz 14](https://forms.gle/XKWqF5TZ1qVWDscE9)
+- After reading, take reading [quiz 14](https://forms.gle/FWFtV6rWRjR7MtuB9)
 
   
 ### Sections 4.3 and 6.6 {.unnumbered}
@@ -45,7 +45,7 @@ Comments:
   - understand what independence for two (or more) RV means
   - how to *prove* independence OR how to *use* independence to construct joint pdf/pmf
   
-- After reading, take reading [quiz 15](https://forms.gle/UvGofRr38VkZCCtf7)
+- After reading, take reading [quiz 15](https://forms.gle/pxwXYhEijvW5wNjW6)
 
   
 ### Sections 4.4 and 6.7 {.unnumbered}
@@ -74,7 +74,7 @@ Comments:
   - compute the variance of a linear combination of two RV when they are not independent
   - see an example of a bivariate distribution with a parameter that measures correlation
   
-- After reading, take reading [quiz 16](https://forms.gle/b5vx8Ezd2b5SB2Jz9)
+- After reading, take reading [quiz 16](https://forms.gle/1NjfMgFZMmFuMnKX9)
 
   
 ### Sections 4.7, 6.8, and 9.6 and pages 139, 255 {.unnumbered}
